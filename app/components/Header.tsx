@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 interface HeaderProps {
   weekOf: string;
@@ -111,21 +112,23 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
             </h1>
           </div>
 
-          <div style={{ textAlign: "right" }}>
-            <div
-              className="mono eyebrow"
-              style={{ color: "var(--text-muted)", marginBottom: 4 }}
-            >
-              {time} EST
+          <div style={{ textAlign: "right", display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 8 }}>
+            <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
+              <Link
+                href="/archive"
+                style={{ fontSize: 11, color: "var(--text-muted)", textDecoration: "none", letterSpacing: "0.08em", textTransform: "uppercase" }}
+              >
+                Archive
+              </Link>
+              <Link
+                href="/#newsletter"
+                style={{ fontSize: 11, color: "var(--text-muted)", textDecoration: "none", letterSpacing: "0.08em", textTransform: "uppercase" }}
+              >
+                Subscribe
+              </Link>
             </div>
-            <div
-              style={{
-                fontSize: 11,
-                color: "var(--text-muted)",
-                letterSpacing: "0.05em",
-              }}
-            >
-              Week of {formatWeek(weekOf)}
+            <div className="mono eyebrow" style={{ color: "var(--text-muted)" }}>
+              {time} EST &nbsp;·&nbsp; Week of {formatWeek(weekOf)}
             </div>
           </div>
         </div>
