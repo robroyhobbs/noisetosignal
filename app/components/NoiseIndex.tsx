@@ -15,6 +15,7 @@ interface NoiseIndexProps {
   noiseCount: number;
   signalCount: number;
   note: string;
+  weekOf: string;
   history: { week: string; ratio: number }[];
 }
 
@@ -29,10 +30,12 @@ export function NoiseIndex({
   noiseCount,
   signalCount,
   note,
+  weekOf,
   history,
 }: NoiseIndexProps) {
   const change = currentRatio - previousRatio;
-  const changePct = ((change / previousRatio) * 100).toFixed(1);
+  const changePct = previousRatio > 0 ? ((change / previousRatio) * 100).toFixed(1) : "N/A";
+  const changeDisplay = changePct === "N/A" ? "N/A" : `${Number(changePct) >= 0 ? "▲ +" : "▼ "}${changePct}%`;
   const chartData = history.map((h) => ({
     week: formatWeekShort(h.week),
     ratio: h.ratio,
@@ -58,7 +61,7 @@ export function NoiseIndex({
         >
           <div>
             <div className="eyebrow" style={{ marginBottom: 8 }}>
-              Noise-to-Signal Index (NSI) — Week of Mar 24, 2025
+              Noise-to-Signal Index (NSI) — Week of {formatWeekShort(weekOf)}
             </div>
             <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
               <span
@@ -82,7 +85,7 @@ export function NoiseIndex({
                     fontWeight: 700,
                   }}
                 >
-                  ▲ +{changePct}%
+                  {changeDisplay}
                 </div>
                 <div style={{ fontSize: 12, color: "var(--text-muted)" }}>
                   vs. last week

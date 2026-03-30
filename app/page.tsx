@@ -15,7 +15,7 @@ export const revalidate = 3600;
 export default function Home() {
   const current = getCurrentWeek();
   const history = getRatioHistory();
-  const previous = weeks[1];
+  const previous = weeks[1] ?? weeks[0];
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
@@ -32,6 +32,7 @@ export default function Home() {
           noiseCount={current.noiseCount}
           signalCount={current.signalCount}
           note={current.note}
+          weekOf={current.weekOf}
           history={history}
         />
         <WeeklySignal items={current.signal} />

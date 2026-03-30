@@ -58,8 +58,20 @@ function getMondayISO() {
   return monday.toISOString().split("T")[0];
 }
 
-function getWeekId(weekOf) {
-  return `w${weekOf.replace(/-/g, "")}`;
+/** Escape a string for safe embedding in a JS/TS string literal */
+function escStr(s) {
+  return s
+    .replace(/\\/g, "\\\\")
+    .replace(/"/g, '\\"')
+    .replace(/\n/g, "\\n")
+    .replace(/\r/g, "\\r")
+    .replace(/\t/g, "\\t");
+}
+
+/** Count how many weeks already exist so IDs are consistent (w1-1, w2-1 ...) */
+function countExistingWeeks(dataFile) {
+  const matches = dataFile.match(/weekOf:/g) || [];
+  return matches.length;
 }
 
 // ── main ─────────────────────────────────────────────────────────────────────
@@ -93,8 +105,11 @@ async function main() {
 
   // Step 2: Load previous ratio to calculate new one
   const dataFile = readFileSync(DATA_FILE, "utf8");
-  const prevRatioMatch = dataFile.match(/ratio:\s*([\d.]+)/);
-  const prevRatio = prevRatioMatch ? parseFloat(prevRatioMatch[1]) : 240;
+  const issueNum = countExistingWeeks(dataFile) + 1;
+
+  // Find ratio from first week entry (most recent) — more specific than simple regex
+  const prevRatioMatch = dataFile.match(/weeks:\s*NoiseWeek\[\]\s*=\s*\[\s*\{[\s\S]*?ratio:\s*([\d.]+)/);
+  const prevRatio = prevRatioMatch ? parseFloat(prevRatioMatch[1]) : 0;
   const newRatio = parseFloat((noiseCount / 5).toFixed(1));
   const change = (((newRatio - prevRatio) / prevRatio) * 100).toFixed(1);
 
@@ -119,7 +134,7 @@ async function main() {
     const catInput = await ask(rl, `    Category (${CATEGORIES.join("/")}): `);
     const category = CATEGORIES.includes(catInput.trim()) ? catInput.trim() : "market";
 
-    const weekNum = weekOf.replace(/-/g, "").slice(2);
+    const weekNum = issueNum;
     signal.push({ id: `s${weekNum}-${i + 1}`, title, url, source, whyItMatters, category, position: i + 1 });
     console.log();
   }
@@ -135,7 +150,7 @@ async function main() {
     const title = await ask(rl, "    Headline (in quotes): ");
     const source = await ask(rl, "    Platform (LinkedIn/Medium/Substack/etc): ");
     const offense = await ask(rl, "    The offense (1-2 sentences, dry): ");
-    const weekNum = weekOf.replace(/-/g, "").slice(2);
+    const weekNum = issueNum;
     noise.push({ id: `n${weekNum}-${i + 1}`, title, url: "#", source, offense });
     console.log();
   }
@@ -143,20 +158,20 @@ async function main() {
   // Step 6: Generate and prepend the new week object
   const signalStr = signal.map((s) => `      {
         id: "${s.id}",
-        title: "${s.title.replace(/"/g, '\\"')}",
-        url: "${s.url}",
-        source: "${s.source.replace(/"/g, '\\"')}",
-        whyItMatters: "${s.whyItMatters.replace(/"/g, '\\"')}",
+        title: "${escStr(s.title)}",
+        url: "${escStr(s.url)}",
+        source: "${escStr(s.source)}",
+        whyItMatters: "${escStr(s.whyItMatters)}",
         category: "${s.category}",
         position: ${s.position},
       }`).join(",\n");
 
   const noiseStr = noise.map((n) => `      {
         id: "${n.id}",
-        title: "${n.title.replace(/"/g, '\\"')}",
+        title: "${escStr(n.title)}",
         url: "#",
-        source: "${n.source.replace(/"/g, '\\"')}",
-        offense: "${n.offense.replace(/"/g, '\\"')}",
+        source: "${escStr(n.source)}",
+        offense: "${escStr(n.offense)}",
       }`).join(",\n");
 
   const newWeekBlock = `  {
@@ -164,7 +179,7 @@ async function main() {
     noiseCount: ${noiseCount},
     signalCount: 5,
     ratio: ${newRatio},
-    note: "${weekNote.replace(/"/g, '\\"')}",
+    note: "${escStr(weekNote)}",
     signal: [
 ${signalStr}
     ],
