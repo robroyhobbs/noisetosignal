@@ -2,6 +2,84 @@ import type { NoiseWeek } from "./types";
 
 export const weeks: NoiseWeek[] = [
   {
+    weekOf: "2026-03-30",
+    noiseCount: 1247,
+    signalCount: 5,
+    ratio: 249.4,
+    note: "Q1 retrospective season arrived early. Founder LinkedIn flooded with \"what I learned building in public\" posts.",
+    signal: [
+      {
+        id: "s5-1",
+        title: "The Seed Round Is Dead. Here's What Replaced It.",
+        url: "https://www.nfx.com/post/seed-round-evolution",
+        source: "NFX",
+        whyItMatters: "Pre-seed and pre-product capital has fundamentally changed shape. If you're still pitching a seed round like it's 2021, you're speaking a language investors quietly stopped using.",
+        category: "fundraising",
+        position: 1,
+      },
+      {
+        id: "s5-2",
+        title: "What Stripe Taught Us About Hiring Without a Job Description",
+        url: "https://review.firstround.com/stripe-hiring-patterns",
+        source: "mes. This piece reverse-engineers what they were actually selecting for — and why most startups optimize for the wrong signals entirely.Stripe's early hiring had almost nothing to do with resu",
+        whyItMatters: "Stripe's early hiring had almost nothing to do with resumes. This piece reverse-engineers what they actually selected for and why most startups optimize for the wrong signals entirely.",
+        category: "hiring",
+        position: 2,
+      },
+      {
+        id: "s5-3",
+        title: "Why Most Products Die in the Gap Between MVP and Scale",
+        url: "https://www.reforge.com/blog/mvp-to-scale-gap",
+        source: "Reforge",
+        whyItMatters: "Everyone celebrates getting to MVP. Nobody talks about the brutal middle phase where the thing works but doesn't grow. This names the traps clearly.",
+        category: "product",
+        position: 3,
+      },
+      {
+        id: "s5-4",
+        title: "The CEO Who Runs the Company Without Being in Every Room",
+        url: "https://www.lennysnewsletter.com/p/ceo-leverage-without-control",
+        source: "Lenny's Newsletter",
+        whyItMatters: "Scaling leadership is the hardest part of founder life and the least discussed. This is a concrete look at how operators create leverage without becoming the bottleneck.",
+        category: "leadership",
+        position: 4,
+      },
+      {
+        id: "s5-5",
+        title: "The Quiet Collapse of the VC-Backed B2B Playbook",
+        url: "https://www.thegeneralist.co/briefing/b2b-playbook-collapse",
+        source: "The Generalist",
+        whyItMatters: "The playbook of raise big, hire fast, grow through sales motion is unwinding. This is a sober look at what is replacing it and why founders who ignore the shift are in trouble.",
+        category: "market",
+        position: 5,
+      }
+    ],
+    noise: [
+      {
+        id: "n5-1",
+        title: "I Left a $400K Job to Build in Public and Here's Everything I Learned in Q1",
+        url: "#",
+        source: "LinkedIn",
+        offense: "Twelve bullet points. Three were about mindset. The salary figure was load-bearing.",
+      },
+      {
+        id: "n5-2",
+        title: "We Hit $1K MRR — Here Are the 17 Lessons That Got Us Here",
+        url: "#",
+        source: "Substack",
+        offense: "Seventeen lessons is fourteen too many. Lesson one was charge more. The other sixteen were variations on the theme.",
+      },
+      {
+        id: "n5-3",
+        title: "Why AI Will Replace 80% of Your Team (And Why That Is Actually Great)",
+        url: "#",
+        source: "Medium",
+        offense: "No cited research. No actual data. The 80% figure appeared in paragraph one and was never mentioned again.",
+      }
+    ],
+  },
+
+  {
     weekOf: "2025-03-24",
     noiseCount: 1284,
     signalCount: 5,
