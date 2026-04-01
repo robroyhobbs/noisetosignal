@@ -1,0 +1,110 @@
+name: Weekly NSI Update
+
+on:
+  schedule:
+    # Every Monday at 8am EST (1pm UTC)
+    - cron: "0 13 * * 1"
+  workflow_dispatch: # allow manual trigger from GitHub UI
+
+jobs:
+  create-weekly-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Count noise from RSS feeds
+        id: noise
+        run: node scripts/count-noise.mjs >> $GITHUB_OUTPUT
+
+      - name: Get Monday date
+        id: date
+        run: |
+          MONDAY=$(node -e "
+            const d = new Date();
+            const day = d.getDay();
+            const diff = day === 0 ? -6 : 1 - day;
+            d.setDate(d.getDate() + diff);
+            console.log(d.toISOString().split('T')[0]);
+          ")
+          echo "monday=$MONDAY" >> $GITHUB_OUTPUT
+
+      - name: Count existing weeks for issue number
+        id: issuenum
+        run: |
+          COUNT=$(node -e "
+            const fs = require('fs');
+            const data = fs.readFileSync('lib/data.ts', 'utf8');
+            const matches = data.match(/weekOf:/g) || [];
+            console.log(matches.length + 1);
+          ")
+          echo "count=$COUNT" >> $GITHUB_OUTPUT
+
+      - name: Create branch and stub week entry
+        run: |
+          BRANCH="week/${{ steps.date.outputs.monday }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+
+          node scripts/stub-week.mjs \
+            "${{ steps.date.outputs.monday }}" \
+            "${{ steps.noise.outputs.noise_count }}" \
+            "${{ steps.issuenum.outputs.count }}"
+
+          git add lib/data.ts
+          git commit -m "chore: stub week of ${{ steps.date.outputs.monday }} (NSI auto-count)"
+          git push origin "$BRANCH"
+
+      - name: Open Pull Request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          WEEK="${{ steps.date.outputs.monday }}"
+          NOISE="${{ steps.noise.outputs.noise_count }}"
+          RATIO=$(node -e "console.log(($NOISE / 5).toFixed(1))")
+
+          gh pr create \
+            --title "📡 Week of $WEEK — NSI $RATIO" \
+            --head "week/$WEEK" \
+            --base main \
+            --body "## Weekly Noise-to-Signal Update
+
+**Week of:** \`$WEEK\`
+**Noise count (auto):** $NOISE posts
+**Estimated NSI:** $RATIO
+
+---
+
+## ✏️ Your job: fill in the 5 signal picks below, then merge
+
+Edit \`lib/data.ts\` on this branch — find the \`week/$WEEK\` stub and replace the placeholder signal items.
+
+Or edit directly in this PR's file view.
+
+### Signal pick format:
+\`\`\`
+{
+  id: \"s${{ steps.issuenum.outputs.count }}-1\",
+  title: \"...\",
+  url: \"https://...\",
+  source: \"Publication Name\",
+  whyItMatters: \"1-2 sentences on why this matters to founders.\",
+  category: \"fundraising\" | \"hiring\" | \"product\" | \"leadership\" | \"market\",
+  position: 1,
+},
+\`\`\`
+
+### Also update the week note:
+Replace the placeholder \`note\` with a one-line summary of the noise theme this week.
+
+---
+
+Once merged → Vercel auto-deploys. 🚀"
