@@ -1,10 +1,13 @@
-import { getCurrentWeek, getRatioHistory, weeks } from "@/lib/data";
+import { getCurrentWeek, getRatioHistory, weeks, getCurrentDilemma, benchmarks, noiseSources } from "@/lib/data";
 import { Header } from "./components/Header";
 import { HeroExplainer } from "./components/HeroExplainer";
 import { NoiseIndex } from "./components/NoiseIndex";
 import { WeeklySignal } from "./components/WeeklySignal";
 import { NoiseExamples } from "./components/NoiseExamples";
 import { NoiseArchetypes } from "./components/NoiseArchetypes";
+import { NoiseLeaderboard } from "./components/NoiseLeaderboard";
+import { WeeklyDilemma } from "./components/WeeklyDilemma";
+import { HonestBenchmarks } from "./components/HonestBenchmarks";
 import { ContrastSection } from "./components/ContrastSection";
 import { InTheRoom } from "./components/InTheRoom";
 import { NewsletterForm } from "./components/NewsletterForm";
@@ -16,6 +19,7 @@ export default function Home() {
   const current = getCurrentWeek();
   const history = getRatioHistory();
   const previous = weeks[1] ?? weeks[0];
+  const dilemma = getCurrentDilemma();
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
@@ -38,6 +42,9 @@ export default function Home() {
         <WeeklySignal items={current.signal} />
         <NoiseExamples examples={current.noise} />
         <NoiseArchetypes />
+        <NoiseLeaderboard sources={noiseSources} />
+        <WeeklyDilemma dilemma={dilemma} />
+        <HonestBenchmarks benchmarks={benchmarks} />
         <ContrastSection />
         <InTheRoom />
         <NewsletterForm />
@@ -46,3 +53,4 @@ export default function Home() {
     </div>
   );
 }
+

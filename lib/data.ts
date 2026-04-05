@@ -1,4 +1,4 @@
-import type { NoiseWeek } from "./types";
+import type { NoiseWeek, Dilemma, BenchmarkStage, NoiseSource } from "./types";
 
 export const weeks: NoiseWeek[] = [
   {
@@ -434,3 +434,144 @@ export function getRatioHistory(): { week: string; ratio: number }[] {
 export function getWeekByDate(date: string): NoiseWeek | undefined {
   return weeks.find((w) => w.weekOf === date);
 }
+
+// ── Weekly Dilemma ────────────────────────────────────────────────────────────
+
+export const dilemmas: Dilemma[] = [
+  {
+    id: "d2026-03-30",
+    weekOf: "2026-03-30",
+    context:
+      "We have a term sheet from a brand-name fund at a $28M pre-money. Our existing lead says they'll follow but won't re-lead. The new investor wants to install an outside CFO as a condition of closing. We're at $1.8M ARR, growing 15% month-over-month. We don't think we need a CFO yet, but the capital extends runway from 8 months to 26.",
+    decision:
+      "Take the money on their terms, or keep looking with 8 months of runway left?",
+    stakes:
+      "If we pass, we may not find another lead in time. If we take it, we're committing to a CFO hire we didn't choose and may not need.",
+    submittedBy: "Series A founder, enterprise SaaS",
+  },
+];
+
+export function getCurrentDilemma(): Dilemma {
+  return dilemmas[0];
+}
+
+// ── Honest Benchmarks ─────────────────────────────────────────────────────────
+
+export const benchmarks: BenchmarkStage[] = [
+  {
+    stage: "Pre-Seed",
+    period: "Q1 2026",
+    raised: "$750K–$1.2M",
+    arr: "Pre-revenue or <$50K",
+    growth: "N/A",
+    runway: "12–15 mo",
+    teamSize: "2–4",
+    note: "Most deals are founder-led, friends-and-family, or angel syndicates. Deck-stage is still possible but increasingly rare without a working prototype.",
+  },
+  {
+    stage: "Seed",
+    period: "Q1 2026",
+    raised: "$2M–$4M",
+    arr: "$150K–$600K",
+    growth: "3–5x YoY",
+    runway: "18–24 mo",
+    teamSize: "6–12",
+    note: "Bar has moved up significantly. Investors want real signal — paying customers, not just pilots. $0 ARR seed rounds are the exception, not the rule.",
+  },
+  {
+    stage: "Series A",
+    period: "Q1 2026",
+    raised: "$8M–$15M",
+    arr: "$1M–$2.5M",
+    growth: "2.5–4x YoY",
+    runway: "18–24 mo",
+    teamSize: "15–30",
+    note: "The A is a bet on repeatability. Investors want to see the GTM motion working — not just that you closed deals, but that you can close them again without the founder in every call.",
+  },
+  {
+    stage: "Series B",
+    period: "Q1 2026",
+    raised: "$25M–$50M",
+    arr: "$6M–$15M",
+    growth: "2–3x YoY",
+    runway: "24–30 mo",
+    teamSize: "40–80",
+    note: "Scale mode. You're hiring ahead of the curve. Investors are pricing the path to $100M ARR. If you can't show how you get there in 3–4 years, the conversation stalls.",
+  },
+];
+
+// ── Noise Leaderboard ─────────────────────────────────────────────────────────
+
+export const noiseSources: NoiseSource[] = [
+  {
+    rank: 1,
+    name: "LinkedIn (founder content)",
+    noiseScore: 94,
+    verdict: "The world's largest performance venue for founders who haven't shipped yet.",
+    tier: "high",
+  },
+  {
+    rank: 2,
+    name: "Medium (startup category)",
+    noiseScore: 83,
+    verdict: "Where frameworks go to retire. Every post ends with a call to follow the author.",
+    tier: "high",
+  },
+  {
+    rank: 3,
+    name: "Twitter/X (startup discourse)",
+    noiseScore: 77,
+    verdict: "Hot takes with the shelf life of a news cycle. The ratio of assertion to evidence is historic.",
+    tier: "high",
+  },
+  {
+    rank: 4,
+    name: "Generic VC blogs",
+    noiseScore: 68,
+    verdict: "Portfolio updates dressed as market insight. Useful for knowing what they've already funded.",
+    tier: "high",
+  },
+  {
+    rank: 5,
+    name: "TechCrunch",
+    noiseScore: 57,
+    verdict: "Funding announcements are news. The surrounding content is mostly noise at speed.",
+    tier: "medium",
+  },
+  {
+    rank: 6,
+    name: "Substack (avg)",
+    noiseScore: 44,
+    verdict: "Wide variance. The best are excellent. The rest are LinkedIn posts with paragraph breaks.",
+    tier: "medium",
+  },
+  {
+    rank: 7,
+    name: "Y Combinator (content)",
+    noiseScore: 31,
+    verdict: "Founder-tested heuristics. Ages reasonably well. Occasionally overfits to the YC archetype.",
+    tier: "medium",
+  },
+  {
+    rank: 8,
+    name: "NFX",
+    noiseScore: 22,
+    verdict: "Network effects as a lens on everything. Works more often than it should.",
+    tier: "low",
+  },
+  {
+    rank: 9,
+    name: "Lenny's Newsletter",
+    noiseScore: 19,
+    verdict: "The rare practitioner voice that doesn't overstay its welcome. Consistently worth opening.",
+    tier: "low",
+  },
+  {
+    rank: 10,
+    name: "First Round Review",
+    noiseScore: 16,
+    verdict: "The gold standard for operator-sourced insight. Slow cadence, high signal.",
+    tier: "low",
+  },
+];
+
