@@ -197,6 +197,41 @@ ${noiseStr}
   writeFileSync(DATA_FILE, updated, "utf8");
 
   console.log("\x1b[32m\n✓ Week added to lib/data.ts\x1b[0m");
+
+  // Step 7: Optional — swap the Weekly Dilemma
+  console.log("\n\x1b[36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\x1b[0m");
+  console.log("\x1b[1m  Weekly Dilemma (optional)\x1b[0m");
+  console.log("\x1b[36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\x1b[0m\n");
+
+  const swapDilemma = await ask(rl, "  Add a new dilemma this week? (y/N): ");
+
+  if (swapDilemma.trim().toLowerCase() === "y") {
+    console.log("\n  Keep it anonymized — no names, companies, or identifying details.\n");
+    const dContext = await ask(rl, "  Context (the situation, 2-4 sentences):\n  > ");
+    const dDecision = await ask(rl, "  The decision (one sentence question):\n  > ");
+    const dStakes = await ask(rl, "  Stakes (what's at risk either way, 1-2 sentences):\n  > ");
+    const dSubmittedBy = await ask(rl, "  Submitted by (role only, e.g. 'Series A founder, B2B SaaS'):\n  > ");
+
+    const newDilemmaBlock = `  {
+    id: "d${weekOf}",
+    weekOf: "${weekOf}",
+    context: "${escStr(dContext)}",
+    decision: "${escStr(dDecision)}",
+    stakes: "${escStr(dStakes)}",
+    submittedBy: "${escStr(dSubmittedBy)}",
+  },\n`;
+
+    const updatedData = readFileSync(DATA_FILE, "utf8");
+    const dilemmaUpdated = updatedData.replace(
+      "export const dilemmas: Dilemma[] = [",
+      `export const dilemmas: Dilemma[] = [\n${newDilemmaBlock}`
+    );
+    writeFileSync(DATA_FILE, dilemmaUpdated, "utf8");
+    console.log("\x1b[32m\n✓ Dilemma added\x1b[0m");
+  } else {
+    console.log("  \x1b[90mSkipped — keeping last week's dilemma\x1b[0m");
+  }
+
   console.log("\x1b[90m\nNext steps:\x1b[0m");
   console.log("  git add lib/data.ts && git commit -m \"Add week of " + weekOf + "\" && git push");
   console.log("  (Vercel will auto-deploy)\n");
