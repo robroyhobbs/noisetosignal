@@ -2,6 +2,84 @@ import type { NoiseWeek, Dilemma, BenchmarkStage, NoiseSource } from "./types";
 
 export const weeks: NoiseWeek[] = [
   {
+    weekOf: "2026-04-13",
+    noiseCount: 218,
+    signalCount: 5,
+    ratio: 43.6,
+    note: "Capital kept clustering at the top while the founder feed swung between AI certainty, layoff realism, and recycled GTM posturing.",
+    signal: [
+      {
+        id: "s7-1",
+        title: "These 3 Charts Show How Venture Capital Has Concentrated At The Top In 2026",
+        url: "https://news.crunchbase.com/venture/capital-concentrated-ai-global-q1-2026/",
+        source: "Crunchbase News",
+        whyItMatters: "If you're raising outside the frontier-model slipstream, this is the market you're actually in. The piece makes the core reality plain: more dollars are being invested, but into fewer companies.",
+        category: "market",
+        position: 1,
+      },
+      {
+        id: "s7-2",
+        title: "The Crunchbase Tech Layoffs Tracker",
+        url: "https://news.crunchbase.com/startups/tech-layoffs/",
+        source: "Crunchbase News",
+        whyItMatters: "This is a useful read on hiring conditions because it strips away the optimism theater. Founders can see where teams are still contracting, which functions are getting hit, and how cautious the market remains.",
+        category: "hiring",
+        position: 2,
+      },
+      {
+        id: "s7-3",
+        title: "Exclusive: GetWhys Raises $5.2M To Help Companies Like Intel And Verizon Better Understand Their Customers",
+        url: "https://news.crunchbase.com/venture/customer-intelligence-ai-getwhys-raises-more-seed-boutros/",
+        source: "Crunchbase News",
+        whyItMatters: "The interesting part isn't the round size. It's the model: proprietary customer interviews turned into reusable GTM intelligence, with humans collecting the signal and AI compressing the work.",
+        category: "product",
+        position: 3,
+      },
+      {
+        id: "s7-4",
+        title: "Wealth.com Nabs $65M Series B Round",
+        url: "https://vcnewsdaily.com/wealth.com/venture-capital-funding/wycmfbtjts",
+        source: "VC News Daily",
+        whyItMatters: "This is a reminder that capital is still available for companies solving expensive, workflow-heavy problems in traditional industries. When a market is painful enough, founders can still raise into it.",
+        category: "fundraising",
+        position: 4,
+      },
+      {
+        id: "s7-5",
+        title: "Founder retreats",
+        url: "https://www.highsignal.io/founder-retreats/",
+        source: "High Signal",
+        whyItMatters: "Worth reading less for the retreat trend itself than for what it signals: founders are actively searching for smaller, higher-trust rooms. That's a useful counterweight to the usual timeline noise.",
+        category: "leadership",
+        position: 5,
+      }
+    ],
+    noise: [
+      {
+        id: "n7-1",
+        title: "We replaced standups with AI agents and instantly got 10x faster",
+        url: "#",
+        source: "LinkedIn",
+        offense: "The company did not get 10x faster. It stopped writing things down and renamed the confusion.",
+      },
+      {
+        id: "n7-2",
+        title: "Why every founder should post their operating system before they have PMF",
+        url: "#",
+        source: "Substack",
+        offense: "No customer interviews, no product insight, just a productivity stack dressed up as strategy.",
+      },
+      {
+        id: "n7-3",
+        title: "The agentic org chart is here and middle management is over",
+        url: "#",
+        source: "Medium",
+        offense: "The headline declared a revolution. The body delivered three examples, none from a company you'd want to copy yet.",
+      }
+    ],
+  },
+
+  {
     weekOf: "2026-03-30",
     noiseCount: 1247,
     signalCount: 5,
@@ -574,4 +652,3 @@ export const noiseSources: NoiseSource[] = [
     tier: "low",
   },
 ];
-

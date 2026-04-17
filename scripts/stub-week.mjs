@@ -21,7 +21,7 @@ if (!weekOf || !noiseCount || !issueNum) {
 const ratio = (parseInt(noiseCount) / 5).toFixed(1);
 
 const signalPlaceholders = Array.from({ length: 5 }, (_, i) => `      {
-        id: "${issueNum}-${i + 1}",
+        id: "s${issueNum}-${i + 1}",
         title: "TODO: Signal pick ${i + 1}",
         url: "https://example.com",
         source: "TODO",
