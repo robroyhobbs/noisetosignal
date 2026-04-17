@@ -71,40 +71,46 @@ jobs:
           NOISE="${{ steps.noise.outputs.noise_count }}"
           RATIO=$(node -e "console.log(($NOISE / 5).toFixed(1))")
 
+          PR_BODY_FILE="$RUNNER_TEMP/weekly-pr-body.md"
+
+          cat > "$PR_BODY_FILE" <<EOF
+          ## Weekly Noise-to-Signal Update
+
+          **Week of:** \`$WEEK\`
+          **Noise count (auto):** $NOISE posts
+          **Estimated NSI:** $RATIO
+
+          ---
+
+          ## ✏️ Your job: fill in the 5 signal picks below, then merge
+
+          Edit \`lib/data.ts\` on this branch — find the \`week/$WEEK\` stub and replace the placeholder signal items.
+
+          Or edit directly in this PR's file view.
+
+          ### Signal pick format:
+          \`\`\`
+          {
+            id: "s${{ steps.issuenum.outputs.count }}-1",
+            title: "...",
+            url: "https://...",
+            source: "Publication Name",
+            whyItMatters: "1-2 sentences on why this matters to founders.",
+            category: "fundraising" | "hiring" | "product" | "leadership" | "market",
+            position: 1,
+          },
+          \`\`\`
+
+          ### Also update the week note:
+          Replace the placeholder \`note\` with a one-line summary of the noise theme this week.
+
+          ---
+
+          Once merged → Vercel auto-deploys. 🚀
+          EOF
+
           gh pr create \
             --title "📡 Week of $WEEK — NSI $RATIO" \
             --head "week/$WEEK" \
             --base main \
-            --body "## Weekly Noise-to-Signal Update
-
-**Week of:** \`$WEEK\`
-**Noise count (auto):** $NOISE posts
-**Estimated NSI:** $RATIO
-
----
-
-## ✏️ Your job: fill in the 5 signal picks below, then merge
-
-Edit \`lib/data.ts\` on this branch — find the \`week/$WEEK\` stub and replace the placeholder signal items.
-
-Or edit directly in this PR's file view.
-
-### Signal pick format:
-\`\`\`
-{
-  id: \"s${{ steps.issuenum.outputs.count }}-1\",
-  title: \"...\",
-  url: \"https://...\",
-  source: \"Publication Name\",
-  whyItMatters: \"1-2 sentences on why this matters to founders.\",
-  category: \"fundraising\" | \"hiring\" | \"product\" | \"leadership\" | \"market\",
-  position: 1,
-},
-\`\`\`
-
-### Also update the week note:
-Replace the placeholder \`note\` with a one-line summary of the noise theme this week.
-
----
-
-Once merged → Vercel auto-deploys. 🚀"
+            --body-file "$PR_BODY_FILE"
