@@ -36,18 +36,39 @@ jobs:
           ")
           echo "monday=$MONDAY" >> $GITHUB_OUTPUT
 
+      - name: Skip if this week already exists on GitHub
+        id: skip
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          WEEK="${{ steps.date.outputs.monday }}"
+          if git ls-remote origin "refs/heads/week/$WEEK" | grep -q .; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "reason=Branch week/$WEEK already exists on origin" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          PR_COUNT=$(gh pr list --head "week/$WEEK" --json number --jq 'length')
+          if [ "$PR_COUNT" != "0" ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "reason=Open PR already exists for week/$WEEK" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          echo "skip=false" >> $GITHUB_OUTPUT
+
       - name: Count existing weeks for issue number
         id: issuenum
+        if: steps.skip.outputs.skip != 'true'
         run: |
           COUNT=$(node -e "
             const fs = require('fs');
             const data = fs.readFileSync('lib/data.ts', 'utf8');
-            const matches = data.match(/weekOf:/g) || [];
+            const matches = data.match(/noiseCount:/g) || [];
             console.log(matches.length + 1);
           ")
           echo "count=$COUNT" >> $GITHUB_OUTPUT
 
       - name: Create branch and stub week entry
+        if: steps.skip.outputs.skip != 'true'
         run: |
           BRANCH="week/${{ steps.date.outputs.monday }}"
           git config user.name "github-actions[bot]"
@@ -64,6 +85,7 @@ jobs:
           git push origin "$BRANCH"
 
       - name: Open Pull Request
+        if: steps.skip.outputs.skip != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
