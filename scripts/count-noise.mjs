@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 /**
- * Fetches RSS feeds and outputs noise_count for GitHub Actions.
+ * Fetches RSS/Atom feeds and outputs noise_count for GitHub Actions.
+ * Uses global fetch (Node 18+) with redirects — no randomness so reruns match.
  * Writes: noise_count=<number> to stdout (captured as step output).
  */
-
-import https from "https";
 
 const RSS_FEEDS = [
   "https://techcrunch.com/feed/",
@@ -13,21 +12,29 @@ const RSS_FEEDS = [
   "https://www.theinformation.com/feed",
 ];
 
-function fetchCount(url) {
-  return new Promise((resolve) => {
-    const req = https.get(url, { timeout: 6000 }, (res) => {
-      let data = "";
-      res.on("data", (c) => (data += c));
-      res.on("end", () => resolve((data.match(/<item>/g) || []).length));
+function countFeedItems(xml) {
+  const items = (xml.match(/<item[\s>]/gi) || []).length;
+  const entries = (xml.match(/<entry[\s>]/gi) || []).length;
+  return Math.max(items, entries);
+}
+
+async function fetchCount(url) {
+  try {
+    const res = await fetch(url, {
+      redirect: "follow",
+      signal: AbortSignal.timeout(12000),
     });
-    req.on("error", () => resolve(0));
-    req.on("timeout", () => { req.destroy(); resolve(0); });
-  });
+    if (!res.ok) return 0;
+    const text = await res.text();
+    return countFeedItems(text);
+  } catch {
+    return 0;
+  }
 }
 
 const counts = await Promise.all(RSS_FEEDS.map(fetchCount));
 const total = counts.reduce((a, b) => a + b, 0);
-const estimated = Math.round(total * 4.2 + Math.floor(Math.random() * 80));
+// Deterministic scale from aggregate feed volume (no RNG — same inputs ⇒ same NSI input).
+const estimated = Math.max(0, Math.round(total * 4.2));
 
-// GitHub Actions output format
 console.log(`noise_count=${estimated}`);

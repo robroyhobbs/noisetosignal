@@ -2,7 +2,7 @@ name: Weekly NSI Update
 
 on:
   schedule:
-    # Every Monday at 8am EST (1pm UTC)
+    # Monday 13:00 UTC (08:00 Eastern standard / 09:00 daylight — use UTC for stability)
     - cron: "0 13 * * 1"
   workflow_dispatch: # allow manual trigger from GitHub UI
 
@@ -45,12 +45,14 @@ jobs:
           if git ls-remote origin "refs/heads/week/$WEEK" | grep -q .; then
             echo "skip=true" >> $GITHUB_OUTPUT
             echo "reason=Branch week/$WEEK already exists on origin" >> $GITHUB_OUTPUT
+            echo "::notice::Weekly NSI skipped — branch week/$WEEK already exists on origin."
             exit 0
           fi
           PR_COUNT=$(gh pr list --head "week/$WEEK" --json number --jq 'length')
           if [ "$PR_COUNT" != "0" ]; then
             echo "skip=true" >> $GITHUB_OUTPUT
             echo "reason=Open PR already exists for week/$WEEK" >> $GITHUB_OUTPUT
+            echo "::notice::Weekly NSI skipped — open PR already exists for week/$WEEK."
             exit 0
           fi
           echo "skip=false" >> $GITHUB_OUTPUT

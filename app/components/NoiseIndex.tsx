@@ -34,8 +34,12 @@ export function NoiseIndex({
   history,
 }: NoiseIndexProps) {
   const change = currentRatio - previousRatio;
-  const changePct = previousRatio > 0 ? ((change / previousRatio) * 100).toFixed(1) : "N/A";
-  const changeDisplay = changePct === "N/A" ? "N/A" : `${Number(changePct) >= 0 ? "▲ +" : "▼ "}${changePct}%`;
+  const changePct =
+    previousRatio > 0 ? ((change / previousRatio) * 100).toFixed(1) : "N/A";
+  const changeDisplay =
+    changePct === "N/A"
+      ? "N/A"
+      : `${Number(changePct) >= 0 ? "▲ +" : "▼ "}${changePct}%`;
   const chartData = history.map((h) => ({
     week: formatWeekShort(h.week),
     ratio: h.ratio,
@@ -152,9 +156,11 @@ export function NoiseIndex({
           </div>
         </div>
 
-        {/* Chart */}
-        <div style={{ height: 120, marginBottom: 0, minWidth: 0 }}>
-          <ResponsiveContainer width="100%" height="100%">
+        {/* Chart — explicit height avoids ResponsiveContainer -1 during static prerender */}
+        <div
+          style={{ height: 120, marginBottom: 0, minWidth: 0, width: "100%" }}
+        >
+          <ResponsiveContainer width="100%" height={120}>
             <LineChart
               data={chartData}
               margin={{ top: 4, right: 0, bottom: 0, left: 0 }}
@@ -174,7 +180,10 @@ export function NoiseIndex({
                   color: "var(--text-primary)",
                   fontSize: 12,
                 }}
-                formatter={(v) => [typeof v === 'number' ? v.toFixed(1) : v, "NSI"]}
+                formatter={(v) => [
+                  typeof v === "number" ? v.toFixed(1) : v,
+                  "NSI",
+                ]}
               />
               <Line
                 type="monotone"
