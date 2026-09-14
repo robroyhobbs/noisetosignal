@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, type CSSProperties } from "react";
+import { SITE_URL } from "@/lib/site";
 
-const SITE_URL = "https://founderratio.com";
 
 interface ShareThisWeekProps {
   weekOf: string;
