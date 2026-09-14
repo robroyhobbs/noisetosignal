@@ -1,19 +1,18 @@
 import type { MetadataRoute } from "next";
 import { topicSlugs } from "@/lib/topics";
 import { conceptSlugs } from "@/lib/concepts";
-
-const siteUrl = "https://founderratio.com";
+import { SITE_URL, absoluteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const topicEntries: MetadataRoute.Sitemap = topicSlugs.map((slug) => ({
-    url: `${siteUrl}/topics/${slug}`,
+    url: absoluteUrl(`/topics/${slug}`),
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.8,
   }));
 
   const conceptEntries: MetadataRoute.Sitemap = conceptSlugs.map((slug) => ({
-    url: `${siteUrl}/concepts/${slug}`,
+    url: absoluteUrl(`/concepts/${slug}`),
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.75,
@@ -21,25 +20,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: siteUrl,
+      url: SITE_URL,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${siteUrl}/archive`,
+      url: absoluteUrl("/archive"),
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.7,
     },
     {
-      url: `${siteUrl}/topics`,
+      url: absoluteUrl("/topics"),
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.85,
     },
     {
-      url: `${siteUrl}/concepts`,
+      url: absoluteUrl("/concepts"),
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.85,
