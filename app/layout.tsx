@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     template: "%s | Founder Ratio",
   },
   description:
-    "Founder Ratio: the weekly founder attention filter. Every week we publish the noise÷signal ratio plus 5 curated picks that change a real decision for venture-backed founders — fundraising, hiring, board, runway, GTM. FounderNexus is the room.",
+    "Weekly noise÷signal ratio and five decision-changing picks for venture-backed founders.",
   alternates: {
     canonical: siteUrl,
   },
   openGraph: {
     title: "Founder Ratio | The Founder Attention Index",
     description:
-      "Founder Ratio — weekly founder attention filter. 5 picks that change a real decision, plus the ratio of startup noise to signal. The ratio is always bad. FounderNexus is the room.",
+      "Five picks that change a real decision, plus the weekly noise÷signal ratio. The ratio is always bad.",
     url: siteUrl,
     siteName: "Founder Ratio",
     type: "website",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Founder Ratio | The Founder Attention Index",
     description:
-      "Founder Ratio — 5 picks that change a real decision for venture-backed founders, plus the weekly noise÷signal ratio. FounderNexus is the room.",
+      "Five decision-changing picks and the weekly noise÷signal ratio.",
   },
   icons: {
     icon: [{ url: "/icon.png", type: "image/png" }],

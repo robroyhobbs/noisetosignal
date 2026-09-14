@@ -94,7 +94,7 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
           style={{
             maxWidth: 1100,
             margin: "0 auto",
-            padding: "16px 24px",
+            padding: "18px 24px",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
@@ -111,7 +111,14 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
                 src="/brand/founder-ratio-wordmark.png"
                 alt="Founder Ratio"
                 height={48}
-                style={{ height: 48, width: "auto", display: "block" }}
+                style={{
+                  height: 48,
+                  width: "auto",
+                  maxHeight: 48,
+                  objectFit: "contain",
+                  display: "block",
+                  flexShrink: 0,
+                }}
               />
             </Link>
             <div

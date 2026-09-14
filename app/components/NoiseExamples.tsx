@@ -47,8 +47,7 @@ export function NoiseExamples({ examples }: NoiseExamplesProps) {
               lineHeight: 1.5,
             }}
           >
-            Three examples of what the ratio is made of. We&apos;re not naming anyone.
-            The offense speaks for itself.
+            Three examples. We don&apos;t name names.
           </div>
         </div>
 

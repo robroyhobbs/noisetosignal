@@ -29,7 +29,7 @@ export function HeroExplainer() {
               lineHeight: 1.4,
             }}
           >
-            For venture-backed founders who are drowning in startup content.
+            For venture-backed founders drowning in startup content.
           </p>
           <p
             style={{
@@ -39,22 +39,12 @@ export function HeroExplainer() {
               margin: 0,
             }}
           >
-            <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>
-              Founder Ratio
-            </span>{" "}
-            is a weekly filter for what actually matters when you are raising,
-            hiring, running a board, watching runway, or fixing GTM. Thousands
-            of startup posts land every week. Most of it is noise. We count that
-            volume, divide by five hand-picked items that change a real decision,
-            and publish the{" "}
+            Each week we count the noise, publish five picks that change a real
+            decision, and track the{" "}
             <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>
               Founder Ratio (noise ÷ signal)
             </span>
-            . The ratio is always bad.{" "}
-            <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>
-              FounderNexus is the room
-            </span>{" "}
-            where the conversation goes further.
+            . The ratio is always bad.
           </p>
         </div>
 
@@ -81,7 +71,7 @@ export function HeroExplainer() {
             />
             <span style={{ fontSize: 13, color: "var(--text-sec)" }}>
               <strong style={{ color: "var(--text-primary)" }}>Noise</strong>{" "}
-              — everything published about startups this week
+              — this week&apos;s startup feed volume
             </span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -97,7 +87,7 @@ export function HeroExplainer() {
             />
             <span style={{ fontSize: 13, color: "var(--text-sec)" }}>
               <strong style={{ color: "var(--text-primary)" }}>Signal</strong>{" "}
-              — 5 picks that change a real decision
+              — 5 decision-changing picks
             </span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -112,8 +102,8 @@ export function HeroExplainer() {
               }}
             />
             <span style={{ fontSize: 13, color: "var(--text-sec)" }}>
-              <strong style={{ color: "var(--text-primary)" }}>The ratio</strong>{" "}
-              — noise ÷ signal. Tracked weekly.
+              <strong style={{ color: "var(--text-primary)" }}>Ratio</strong>{" "}
+              — noise ÷ signal
             </span>
           </div>
         </div>

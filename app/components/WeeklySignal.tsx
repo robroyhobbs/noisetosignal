@@ -59,21 +59,8 @@ export function WeeklySignal({ items }: WeeklySignalProps) {
                 lineHeight: 1.5,
               }}
             >
-              Curated for venture-backed founders. Fundraising, hiring, board,
-              runway, GTM — not vanity volume.
+              Fundraising, hiring, board, runway, GTM.
             </p>
-          </div>
-          <div
-            style={{
-              fontSize: 12,
-              color: "var(--text-muted)",
-              maxWidth: 280,
-              textAlign: "right",
-              lineHeight: 1.5,
-              flexShrink: 0,
-            }}
-          >
-            Why it matters is the product. Headlines alone do not make the cut.
           </div>
         </div>
 
