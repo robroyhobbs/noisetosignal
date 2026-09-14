@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
-const siteUrl = "https://founderratio.com";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
     default:
       "Founder Ratio | Weekly picks for venture-backed founders",
@@ -14,14 +13,10 @@ export const metadata: Metadata = {
   },
   description:
     "Weekly noise÷signal ratio and five decision-changing picks for venture-backed founders.",
-  alternates: {
-    canonical: siteUrl,
-  },
   openGraph: {
     title: "Founder Ratio | The Founder Attention Index",
     description:
       "Five picks that change a real decision, plus the weekly noise÷signal ratio. The ratio is always bad.",
-    url: siteUrl,
     siteName: "Founder Ratio",
     type: "website",
     locale: "en_US",
