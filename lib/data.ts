@@ -2,6 +2,96 @@ import type { NoiseWeek, Dilemma, BenchmarkStage, NoiseSource } from "./types";
 
 export const weeks: NoiseWeek[] = [
   {
+    weekOf: "2026-09-14",
+    noiseCount: 462,
+    signalCount: 5,
+    ratio: 92.4,
+    note: "Infra mega-rounds and agent-security theater crowded the feed while the operator stories that mattered were about pivots, hiring after cuts, and who still gets to raise.",
+    signal: [
+      {
+        id: "s29-1",
+        title:
+          "Investing in Lightfield: $47M Series A after the hardest founder move — the pivot",
+        url: "https://a16z.com/announcement/investing-in-lightfield/",
+        source: "Andreessen Horowitz",
+        whyItMatters:
+          "For founders mid-pivot: shrinking to a core team, renaming the company, and raising into a new thesis is the hard path — not a LinkedIn rebound story. Read it as a case study in when to cut and what finding product-market fit again actually costs.",
+        category: "leadership",
+        position: 1,
+      },
+      {
+        id: "s29-2",
+        title:
+          "Sequoia doubles down on Cymphony as AI agents create new enterprise security risks",
+        url: "https://techcrunch.com/2026/09/09/sequoia-doubles-down-on-cymphony-as-ai-agents-create-new-enterprise-security-risks/",
+        source: "TechCrunch",
+        whyItMatters:
+          "If you ship agents into customer environments, security is no longer a checkbox — it is the product surface. Useful for any founder selling into IT buyers: the buying committee just got bigger.",
+        category: "product",
+        position: 2,
+      },
+      {
+        id: "s29-3",
+        title:
+          "How This Doctor-Turned-Startup-Founder Decided To Fix The Healthcare Staffing Crunch: Make Employers Apply",
+        url: "https://news.crunchbase.com/venture/doctor-turned-startup-founder-healthcare-staffing-crunch-abuzeid-incredible/",
+        source: "Crunchbase News",
+        whyItMatters:
+          "Practical on how a non-technical founder raised ~$97M by being selective about investors after talking to ~70 for seed. A useful filter for founders currently in market: marketplace experience and operator partners beat logo collecting.",
+        category: "hiring",
+        position: 3,
+      },
+      {
+        id: "s29-4",
+        title: "Poseidon Aerospace lands $60M ahead of first pilotless test flight",
+        url: "https://techcrunch.com/2026/09/08/poseidon-aerospace-lands-60m-ahead-of-first-pilotless-test-flight/",
+        source: "TechCrunch",
+        whyItMatters:
+          "Hard-tech Series A tied to a near-term flight milestone and an explicit hiring spree. Reality check for software founders comparing raise-when-metrics-look-good with raise-against-a-proof-point-you-cannot-fake.",
+        category: "fundraising",
+        position: 4,
+      },
+      {
+        id: "s29-5",
+        title:
+          "Temporal raises $550M at a $12.55B valuation as demand grows for reliable AI infrastructure",
+        url: "https://temporal.io/blog/temporal-raises-usd550m-series-e-at-usd12-55b-valuation-ai",
+        source: "Temporal",
+        whyItMatters:
+          "The denominator piece. Capital is still flooding reliable AI infrastructure while most app-layer founders fight for scraps. Price your round against the market you are actually in, not the headlines of companies processing trillions of actions.",
+        category: "market",
+        position: 5,
+      },
+    ],
+    noise: [
+      {
+        id: "n29-1",
+        title: "We pivoted without firing anyone and culture has never been stronger",
+        url: "#",
+        source: "LinkedIn",
+        offense:
+          "The burn stayed flat. The roadmap got a new adjective. That was the entire strategy update.",
+      },
+      {
+        id: "n29-2",
+        title: "Our agents are full teammates now (org chart attached)",
+        url: "#",
+        source: "Twitter/X",
+        offense:
+          "Nobody listed an owner for when the agent deleted the CRM field. Accountability was framed as a vibe.",
+      },
+      {
+        id: "n29-3",
+        title: "Congrats to every founder who raised this week — proof the market is back",
+        url: "#",
+        source: "Substack",
+        offense:
+          "Twelve logos. Zero cohort retention. The comments still called it a macro signal.",
+      },
+    ],
+  },
+
+  {
     weekOf: "2026-04-20",
     noiseCount: 221,
     signalCount: 5,
@@ -632,6 +722,17 @@ export function getWeekByDate(date: string): NoiseWeek | undefined {
 // ── Weekly Dilemma ────────────────────────────────────────────────────────────
 
 export const dilemmas: Dilemma[] = [
+  {
+    id: "d2026-09-14",
+    weekOf: "2026-09-14",
+    context:
+      "We are a 28-person B2B SaaS team at $2.4M ARR, flat for two quarters. We raised $18M at a $90M post 20 months ago. Two enterprise logos drive 40% of revenue and both renewals are soft. A growth fund will lead a $12M extension at a flat round if we keep headcount and ship an AI agent packaging story. Our gut says we need to cut to ~14, rebuild GTM around one ICP, and raise smaller later — Lightfield-style — but the board wants the extension closed this month.",
+    decision:
+      "Take the flat extension and keep the team, or cut hard now and risk the board fight / fundraising gap?",
+    stakes:
+      "The extension buys runway into a story we do not believe. The cut buys honesty and may strand us without a lead for 6–9 months.",
+    submittedBy: "Series A founder, B2B SaaS",
+  },
   {
     id: "d2026-04-20",
     weekOf: "2026-04-20",
