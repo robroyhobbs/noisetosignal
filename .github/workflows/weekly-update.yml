@@ -98,7 +98,7 @@ jobs:
           PR_BODY_FILE="$RUNNER_TEMP/weekly-pr-body.md"
 
           cat > "$PR_BODY_FILE" <<EOF
-          ## Weekly Noise-to-Signal Update
+          ## Weekly Founder Ratio Update
 
           **Week of:** \`$WEEK\`
           **Noise count (auto):** $NOISE posts

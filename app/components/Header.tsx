@@ -106,9 +106,8 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
                 lineHeight: 1,
               }}
             >
-              NOISE
-              <span style={{ color: "var(--accent)" }}>-TO-</span>
-              SIGNAL
+              Founder{" "}
+              <span style={{ color: "var(--accent)" }}>Ratio</span>
             </h1>
           </div>
 

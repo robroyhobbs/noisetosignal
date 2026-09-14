@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Weekly update script for Noise-to-Signal
+ * Weekly update script for Founder Ratio
  * Run every Monday: node scripts/update-week.mjs
  *
  * What it does:
@@ -80,7 +80,7 @@ async function main() {
   const rl = createInterface({ input: process.stdin, output: process.stdout });
 
   console.log("\n\x1b[36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\x1b[0m");
-  console.log("\x1b[1m  NOISE-TO-SIGNAL — Weekly Update Script\x1b[0m");
+  console.log("\x1b[1m  FOUNDER RATIO — Weekly Update Script\x1b[0m");
   console.log("\x1b[36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\x1b[0m\n");
 
   const weekOf = getMondayISO();

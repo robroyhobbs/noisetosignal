@@ -30,7 +30,7 @@ export function Footer() {
               marginBottom: 6,
             }}
           >
-            NOISE-TO-SIGNAL
+            Founder Ratio
           </div>
           <div
             style={{
@@ -51,7 +51,7 @@ export function Footer() {
             </a>
             {" "}in partnership with{" "}
             <a
-              href="https://www.foundernexus.com?utm_source=noisetosignal&utm_medium=referral&utm_campaign=week-2026-09-14&utm_content=footer"
+              href="https://www.foundernexus.com?utm_source=founderratio&utm_medium=referral&utm_campaign=week-2026-09-14&utm_content=footer"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "var(--text-sec)", textDecoration: "none" }}
@@ -83,7 +83,7 @@ export function Footer() {
             and Substack. Signal is human-curated. The ratio is always bad.
           </div>
           <div style={{ marginTop: 12, fontSize: 11, color: "var(--text-muted)" }}>
-            © {new Date().getFullYear()} Noise-to-Signal
+            © {new Date().getFullYear()} Founder Ratio
           </div>
         </div>
       </div>

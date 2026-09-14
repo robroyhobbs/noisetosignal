@@ -4,8 +4,8 @@ interface InTheRoomProps {
 
 export function InTheRoom({ weekOf }: InTheRoomProps) {
   const campaign = `week-${weekOf}`;
-  const roomLink = `https://www.foundernexus.com?utm_source=noisetosignal&utm_medium=referral&utm_campaign=${campaign}&utm_content=in-the-room-secondary`;
-  const applyLink = `https://platform.foundernexus.com/registration?utm_source=noisetosignal&utm_medium=referral&utm_campaign=${campaign}&utm_content=in-the-room`;
+  const roomLink = `https://www.foundernexus.com?utm_source=founderratio&utm_medium=referral&utm_campaign=${campaign}&utm_content=in-the-room-secondary`;
+  const applyLink = `https://platform.foundernexus.com/registration?utm_source=founderratio&utm_medium=referral&utm_campaign=${campaign}&utm_content=in-the-room`;
 
   return (
     <div

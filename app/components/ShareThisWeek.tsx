@@ -2,7 +2,7 @@
 
 import { useState, type CSSProperties } from "react";
 
-const SITE_URL = "https://noisetosignal.vercel.app";
+const SITE_URL = "https://founderratio.com";
 
 interface ShareThisWeekProps {
   weekOf: string;
@@ -21,7 +21,7 @@ function formatWeekShort(dateStr: string): string {
 export function ShareThisWeek({ weekOf, ratio }: ShareThisWeekProps) {
   const [copied, setCopied] = useState(false);
   const weekLabel = formatWeekShort(weekOf);
-  const tweetText = `This week's Noise-to-Signal ratio: ${ratio.toFixed(1)} (week of ${weekLabel}). 5 stake-oriented picks for venture-backed founders.`;
+  const tweetText = `This week's Founder Ratio: ${ratio.toFixed(1)} noise÷signal (week of ${weekLabel}). 5 stake-oriented picks for venture-backed founders.`;
   const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(SITE_URL)}`;
 
   async function copyLink() {
