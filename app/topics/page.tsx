@@ -66,8 +66,8 @@ export default function TopicsIndex() {
           }}
         >
           Five hubs aligned to Founder Ratio signal categories. Each page
-          collects recent stake-oriented picks for venture-backed founders —
-          with a soft lens from FounderNexus Startup Bible playbooks.
+          collects recent picks that change a real decision for venture-backed
+          founders — with a soft lens from FounderNexus Startup Bible playbooks.
         </p>
 
         <div

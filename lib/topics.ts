@@ -18,7 +18,7 @@ export const topics: TopicMeta[] = [
   {
     slug: "fundraising",
     title: "Fundraising",
-    blurb: "Rounds, process, and who still gets capital when the feed is loud.",
+    blurb: "For venture-backed founders: rounds, process, and who still gets capital when the feed is loud.",
     bibleHint:
       "Doctrine boost from FounderNexus Startup Bible playbooks on raising money — SAFEs, notes, priced rounds, and data rooms.",
     bibleLinks: [
@@ -37,7 +37,7 @@ export const topics: TopicMeta[] = [
   {
     slug: "hiring",
     title: "Hiring",
-    blurb: "Team design, talent markets, and when headcount is the real bet.",
+    blurb: "For venture-backed founders: team design, talent markets, and when headcount is the real bet.",
     bibleHint:
       "Doctrine boost from FounderNexus Startup Bible playbooks on building the company — especially executive team and equity structure.",
     bibleLinks: [
@@ -51,12 +51,12 @@ export const topics: TopicMeta[] = [
       },
     ],
     definition:
-      "Hiring signal helps a venture-backed founder decide who to hire next, how to compete for talent, or when to slow headcount. It is stake-oriented: org design, comp, and recruiting leverage — not culture-poster content. If it does not change a people decision this quarter, it is noise.",
+      "Hiring signal helps a venture-backed founder decide who to hire next, how to compete for talent, or when to slow headcount. Org design, comp, and recruiting leverage — not culture-poster content. If it does not change a people decision this quarter, it is noise.",
   },
   {
     slug: "product",
     title: "Product",
-    blurb: "Build, package, and GTM choices that change what ships next.",
+    blurb: "For venture-backed founders: build, package, and GTM choices that change what ships next.",
     bibleHint:
       "Doctrine boost from FounderNexus Startup Bible playbooks on getting customers — packaging, pilots, and validate-before-you-build.",
     bibleLinks: [
@@ -75,7 +75,7 @@ export const topics: TopicMeta[] = [
   {
     slug: "leadership",
     title: "Leadership",
-    blurb: "Founder judgment, pivots, boards, and hard calls under pressure.",
+    blurb: "For venture-backed founders: judgment, pivots, boards, and hard calls under pressure.",
     bibleHint:
       "Doctrine boost from FounderNexus Startup Bible playbooks on company-building judgment — executive team and founder equity/vesting realities.",
     bibleLinks: [
@@ -89,12 +89,12 @@ export const topics: TopicMeta[] = [
       },
     ],
     definition:
-      "Leadership signal sharpens founder judgment — pivots, board dynamics, culture under constraint, and personal operating cadence. It is useful when it shows the cost of a hard call, not when it flatters the founder brand. Motivational noise without a decision surface does not make this list.",
+      "Leadership signal sharpens judgment for venture-backed founders — pivots, board dynamics, culture under constraint, and personal operating cadence. It is useful when it shows the cost of a hard call, not when it flatters the founder brand. Motivational noise without a decision surface does not make this list.",
   },
   {
     slug: "market",
     title: "Market",
-    blurb: "Capital as denominator, category shifts, and where attention is mispriced.",
+    blurb: "For venture-backed founders: capital as denominator, category shifts, and where attention is mispriced.",
     bibleHint:
       "Doctrine boost from FounderNexus Startup Bible reference benchmarks and raising-money context for reading the capital landscape.",
     bibleLinks: [

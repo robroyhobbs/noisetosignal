@@ -58,7 +58,7 @@ export default function Archive() {
           <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
             {[
               { label: "Issues tracked", value: String(weeks.length) },
-              { label: "All-time high NSI", value: allTimeHigh.toFixed(1) },
+              { label: "All-time high ratio", value: allTimeHigh.toFixed(1) },
               { label: "Total noise posts counted", value: totalNoise.toLocaleString() },
               { label: "Tracking since", value: new Date(firstWeek.weekOf).toLocaleDateString("en-US", { month: "short", year: "numeric" }) },
             ].map((stat) => (
@@ -80,7 +80,7 @@ export default function Archive() {
           marginBottom: 48,
         }}>
           <p style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 16, letterSpacing: "0.06em", textTransform: "uppercase" }}>
-            NSI trend &mdash; all time
+            Founder Ratio trend &mdash; all time
           </p>
           <ArchiveChart data={history} />
           <p style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 12, textAlign: "right" }}>

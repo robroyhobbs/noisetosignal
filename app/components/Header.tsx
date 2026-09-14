@@ -45,12 +45,11 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
   }, []);
 
   const tickers = [
-    `NSI ${ratio.toFixed(1)} ▲`,
+    `FOUNDER RATIO ${ratio.toFixed(1)}`,
     `NOISE COUNT ${noiseCount.toLocaleString()}`,
     `SIGNAL 5 items`,
     `WEEK OF ${formatWeek(weekOf).toUpperCase()}`,
-    `RATIO TREND ↑ ALL-TIME HIGH`,
-    `NSI ${ratio.toFixed(1)} ▲`,
+    `FOUNDER RATIO ${ratio.toFixed(1)}`,
     `NOISE COUNT ${noiseCount.toLocaleString()}`,
     `SIGNAL 5 items`,
   ].join("    •    ");
@@ -127,9 +126,9 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
                 padding: "4px 10px",
                 whiteSpace: "nowrap",
               }}
-              title={`Week of ${formatWeek(weekOf)}`}
+              title={`Founder Ratio (noise ÷ signal) — week of ${formatWeek(weekOf)}`}
             >
-              NSI {ratio.toFixed(1)}
+              {ratio.toFixed(1)}
             </div>
           </div>
 
@@ -151,9 +150,6 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
               </Link>
               <Link href="/archive" style={navLinkStyle}>
                 Archive
-              </Link>
-              <Link href="/#newsletter" style={navLinkStyle}>
-                Subscribe
               </Link>
             </div>
             <div className="mono eyebrow" style={{ color: "var(--text-muted)" }}>

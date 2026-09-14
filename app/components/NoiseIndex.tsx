@@ -187,7 +187,7 @@ export function NoiseIndex({
                 }}
                 formatter={(v) => [
                   typeof v === "number" ? v.toFixed(1) : v,
-                  "NSI",
+                  "Founder Ratio",
                 ]}
               />
               <Line
@@ -213,8 +213,8 @@ export function NoiseIndex({
             marginTop: 8,
           }}
         >
-          The NSI has increased every week since we started tracking. We wish
-          this surprised us.
+          The Founder Ratio has increased every week since we started tracking.
+          We wish this surprised us.
         </div>
       </div>
     </section>
