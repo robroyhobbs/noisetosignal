@@ -36,8 +36,8 @@ export function Footer() {
               src="/brand/founder-ratio-mark.png"
               alt=""
               width={18}
-              height={22}
-              style={{ height: 22, width: "auto", display: "block" }}
+              height={28}
+              style={{ height: 28, width: "auto", display: "block" }}
             />
             <div
               style={{
