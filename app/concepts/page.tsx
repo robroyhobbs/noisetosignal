@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/site";
 import Link from "next/link";
 import { getCurrentWeek } from "@/lib/data";
 import { concepts } from "@/lib/concepts";
@@ -11,7 +12,8 @@ export const metadata: Metadata = {
   title: "Concepts",
   description:
     "Short operator definitions — SAFE, liquidation preference, runway, and more.",
-  alternates: { canonical: "https://founderratio.com/concepts" },
+  alternates: { canonical: absoluteUrl("/concepts") },
+  openGraph: { url: absoluteUrl("/concepts") },
 };
 
 const TOPIC_COLORS: Record<string, string> = {

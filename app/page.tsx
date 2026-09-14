@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/site";
 import { getCurrentWeek, getRatioHistory, weeks, getCurrentDilemma } from "@/lib/data";
 import { Header } from "./components/Header";
 import { HeroExplainer } from "./components/HeroExplainer";
@@ -13,6 +15,12 @@ import { ContrastSection } from "./components/ContrastSection";
 import { InTheRoom } from "./components/InTheRoom";
 // NewsletterForm hidden until subscribe is wired — do not delete the component.
 import { Footer } from "./components/Footer";
+
+
+export const metadata: Metadata = {
+  alternates: { canonical: absoluteUrl("/") },
+  openGraph: { url: absoluteUrl("/") },
+};
 
 export const revalidate = 3600;
 

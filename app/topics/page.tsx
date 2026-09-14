@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/site";
 import Link from "next/link";
 import { getCurrentWeek } from "@/lib/data";
 import { topics, getSignalsForTopic } from "@/lib/topics";
@@ -11,7 +12,8 @@ export const metadata: Metadata = {
   title: "Topics",
   description:
     "Fundraising, hiring, product, leadership, and market signal hubs.",
-  alternates: { canonical: "https://founderratio.com/topics" },
+  alternates: { canonical: absoluteUrl("/topics") },
+  openGraph: { url: absoluteUrl("/topics") },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {

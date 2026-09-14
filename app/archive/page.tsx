@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/site";
 import { weeks, getRatioHistory } from "@/lib/data";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { ArchiveChart } from "../components/ArchiveChart";
 import Link from "next/link";
+
+
+export const metadata: Metadata = {
+  title: "Archive",
+  description: "Past Founder Ratio weekly indexes — noise counts, ratios, and signal picks.",
+  alternates: { canonical: absoluteUrl("/archive") },
+  openGraph: { url: absoluteUrl("/archive") },
+};
 
 export const revalidate = 3600;
 

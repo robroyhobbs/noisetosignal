@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCurrentWeek } from "@/lib/data";
@@ -61,8 +62,9 @@ export async function generateMetadata({
     title: concept.title,
     description: concept.definition.slice(0, 160),
     alternates: {
-      canonical: `https://founderratio.com/concepts/${concept.slug}`,
+      canonical: absoluteUrl(`/concepts/${concept.slug}`),
     },
+    openGraph: { url: absoluteUrl(`/concepts/${concept.slug}`) },
   };
 }
 
