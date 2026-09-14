@@ -10,7 +10,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Topics",
   description:
-    "Founder Ratio topic hubs — fundraising, hiring, product, leadership, and market signal for venture-backed founders.",
+    "Fundraising, hiring, product, leadership, and market signal hubs.",
   alternates: { canonical: "https://founderratio.com/topics" },
 };
 
@@ -65,9 +65,7 @@ export default function TopicsIndex() {
             marginBottom: 40,
           }}
         >
-          Five hubs aligned to Founder Ratio signal categories. Each page
-          collects recent picks that change a real decision for venture-backed
-          founders — with a soft lens from FounderNexus Startup Bible playbooks.
+          Five hubs of recent decision-changing picks, with Startup Bible links.
         </p>
 
         <div

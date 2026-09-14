@@ -18,9 +18,8 @@ export const topics: TopicMeta[] = [
   {
     slug: "fundraising",
     title: "Fundraising",
-    blurb: "For venture-backed founders: rounds, process, and who still gets capital when the feed is loud.",
-    bibleHint:
-      "Doctrine boost from FounderNexus Startup Bible playbooks on raising money — SAFEs, notes, priced rounds, and data rooms.",
+    blurb: "Rounds, process, and who still gets capital when the feed is loud.",
+    bibleHint: "Startup Bible on raising money — SAFEs, notes, priced rounds, data rooms.",
     bibleLinks: [
       {
         label: "SAFEs, notes & priced rounds",
@@ -32,14 +31,13 @@ export const topics: TopicMeta[] = [
       },
     ],
     definition:
-      "For venture-backed founders, fundraising signal is anything that changes how you raise, price, or sequence a round — not another mega-round headline. It clarifies investor behavior, process discipline, or proof points that actually move a close. Vanity announcements without operator takeaway stay noise.",
+      "Fundraising signal changes how you raise, price, or sequence a round — not another mega-round headline. Investor behavior, process, or proof that moves a close. Vanity announcements stay noise.",
   },
   {
     slug: "hiring",
     title: "Hiring",
-    blurb: "For venture-backed founders: team design, talent markets, and when headcount is the real bet.",
-    bibleHint:
-      "Doctrine boost from FounderNexus Startup Bible playbooks on building the company — especially executive team and equity structure.",
+    blurb: "Team design, talent markets, and when headcount is the real bet.",
+    bibleHint: "Startup Bible on building the company — exec team and equity structure.",
     bibleLinks: [
       {
         label: "Executive team",
@@ -51,14 +49,13 @@ export const topics: TopicMeta[] = [
       },
     ],
     definition:
-      "Hiring signal helps a venture-backed founder decide who to hire next, how to compete for talent, or when to slow headcount. Org design, comp, and recruiting leverage — not culture-poster content. If it does not change a people decision this quarter, it is noise.",
+      "Hiring signal changes who to hire next, how to compete for talent, or when to slow headcount. Org design, comp, recruiting leverage — not culture-poster content.",
   },
   {
     slug: "product",
     title: "Product",
-    blurb: "For venture-backed founders: build, package, and GTM choices that change what ships next.",
-    bibleHint:
-      "Doctrine boost from FounderNexus Startup Bible playbooks on getting customers — packaging, pilots, and validate-before-you-build.",
+    blurb: "Build, package, and GTM choices that change what ships next.",
+    bibleHint: "Startup Bible on getting customers — packaging, pilots, validate-before-you-build.",
     bibleLinks: [
       {
         label: "Pricing and packaging",
@@ -70,14 +67,13 @@ export const topics: TopicMeta[] = [
       },
     ],
     definition:
-      "Product signal changes what you ship, how you package it, or how you go to market — including GTM and packaging tradeoffs. For venture-backed founders, that means roadmap cuts, buyer surfaces, and proof of retention or conversion. Feature theater and launch-day LinkedIn posts are noise.",
+      "Product signal changes what you ship, how you package it, or how you go to market. Roadmap cuts, buyer surfaces, retention proof. Feature theater is noise.",
   },
   {
     slug: "leadership",
     title: "Leadership",
-    blurb: "For venture-backed founders: judgment, pivots, boards, and hard calls under pressure.",
-    bibleHint:
-      "Doctrine boost from FounderNexus Startup Bible playbooks on company-building judgment — executive team and founder equity/vesting realities.",
+    blurb: "Judgment, pivots, boards, and hard calls under pressure.",
+    bibleHint: "Startup Bible on company-building judgment — exec team and founder equity/vesting.",
     bibleLinks: [
       {
         label: "Executive team",
@@ -89,14 +85,13 @@ export const topics: TopicMeta[] = [
       },
     ],
     definition:
-      "Leadership signal sharpens judgment for venture-backed founders — pivots, board dynamics, culture under constraint, and personal operating cadence. It is useful when it shows the cost of a hard call, not when it flatters the founder brand. Motivational noise without a decision surface does not make this list.",
+      "Leadership signal sharpens judgment — pivots, board dynamics, culture under constraint. Useful when it shows the cost of a hard call, not founder-brand flattery.",
   },
   {
     slug: "market",
     title: "Market",
-    blurb: "For venture-backed founders: capital as denominator, category shifts, and where attention is mispriced.",
-    bibleHint:
-      "Doctrine boost from FounderNexus Startup Bible reference benchmarks and raising-money context for reading the capital landscape.",
+    blurb: "Capital as denominator, category shifts, and where attention is mispriced.",
+    bibleHint: "Startup Bible benchmarks and raising-money context for the capital landscape.",
     bibleLinks: [
       {
         label: "Benchmarks",
@@ -108,7 +103,7 @@ export const topics: TopicMeta[] = [
       },
     ],
     definition:
-      "Market signal reframes the denominator: capital flows, category structure, and where attention is mispriced relative to your stage. It helps venture-backed founders price rounds and roadmap bets against the market they are actually in. Macro cheerleading without a capital or competitive takeaway is noise.",
+      "Market signal reframes the denominator: capital flows, category structure, mispriced attention. Macro cheerleading without a takeaway is noise.",
   },
 ];
 

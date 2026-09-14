@@ -10,7 +10,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Concepts",
   description:
-    "Founder Ratio concept pages — short operator definitions for SAFE, liquidation preference, runway, founder-led sales, and more. Links out to FounderNexus Startup Bible.",
+    "Short operator definitions — SAFE, liquidation preference, runway, and more.",
   alternates: { canonical: "https://founderratio.com/concepts" },
 };
 
@@ -65,10 +65,7 @@ export default function ConceptsIndex() {
             marginBottom: 40,
           }}
         >
-          Thin pages for terms venture-backed founders hit this week. Short
-          Founder Ratio definitions — then out to FounderNexus Startup Bible
-          playbooks when you need the full doctrine. We do not republish Bible
-          bodies here.
+          Short operator definitions — then out to FounderNexus Startup Bible.
         </p>
 
         <div

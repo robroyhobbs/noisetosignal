@@ -155,20 +155,6 @@ export function ContrastSection() {
           </div>
         </div>
 
-        <p
-          style={{
-            fontSize: 15,
-            color: "var(--text-sec)",
-            marginTop: 48,
-            paddingTop: 32,
-            borderTop: "1px solid var(--border)",
-            lineHeight: 1.7,
-            maxWidth: 640,
-          }}
-        >
-          The gap between those two columns is where founders lose the most time.
-          Content fills the feed. The real questions stay unanswered.
-        </p>
       </div>
     </div>
   );

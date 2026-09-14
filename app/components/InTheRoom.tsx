@@ -56,25 +56,11 @@ export function InTheRoom({ weekOf }: InTheRoomProps) {
             fontSize: 15,
             color: "var(--text-sec)",
             lineHeight: 1.8,
-            margin: "0 0 20px",
-          }}
-        >
-          Founders who actually move the needle are not spending their time on
-          LinkedIn. They are in rooms with other founders who have been through
-          it. That is where the real signal lives. Not a post. Not a thread. A
-          conversation with someone who has skin in the game and no reason to
-          perform.
-        </p>
-
-        <p
-          style={{
-            fontSize: 15,
-            color: "var(--text-sec)",
-            lineHeight: 1.8,
             margin: "0 0 40px",
           }}
         >
-          That room exists.{" "}
+          The index is public. The hard calls get better in a room of founders
+          who have been through it —{" "}
           <a
             href={roomLink}
             target="_blank"
@@ -87,10 +73,8 @@ export function InTheRoom({ weekOf }: InTheRoomProps) {
             }}
           >
             FounderNexus
-          </a>{" "}
-          is a curated network for venture-scale founders who value the right
-          room over the right content. No pitch decks. No performance. Just the
-          questions that actually matter and people qualified to answer them.
+          </a>
+          .
         </p>
 
         <a

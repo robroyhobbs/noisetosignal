@@ -20,8 +20,7 @@ export function WeeklyDilemma({ dilemma }: WeeklyDilemmaProps) {
             The Weekly Dilemma
           </div>
           <div style={{ fontSize: 13, color: "var(--text-muted)", maxWidth: 560 }}>
-            One real founder decision, submitted anonymously. No answer given.
-            Just the context, the stakes, and the thing you actually have to decide.
+            One anonymous founder decision. Context, stakes, no answer.
           </div>
         </div>
 
@@ -130,7 +129,7 @@ export function WeeklyDilemma({ dilemma }: WeeklyDilemmaProps) {
 
         {/* CTA */}
         <div style={{ marginTop: 20, fontSize: 13, color: "var(--text-muted)" }}>
-          Facing a decision like this?{" "}
+          Facing one?{" "}
           <a
             href="https://www.foundernexus.com"
             target="_blank"
@@ -139,7 +138,7 @@ export function WeeklyDilemma({ dilemma }: WeeklyDilemmaProps) {
           >
             FounderNexus
           </a>{" "}
-          is where founders work through these in rooms that don't end up on LinkedIn.
+          is the room.
         </div>
       </div>
     </section>

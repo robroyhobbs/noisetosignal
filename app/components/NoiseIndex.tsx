@@ -213,8 +213,7 @@ export function NoiseIndex({
             marginTop: 8,
           }}
         >
-          The Founder Ratio has increased every week since we started tracking.
-          We wish this surprised us.
+          Up every week since we started.
         </div>
       </div>
     </section>

@@ -220,8 +220,7 @@ export default async function ConceptPage({
                 margin: "0 0 12px",
               }}
             >
-              Playbooks from the room — we link out; we do not republish their
-              bodies here.
+              Playbooks from the room — we link out.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {concept.bibleLinks.map((link) => (

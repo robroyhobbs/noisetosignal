@@ -197,8 +197,7 @@ export default async function TopicPage({
               margin: "0 0 10px",
             }}
           >
-            {topic.bibleHint} We link out to the playbooks — we do not republish
-            their bodies here.
+            {topic.bibleHint}
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
             {topic.bibleLinks.map((link) => (
