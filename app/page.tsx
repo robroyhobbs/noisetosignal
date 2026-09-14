@@ -1,16 +1,17 @@
-import { getCurrentWeek, getRatioHistory, weeks, getCurrentDilemma, benchmarks, noiseSources } from "@/lib/data";
+import { getCurrentWeek, getRatioHistory, weeks, getCurrentDilemma } from "@/lib/data";
 import { Header } from "./components/Header";
 import { HeroExplainer } from "./components/HeroExplainer";
 import { NoiseIndex } from "./components/NoiseIndex";
 import { WeeklySignal } from "./components/WeeklySignal";
 import { NoiseExamples } from "./components/NoiseExamples";
-import { NoiseArchetypes } from "./components/NoiseArchetypes";
-import { NoiseLeaderboard } from "./components/NoiseLeaderboard";
+// Demoted from homepage for first-time clarity (components remain in repo):
+// import { NoiseArchetypes } from "./components/NoiseArchetypes";
+// import { NoiseLeaderboard } from "./components/NoiseLeaderboard";
+// import { HonestBenchmarks } from "./components/HonestBenchmarks";
 import { WeeklyDilemma } from "./components/WeeklyDilemma";
-import { HonestBenchmarks } from "./components/HonestBenchmarks";
 import { ContrastSection } from "./components/ContrastSection";
 import { InTheRoom } from "./components/InTheRoom";
-import { NewsletterForm } from "./components/NewsletterForm";
+// NewsletterForm hidden until subscribe is wired — do not delete the component.
 import { Footer } from "./components/Footer";
 
 export const revalidate = 3600;
@@ -41,13 +42,9 @@ export default function Home() {
         />
         <WeeklySignal items={current.signal} />
         <NoiseExamples examples={current.noise} />
-        <NoiseArchetypes />
-        <NoiseLeaderboard sources={noiseSources} />
         <WeeklyDilemma dilemma={dilemma} />
-        <HonestBenchmarks benchmarks={benchmarks} />
         <ContrastSection />
         <InTheRoom weekOf={current.weekOf} />
-        <NewsletterForm />
       </main>
       <Footer />
     </div>

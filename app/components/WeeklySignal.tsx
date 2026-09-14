@@ -48,7 +48,7 @@ export function WeeklySignal({ items }: WeeklySignalProps) {
                 margin: 0,
               }}
             >
-              5 stake-oriented picks
+              5 picks that change a real decision
             </h2>
             <p
               style={{
@@ -59,8 +59,8 @@ export function WeeklySignal({ items }: WeeklySignalProps) {
                 lineHeight: 1.5,
               }}
             >
-              Curated for venture-backed founders. Each pick clears a stake bar —
-              fundraising, hiring, board, runway, or GTM — not vanity volume.
+              Curated for venture-backed founders. Fundraising, hiring, board,
+              runway, GTM — not vanity volume.
             </p>
           </div>
           <div

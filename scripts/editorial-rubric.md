@@ -1,6 +1,6 @@
 # Editorial rubric — what wins (and what does not)
 
-Founder Ratio publishes **5 stake-oriented picks** each week for **venture-backed founders**, plus the noise÷signal ratio (the methodology behind the product). FounderNexus is the room; this site is the public filter.
+Founder Ratio publishes **5 picks that change a real decision** each week for **venture-backed founders**, plus the noise÷signal ratio (the methodology behind the product). FounderNexus is the room; this site is the public filter.
 
 ## What wins (include)
 

@@ -21,7 +21,7 @@ function formatWeekShort(dateStr: string): string {
 export function ShareThisWeek({ weekOf, ratio }: ShareThisWeekProps) {
   const [copied, setCopied] = useState(false);
   const weekLabel = formatWeekShort(weekOf);
-  const tweetText = `This week's Founder Ratio: ${ratio.toFixed(1)} noise÷signal (week of ${weekLabel}). 5 stake-oriented picks for venture-backed founders.`;
+  const tweetText = `This week's Founder Ratio: ${ratio.toFixed(1)} noise÷signal (week of ${weekLabel}). 5 picks that change a real decision for venture-backed founders.`;
   const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(SITE_URL)}`;
 
   async function copyLink() {

@@ -49,7 +49,7 @@ export function ArchiveChart({ data }: { data: DataPoint[] }) {
             }}
             labelStyle={{ color: "#9999bb" }}
             itemStyle={{ color: "#ef4444" }}
-            formatter={(v) => [typeof v === "number" ? v.toFixed(1) : v, "NSI"]}
+            formatter={(v) => [typeof v === "number" ? v.toFixed(1) : v, "Founder Ratio"]}
           />
           <Line
             type="monotone"

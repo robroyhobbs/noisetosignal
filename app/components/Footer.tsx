@@ -136,7 +136,7 @@ export function Footer() {
             }}
           >
             Noise is counted weekly from TechCrunch, Product Hunt, Hacker News,
-            and Substack. Signal is human-curated. The ratio is always bad.
+            and The Information. Signal is human-curated. The ratio is always bad.
           </div>
           <div style={{ marginTop: 12, fontSize: 11, color: "var(--text-muted)" }}>
             © {new Date().getFullYear()} Founder Ratio
