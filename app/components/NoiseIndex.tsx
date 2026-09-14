@@ -67,7 +67,7 @@ export function NoiseIndex({
         >
           <div>
             <div className="eyebrow" style={{ marginBottom: 8 }}>
-              Noise-to-Signal Index (NSI) — Week of {formatWeekShort(weekOf)}
+              Founder Ratio (noise ÷ signal) — Week of {formatWeekShort(weekOf)}
             </div>
             <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
               <span

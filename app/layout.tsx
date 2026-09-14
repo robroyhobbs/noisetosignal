@@ -3,34 +3,34 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
-const siteUrl = "https://noisetosignal.vercel.app";
+const siteUrl = "https://founderratio.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "Noise-to-Signal | 5 stake-oriented picks for venture-backed founders",
-    template: "%s | Noise-to-Signal",
+      "Founder Ratio | 5 stake-oriented picks for venture-backed founders",
+    template: "%s | Founder Ratio",
   },
   description:
-    "Every week: the noise-to-signal ratio plus 5 curated, stake-oriented picks for venture-backed founders — fundraising, hiring, board, runway, GTM. FounderNexus is the room.",
+    "Founder Ratio: the weekly founder attention filter. Every week we publish the noise÷signal ratio plus 5 curated, stake-oriented picks for venture-backed founders — fundraising, hiring, board, runway, GTM. FounderNexus is the room.",
   alternates: {
     canonical: siteUrl,
   },
   openGraph: {
-    title: "Noise-to-Signal | The Founder Attention Index",
+    title: "Founder Ratio | The Founder Attention Index",
     description:
-      "5 stake-oriented picks for venture-backed founders — plus the weekly ratio of startup noise to signal. FounderNexus is the room.",
+      "Founder Ratio — weekly founder attention filter. 5 stake-oriented picks plus the ratio of startup noise to signal. The ratio is always bad. FounderNexus is the room.",
     url: siteUrl,
-    siteName: "Noise-to-Signal",
+    siteName: "Founder Ratio",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Noise-to-Signal | The Founder Attention Index",
+    title: "Founder Ratio | The Founder Attention Index",
     description:
-      "5 stake-oriented picks for venture-backed founders — plus the weekly ratio. FounderNexus is the room.",
+      "Founder Ratio — 5 stake-oriented picks for venture-backed founders, plus the weekly noise÷signal ratio. FounderNexus is the room.",
   },
 };
 

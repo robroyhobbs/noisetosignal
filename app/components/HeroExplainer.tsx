@@ -27,12 +27,15 @@ export function HeroExplainer() {
             margin: 0,
           }}
         >
-          Every week, thousands of things get published about startups. Most of
-          it is noise.{" "}
           <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>
-            We track the volume, publish the ratio, and surface 5 stake-oriented
-            picks for venture-backed founders — fundraising, hiring, board,
-            runway, GTM.
+            Founder Ratio
+          </span>{" "}
+          is the weekly founder attention filter. Every week, thousands of
+          things get published about startups. Most of it is noise.{" "}
+          <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>
+            We still compute noise ÷ signal, publish the ratio, and surface 5
+            stake-oriented picks for venture-backed founders — fundraising,
+            hiring, board, runway, GTM.
           </span>{" "}
           The ratio is always bad.{" "}
           <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>
