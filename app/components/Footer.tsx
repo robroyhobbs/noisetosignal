@@ -51,7 +51,7 @@ export function Footer() {
             </a>
             {" "}in partnership with{" "}
             <a
-              href="https://www.foundernexus.com"
+              href="https://www.foundernexus.com?utm_source=noisetosignal&utm_medium=referral&utm_campaign=week-2026-09-14&utm_content=footer"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "var(--text-sec)", textDecoration: "none" }}

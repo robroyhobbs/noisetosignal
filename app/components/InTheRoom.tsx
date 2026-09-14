@@ -68,7 +68,7 @@ export function InTheRoom() {
         >
           That room exists.{" "}
           <a
-            href="https://www.foundernexus.com"
+            href="https://www.foundernexus.com?utm_source=noisetosignal&utm_medium=referral&utm_campaign=week-2026-09-14&utm_content=in-the-room-secondary"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -86,7 +86,7 @@ export function InTheRoom() {
         </p>
 
         <a
-          href="https://www.foundernexus.com"
+          href="https://platform.foundernexus.com/registration?utm_source=noisetosignal&utm_medium=referral&utm_campaign=week-2026-09-14&utm_content=in-the-room"
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -104,7 +104,7 @@ export function InTheRoom() {
             transition: "border-color 0.2s",
           }}
         >
-          Learn about FounderNexus
+          Apply to FounderNexus
         </a>
       </div>
     </div>
