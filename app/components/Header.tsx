@@ -146,6 +146,9 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
               <Link href="/topics" style={navLinkStyle}>
                 Topics
               </Link>
+              <Link href="/concepts" style={navLinkStyle}>
+                Concepts
+              </Link>
               <Link href="/archive" style={navLinkStyle}>
                 Archive
               </Link>

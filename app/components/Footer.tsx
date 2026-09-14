@@ -93,6 +93,18 @@ export function Footer() {
               Topics
             </Link>
             <Link
+              href="/concepts"
+              style={{
+                fontSize: 11,
+                color: "var(--text-muted)",
+                textDecoration: "none",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+              }}
+            >
+              Concepts
+            </Link>
+            <Link
               href="/archive"
               style={{
                 fontSize: 11,
