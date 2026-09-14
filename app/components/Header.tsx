@@ -110,8 +110,8 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
               <img
                 src="/brand/founder-ratio-wordmark.png"
                 alt="Founder Ratio"
-                height={32}
-                style={{ height: 32, width: "auto", display: "block" }}
+                height={48}
+                style={{ height: 48, width: "auto", display: "block" }}
               />
             </Link>
             <div
