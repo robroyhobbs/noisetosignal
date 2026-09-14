@@ -96,3 +96,6 @@ writeFileSync(DATA_FILE, updated, "utf8");
 console.log(
   `✓ Stubbed week ${weekOf} with noise count ${noiseCount}, ratio ${ratio}`,
 );
+console.log(
+  "Next: fill signal/noise using scripts/editorial-rubric.md and scripts/fill-checklist.md",
+);

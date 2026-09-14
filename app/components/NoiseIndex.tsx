@@ -9,6 +9,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+import { ShareThisWeek } from "./ShareThisWeek";
+
 interface NoiseIndexProps {
   currentRatio: number;
   previousRatio: number;
@@ -106,6 +108,9 @@ export function NoiseIndex({
               }}
             >
               {note}
+            </div>
+            <div style={{ marginTop: 16 }}>
+              <ShareThisWeek weekOf={weekOf} ratio={currentRatio} />
             </div>
           </div>
 

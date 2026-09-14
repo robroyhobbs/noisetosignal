@@ -27,13 +27,18 @@ export function HeroExplainer() {
             margin: 0,
           }}
         >
-          Every week, thousands of things get published about startups, building
-          companies, and founder life. Most of it is noise.{" "}
+          Every week, thousands of things get published about startups. Most of
+          it is noise.{" "}
           <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>
-            We track the volume, find the 5 pieces actually worth reading, and
-            publish the ratio.
+            We track the volume, publish the ratio, and surface 5 stake-oriented
+            picks for venture-backed founders — fundraising, hiring, board,
+            runway, GTM.
           </span>{" "}
-          The ratio is always bad. It keeps getting worse.
+          The ratio is always bad.{" "}
+          <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>
+            FounderNexus is the room
+          </span>{" "}
+          where the conversation goes further.
         </p>
 
         <div
@@ -75,7 +80,7 @@ export function HeroExplainer() {
             />
             <span style={{ fontSize: 13, color: "var(--text-sec)" }}>
               <strong style={{ color: "var(--text-primary)" }}>Signal</strong>{" "}
-              — the 5 pieces worth your time, curated by hand
+              — 5 stake-oriented picks, curated by hand
             </span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>

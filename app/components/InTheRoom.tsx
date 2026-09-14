@@ -1,4 +1,12 @@
-export function InTheRoom() {
+interface InTheRoomProps {
+  weekOf: string;
+}
+
+export function InTheRoom({ weekOf }: InTheRoomProps) {
+  const campaign = `week-${weekOf}`;
+  const roomLink = `https://www.foundernexus.com?utm_source=noisetosignal&utm_medium=referral&utm_campaign=${campaign}&utm_content=in-the-room-secondary`;
+  const applyLink = `https://platform.foundernexus.com/registration?utm_source=noisetosignal&utm_medium=referral&utm_campaign=${campaign}&utm_content=in-the-room`;
+
   return (
     <div
       style={{
@@ -40,7 +48,7 @@ export function InTheRoom() {
         >
           The signal is the public version.
           <br />
-          The room is where it goes further.
+          FounderNexus is the room.
         </h2>
 
         <p
@@ -53,9 +61,9 @@ export function InTheRoom() {
         >
           Founders who actually move the needle are not spending their time on
           LinkedIn. They are in rooms with other founders who have been through
-          it. That is where the real signal lives. Not a post. Not a
-          thread. A conversation with someone who has skin in the game and
-          no reason to perform.
+          it. That is where the real signal lives. Not a post. Not a thread. A
+          conversation with someone who has skin in the game and no reason to
+          perform.
         </p>
 
         <p
@@ -68,7 +76,7 @@ export function InTheRoom() {
         >
           That room exists.{" "}
           <a
-            href="https://www.foundernexus.com?utm_source=noisetosignal&utm_medium=referral&utm_campaign=week-2026-09-14&utm_content=in-the-room-secondary"
+            href={roomLink}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -86,7 +94,7 @@ export function InTheRoom() {
         </p>
 
         <a
-          href="https://platform.foundernexus.com/registration?utm_source=noisetosignal&utm_medium=referral&utm_campaign=week-2026-09-14&utm_content=in-the-room"
+          href={applyLink}
           target="_blank"
           rel="noopener noreferrer"
           style={{
