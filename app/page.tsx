@@ -46,11 +46,10 @@ export default function Home() {
         <WeeklyDilemma dilemma={dilemma} />
         <HonestBenchmarks benchmarks={benchmarks} />
         <ContrastSection />
-        <InTheRoom />
+        <InTheRoom weekOf={current.weekOf} />
         <NewsletterForm />
       </main>
       <Footer />
     </div>
   );
 }
-

@@ -16,46 +16,76 @@ const CATEGORY_COLORS: Record<string, { bg: string; text: string; border: string
 
 export function WeeklySignal({ items }: WeeklySignalProps) {
   return (
-    <section style={{ padding: "40px 0" }}>
+    <section
+      style={{
+        padding: "56px 0",
+        background: "rgba(34, 197, 94, 0.03)",
+        borderTop: "1px solid rgba(34, 197, 94, 0.25)",
+        borderBottom: "1px solid rgba(34, 197, 94, 0.25)",
+      }}
+    >
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
         <div
           style={{
             display: "flex",
             alignItems: "baseline",
             justifyContent: "space-between",
-            marginBottom: 24,
+            marginBottom: 28,
+            gap: 24,
           }}
         >
           <div>
-            <div className="eyebrow" style={{ marginBottom: 6, color: "#22c55e" }}>
-              ● Signal
+            <div className="eyebrow" style={{ marginBottom: 8, color: "#22c55e" }}>
+              ● Primary — This week&apos;s signal
             </div>
             <h2
               style={{
-                fontSize: 20,
-                fontWeight: 700,
-                letterSpacing: "-0.01em",
+                fontSize: 26,
+                fontWeight: 800,
+                letterSpacing: "-0.02em",
                 color: "var(--text-primary)",
+                margin: 0,
               }}
             >
-              This Week&apos;s Signal
+              5 stake-oriented picks
             </h2>
+            <p
+              style={{
+                margin: "8px 0 0",
+                fontSize: 13,
+                color: "var(--text-sec)",
+                maxWidth: 520,
+                lineHeight: 1.5,
+              }}
+            >
+              Curated for venture-backed founders. Each pick clears a stake bar —
+              fundraising, hiring, board, runway, or GTM — not vanity volume.
+            </p>
           </div>
           <div
             style={{
               fontSize: 12,
               color: "var(--text-muted)",
-              maxWidth: 340,
+              maxWidth: 280,
               textAlign: "right",
               lineHeight: 1.5,
+              flexShrink: 0,
             }}
           >
-            Five items that cleared the bar. Each one includes why it actually
-            matters — not just what it says.
+            Why it matters is the product. Headlines alone do not make the cut.
           </div>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 1 }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 1,
+            boxShadow: "0 0 0 1px rgba(34, 197, 94, 0.15)",
+            borderRadius: 4,
+            overflow: "hidden",
+          }}
+        >
           {items.map((item, i) => {
             const cat = CATEGORY_COLORS[item.category] ?? CATEGORY_COLORS.market;
             return (
