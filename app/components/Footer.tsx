@@ -35,9 +35,9 @@ export function Footer() {
             <img
               src="/brand/founder-ratio-mark.png"
               alt=""
-              width={22}
-              height={28}
-              style={{ height: 28, width: "auto", display: "block", objectFit: "contain" }}
+              width={28}
+              height={36}
+              style={{ height: 36, width: "auto", display: "block", objectFit: "contain" }}
             />
             <div
               style={{

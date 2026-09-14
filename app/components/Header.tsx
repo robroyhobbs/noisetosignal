@@ -110,11 +110,11 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
               <img
                 src="/brand/founder-ratio-wordmark.png"
                 alt="Founder Ratio"
-                height={48}
+                height={56}
                 style={{
-                  height: 48,
+                  height: 56,
                   width: "auto",
-                  maxHeight: 48,
+                  maxHeight: 56,
                   objectFit: "contain",
                   display: "block",
                   flexShrink: 0,
