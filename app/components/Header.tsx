@@ -55,6 +55,14 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
     `SIGNAL 5 items`,
   ].join("    •    ");
 
+  const navLinkStyle = {
+    fontSize: 11,
+    color: "var(--text-muted)",
+    textDecoration: "none",
+    letterSpacing: "0.08em",
+    textTransform: "uppercase",
+  };
+
   return (
     <header>
       {/* Ticker bar */}
@@ -87,42 +95,61 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
           style={{
             maxWidth: 1100,
             margin: "0 auto",
-            padding: "20px 24px",
+            padding: "16px 24px",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
+            gap: 16,
           }}
         >
-          <div>
-            <div className="eyebrow" style={{ marginBottom: 6 }}>
-              The Founder Attention Index
-            </div>
-            <h1
-              style={{
-                fontSize: 28,
-                fontWeight: 800,
-                letterSpacing: "-0.02em",
-                color: "var(--text-primary)",
-                lineHeight: 1,
-              }}
+          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+            <Link
+              href="/"
+              style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}
             >
-              Founder{" "}
-              <span style={{ color: "var(--accent)" }}>Ratio</span>
-            </h1>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/brand/founder-ratio-wordmark.png"
+                alt="Founder Ratio"
+                height={32}
+                style={{ height: 32, width: "auto", display: "block" }}
+              />
+            </Link>
+            <div
+              className="mono"
+              style={{
+                fontSize: 11,
+                fontWeight: 700,
+                letterSpacing: "0.06em",
+                color: "var(--accent)",
+                border: "1px solid var(--border-strong)",
+                borderRadius: 999,
+                padding: "4px 10px",
+                whiteSpace: "nowrap",
+              }}
+              title={`Week of ${formatWeek(weekOf)}`}
+            >
+              NSI {ratio.toFixed(1)}
+            </div>
           </div>
 
-          <div style={{ textAlign: "right", display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 8 }}>
+          <div
+            style={{
+              textAlign: "right",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
+              gap: 8,
+            }}
+          >
             <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
-              <Link
-                href="/archive"
-                style={{ fontSize: 11, color: "var(--text-muted)", textDecoration: "none", letterSpacing: "0.08em", textTransform: "uppercase" }}
-              >
+              <Link href="/topics" style={navLinkStyle}>
+                Topics
+              </Link>
+              <Link href="/archive" style={navLinkStyle}>
                 Archive
               </Link>
-              <Link
-                href="/#newsletter"
-                style={{ fontSize: 11, color: "var(--text-muted)", textDecoration: "none", letterSpacing: "0.08em", textTransform: "uppercase" }}
-              >
+              <Link href="/#newsletter" style={navLinkStyle}>
                 Subscribe
               </Link>
             </div>
@@ -148,6 +175,7 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
             display: "flex",
             gap: 16,
             alignItems: "center",
+            flexWrap: "wrap",
           }}
         >
           <span
@@ -163,8 +191,9 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
             Signal categories:
           </span>
           {Object.entries(CATEGORY_COLORS).map(([cat, color]) => (
-            <span
+            <Link
               key={cat}
+              href={`/topics/${cat}`}
               style={{
                 fontSize: 10,
                 fontWeight: 700,
@@ -174,6 +203,7 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
                 display: "flex",
                 alignItems: "center",
                 gap: 5,
+                textDecoration: "none",
               }}
             >
               <span
@@ -186,7 +216,7 @@ export function Header({ weekOf, ratio, noiseCount }: HeaderProps) {
                 }}
               />
               {cat}
-            </span>
+            </Link>
           ))}
         </div>
       </div>

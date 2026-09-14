@@ -32,6 +32,10 @@ export const metadata: Metadata = {
     description:
       "Founder Ratio — 5 stake-oriented picks for venture-backed founders, plus the weekly noise÷signal ratio. FounderNexus is the room.",
   },
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/brand/founder-ratio-mark.png" }],
+  },
 };
 
 export default function RootLayout({
