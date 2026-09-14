@@ -9,6 +9,7 @@ import {
   applyCtaUrl,
   topicSlugs,
 } from "@/lib/topics";
+import { getConceptsForTopic } from "@/lib/concepts";
 import type { Category } from "@/lib/types";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
@@ -85,6 +86,7 @@ export default async function TopicPage({
 
   const current = getCurrentWeek();
   const signals = getSignalsForTopic(topic.slug as Category, 15);
+  const relatedConcepts = getConceptsForTopic(topic.slug as Category, 3);
   const cat = CATEGORY_COLORS[topic.slug];
   const cta = applyCtaUrl(topic.slug);
 
@@ -307,6 +309,79 @@ export default async function TopicPage({
                 </div>
               </a>
             ))}
+          </div>
+        )}
+
+        {relatedConcepts.length > 0 && (
+          <div style={{ marginBottom: 36 }}>
+            <h2
+              style={{
+                fontSize: 18,
+                fontWeight: 700,
+                color: "var(--text-primary)",
+                margin: "0 0 14px",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              Related concepts
+            </h2>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
+                gap: 12,
+              }}
+            >
+              {relatedConcepts.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/concepts/${c.slug}`}
+                  style={{
+                    display: "block",
+                    textDecoration: "none",
+                    background: "var(--bg-card)",
+                    border: "1px solid var(--border)",
+                    borderLeft: `3px solid ${cat.text}`,
+                    borderRadius: 4,
+                    padding: "14px 16px",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: 13,
+                      fontWeight: 700,
+                      color: "var(--text-primary)",
+                      marginBottom: 6,
+                    }}
+                  >
+                    {c.title}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 12,
+                      color: "var(--text-sec)",
+                      lineHeight: 1.45,
+                    }}
+                  >
+                    {c.blurb}
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <div style={{ marginTop: 12 }}>
+              <Link
+                href="/concepts"
+                style={{
+                  fontSize: 12,
+                  color: "var(--text-muted)",
+                  textDecoration: "none",
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                }}
+              >
+                All concepts →
+              </Link>
+            </div>
           </div>
         )}
 

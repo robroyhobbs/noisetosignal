@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getCurrentWeek } from "@/lib/data";
-import { topics, getSignalsForTopic } from "@/lib/topics";
+import { concepts } from "@/lib/concepts";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Topics",
+  title: "Concepts",
   description:
-    "Founder Ratio topic hubs — fundraising, hiring, product, leadership, and market signal for venture-backed founders.",
-  alternates: { canonical: "https://founderratio.com/topics" },
+    "Founder Ratio concept pages — short operator definitions for SAFE, liquidation preference, runway, founder-led sales, and more. Links out to FounderNexus Startup Bible.",
+  alternates: { canonical: "https://founderratio.com/concepts" },
 };
 
-const CATEGORY_COLORS: Record<string, string> = {
+const TOPIC_COLORS: Record<string, string> = {
   fundraising: "#a78bfa",
   hiring: "#34d399",
   product: "#60a5fa",
@@ -22,7 +22,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   market: "#f472b6",
 };
 
-export default function TopicsIndex() {
+export default function ConceptsIndex() {
   const current = getCurrentWeek();
 
   return (
@@ -43,7 +43,7 @@ export default function TopicsIndex() {
             marginBottom: 8,
           }}
         >
-          Signal by category
+          Operator definitions
         </p>
         <h1
           style={{
@@ -54,7 +54,7 @@ export default function TopicsIndex() {
             letterSpacing: "-0.02em",
           }}
         >
-          Topics
+          Concepts
         </h1>
         <p
           style={{
@@ -65,9 +65,10 @@ export default function TopicsIndex() {
             marginBottom: 40,
           }}
         >
-          Five hubs aligned to Founder Ratio signal categories. Each page
-          collects recent stake-oriented picks for venture-backed founders —
-          with a soft lens from FounderNexus Startup Bible playbooks.
+          Thin pages for terms venture-backed founders hit this week. Short
+          Founder Ratio definitions — then out to FounderNexus Startup Bible
+          playbooks when you need the full doctrine. We do not republish Bible
+          bodies here.
         </p>
 
         <div
@@ -77,19 +78,20 @@ export default function TopicsIndex() {
             gap: 16,
           }}
         >
-          {topics.map((topic) => {
-            const count = getSignalsForTopic(topic.slug, 50).length;
-            const color = CATEGORY_COLORS[topic.slug];
+          {concepts.map((concept) => {
+            const accent =
+              TOPIC_COLORS[concept.relatedTopics[0] ?? "fundraising"] ??
+              "#a78bfa";
             return (
               <Link
-                key={topic.slug}
-                href={`/topics/${topic.slug}`}
+                key={concept.slug}
+                href={`/concepts/${concept.slug}`}
                 style={{
                   display: "block",
                   textDecoration: "none",
                   background: "var(--bg-card)",
                   border: "1px solid var(--border)",
-                  borderLeft: `3px solid ${color}`,
+                  borderLeft: `3px solid ${accent}`,
                   borderRadius: 4,
                   padding: "20px 22px",
                 }}
@@ -100,11 +102,11 @@ export default function TopicsIndex() {
                     fontWeight: 700,
                     letterSpacing: "0.08em",
                     textTransform: "uppercase",
-                    color,
+                    color: accent,
                     marginBottom: 8,
                   }}
                 >
-                  {topic.title}
+                  {concept.title}
                 </div>
                 <div
                   style={{
@@ -114,10 +116,10 @@ export default function TopicsIndex() {
                     marginBottom: 12,
                   }}
                 >
-                  {topic.blurb}
+                  {concept.blurb}
                 </div>
                 <div style={{ fontSize: 12, color: "var(--text-muted)" }}>
-                  {count} recent signal item{count === 1 ? "" : "s"} →
+                  Read concept →
                 </div>
               </Link>
             );
@@ -138,7 +140,7 @@ export default function TopicsIndex() {
             ← Current issue
           </Link>
           <Link
-            href="/concepts"
+            href="/topics"
             style={{
               fontSize: 12,
               color: "var(--text-muted)",
@@ -147,7 +149,7 @@ export default function TopicsIndex() {
               textTransform: "uppercase",
             }}
           >
-            Concepts
+            Topics
           </Link>
           <Link
             href="/archive"
