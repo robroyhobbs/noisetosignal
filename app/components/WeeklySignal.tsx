@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import type { SignalItem } from "@/lib/types";
 
 interface WeeklySignalProps {
@@ -88,15 +89,24 @@ export function WeeklySignal({ items }: WeeklySignalProps) {
         >
           {items.map((item, i) => {
             const cat = CATEGORY_COLORS[item.category] ?? CATEGORY_COLORS.market;
-            return (
-              <a
-                key={item.id}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
+            const categoryTag = (
+              <span
+                className="category-tag"
                 style={{
-                  display: "block",
-                  textDecoration: "none",
+                  background: cat.bg,
+                  color: cat.text,
+                  borderColor: cat.border,
+                  flexShrink: 0,
+                }}
+              >
+                {item.category}
+              </span>
+            );
+
+            return (
+              <div
+                key={item.id}
+                style={{
                   background: "var(--bg-card)",
                   border: "1px solid var(--border)",
                   borderLeft: `3px solid ${cat.text}`,
@@ -119,7 +129,6 @@ export function WeeklySignal({ items }: WeeklySignalProps) {
                     gap: 16,
                   }}
                 >
-                  {/* Number */}
                   <div
                     className="mono"
                     style={{
@@ -134,7 +143,6 @@ export function WeeklySignal({ items }: WeeklySignalProps) {
                   </div>
 
                   <div style={{ flex: 1 }}>
-                    {/* Title row */}
                     <div
                       style={{
                         display: "flex",
@@ -144,30 +152,33 @@ export function WeeklySignal({ items }: WeeklySignalProps) {
                         flexWrap: "wrap",
                       }}
                     >
-                      <span
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         style={{
                           fontSize: 15,
                           fontWeight: 600,
                           color: "var(--text-primary)",
                           lineHeight: 1.3,
+                          textDecoration: "none",
                         }}
                       >
                         {item.title}
-                      </span>
-                      <span
-                        className="category-tag"
-                        style={{
-                          background: cat.bg,
-                          color: cat.text,
-                          borderColor: cat.border,
-                          flexShrink: 0,
-                        }}
-                      >
-                        {item.category}
-                      </span>
+                      </a>
+                      {item.category in CATEGORY_COLORS ? (
+                        <Link
+                          href={`/topics/${item.category}`}
+                          style={{ textDecoration: "none" }}
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {categoryTag}
+                        </Link>
+                      ) : (
+                        categoryTag
+                      )}
                     </div>
 
-                    {/* Source */}
                     <div
                       style={{
                         fontSize: 11,
@@ -181,7 +192,6 @@ export function WeeklySignal({ items }: WeeklySignalProps) {
                       {item.source}
                     </div>
 
-                    {/* Why it matters */}
                     <div
                       style={{
                         fontSize: 13,
@@ -208,19 +218,23 @@ export function WeeklySignal({ items }: WeeklySignalProps) {
                     </div>
                   </div>
 
-                  {/* Arrow */}
-                  <div
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{
                       fontSize: 16,
                       color: "var(--text-muted)",
                       paddingTop: 2,
                       flexShrink: 0,
+                      textDecoration: "none",
                     }}
+                    aria-label={`Open: ${item.title}`}
                   >
                     →
-                  </div>
+                  </a>
                 </div>
-              </a>
+              </div>
             );
           })}
         </div>

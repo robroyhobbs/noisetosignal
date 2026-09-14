@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer
@@ -23,14 +25,30 @@ export function Footer() {
         <div>
           <div
             style={{
-              fontSize: 14,
-              fontWeight: 800,
-              letterSpacing: "-0.01em",
-              color: "var(--text-primary)",
-              marginBottom: 6,
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+              marginBottom: 8,
             }}
           >
-            Founder Ratio
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/brand/founder-ratio-mark.png"
+              alt=""
+              width={18}
+              height={22}
+              style={{ height: 22, width: "auto", display: "block" }}
+            />
+            <div
+              style={{
+                fontSize: 14,
+                fontWeight: 800,
+                letterSpacing: "-0.01em",
+                color: "var(--text-primary)",
+              }}
+            >
+              Founder Ratio
+            </div>
           </div>
           <div
             style={{
@@ -60,6 +78,32 @@ export function Footer() {
             </a>{" "}
             — a curated network for venture-scale founders who value rooms over
             noise.
+          </div>
+          <div style={{ marginTop: 14, display: "flex", gap: 16 }}>
+            <Link
+              href="/topics"
+              style={{
+                fontSize: 11,
+                color: "var(--text-muted)",
+                textDecoration: "none",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+              }}
+            >
+              Topics
+            </Link>
+            <Link
+              href="/archive"
+              style={{
+                fontSize: 11,
+                color: "var(--text-muted)",
+                textDecoration: "none",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+              }}
+            >
+              Archive
+            </Link>
           </div>
         </div>
 
