@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/fetch-renders.js",
-    "predev": "node scripts/fetch-renders.js",
+    "prebuild": "node scripts/fetch-dilemmas.js",
+    "predev": "node scripts/fetch-dilemmas.js",
     "build": "next build",
     "start": "next start",
-    "fetch:renders": "node scripts/fetch-renders.js"
+    "fetch:dilemmas": "node scripts/fetch-dilemmas.js"
   },
   "keywords": [],
   "author": "",

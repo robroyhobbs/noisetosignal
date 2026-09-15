@@ -6,3 +6,4 @@ out/
 *.tsbuildinfo
 .vercel
 data/.fetched-benchmarks/
+data/.fetched-dilemmas/

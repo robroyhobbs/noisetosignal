@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { absoluteUrl } from "@/lib/site";
 import { getCurrentWeek, getRatioHistory, weeks, getCurrentDilemma } from "@/lib/data";
+import { getNewestDilemma } from "@/lib/dilemmas";
 import { Header } from "./components/Header";
 import { HeroExplainer } from "./components/HeroExplainer";
 import { NoiseIndex } from "./components/NoiseIndex";
@@ -28,7 +29,7 @@ export default function Home() {
   const current = getCurrentWeek();
   const history = getRatioHistory();
   const previous = weeks[1] ?? weeks[0];
-  const dilemma = getCurrentDilemma();
+  const dilemma = getNewestDilemma() ?? getCurrentDilemma();
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
