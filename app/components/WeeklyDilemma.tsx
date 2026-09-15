@@ -1,11 +1,26 @@
 import type { Dilemma } from "@/lib/types";
+import type { FetchedDilemma } from "@/lib/dilemmas";
 import { FnLink } from "./FnLink";
 
 interface WeeklyDilemmaProps {
-  dilemma: Dilemma;
+  dilemma: Dilemma | FetchedDilemma;
+}
+
+function isFetched(d: Dilemma | FetchedDilemma): d is FetchedDilemma {
+  return "situation" in d;
 }
 
 export function WeeklyDilemma({ dilemma }: WeeklyDilemmaProps) {
+  const fetched = isFetched(dilemma);
+  const context = fetched ? dilemma.situation : dilemma.context;
+  const decision = fetched ? dilemma.title : dilemma.decision;
+  const stakes = fetched ? null : dilemma.stakes;
+  const options = fetched ? dilemma.options : [];
+  const mattered = fetched ? dilemma.what_mattered : [];
+  const byline = fetched
+    ? dilemma.stage_label
+    : `Submitted anonymously · ${dilemma.submittedBy}`;
+
   return (
     <section
       style={{
@@ -44,7 +59,7 @@ export function WeeklyDilemma({ dilemma }: WeeklyDilemmaProps) {
               marginBottom: 24,
             }}
           >
-            {dilemma.context}
+            {context}
           </div>
 
           {/* The decision */}
@@ -69,9 +84,39 @@ export function WeeklyDilemma({ dilemma }: WeeklyDilemmaProps) {
                 lineHeight: 1.5,
               }}
             >
-              {dilemma.decision}
+              {decision}
             </div>
           </div>
+
+          {options.length > 0 && (
+            <div
+              style={{
+                borderTop: "1px solid var(--border)",
+                paddingTop: 20,
+                marginBottom: 20,
+              }}
+            >
+              <div
+                className="eyebrow"
+                style={{ color: "var(--text-muted)", marginBottom: 8 }}
+              >
+                Options
+              </div>
+              <ul
+                style={{
+                  margin: 0,
+                  paddingLeft: 18,
+                  fontSize: 14,
+                  color: "var(--text-sec)",
+                  lineHeight: 1.6,
+                }}
+              >
+                {options.map((o) => (
+                  <li key={o}>{o}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* Stakes */}
           <div
@@ -87,15 +132,31 @@ export function WeeklyDilemma({ dilemma }: WeeklyDilemmaProps) {
             >
               What's at stake
             </div>
-            <div
-              style={{
-                fontSize: 14,
-                color: "var(--text-sec)",
-                lineHeight: 1.6,
-              }}
-            >
-              {dilemma.stakes}
-            </div>
+            {mattered.length > 0 ? (
+              <ul
+                style={{
+                  margin: 0,
+                  paddingLeft: 18,
+                  fontSize: 14,
+                  color: "var(--text-sec)",
+                  lineHeight: 1.6,
+                }}
+              >
+                {mattered.map((m) => (
+                  <li key={m}>{m}</li>
+                ))}
+              </ul>
+            ) : (
+              <div
+                style={{
+                  fontSize: 14,
+                  color: "var(--text-sec)",
+                  lineHeight: 1.6,
+                }}
+              >
+                {stakes}
+              </div>
+            )}
           </div>
 
           {/* Submitted by */}
@@ -114,7 +175,7 @@ export function WeeklyDilemma({ dilemma }: WeeklyDilemmaProps) {
                 textTransform: "uppercase",
               }}
             >
-              Submitted anonymously · {dilemma.submittedBy}
+              {byline}
             </div>
             <div
               style={{
