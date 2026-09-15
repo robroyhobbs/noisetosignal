@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { topicSlugs } from "@/lib/topics";
 import { conceptSlugs } from "@/lib/concepts";
+import { getBenchmarkPages } from "@/lib/benchmarks";
 import { SITE_URL, absoluteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -16,6 +17,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.75,
+  }));
+
+  const benchmarkEntries: MetadataRoute.Sitemap = getBenchmarkPages().map((p) => ({
+    url: absoluteUrl(`/benchmarks/${p.slug}`),
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
   }));
 
   return [
@@ -45,5 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...topicEntries,
     ...conceptEntries,
+    {
+      url: absoluteUrl("/benchmarks"),
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    ...benchmarkEntries,
   ];
 }

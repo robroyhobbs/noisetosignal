@@ -1,4 +1,5 @@
 import type { Dilemma } from "@/lib/types";
+import { FnLink } from "./FnLink";
 
 interface WeeklyDilemmaProps {
   dilemma: Dilemma;
@@ -130,14 +131,13 @@ export function WeeklyDilemma({ dilemma }: WeeklyDilemmaProps) {
         {/* CTA */}
         <div style={{ marginTop: 20, fontSize: 13, color: "var(--text-muted)" }}>
           Facing one?{" "}
-          <a
-            href="https://www.foundernexus.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <FnLink
+            href="https://www.foundernexus.com?utm_source=founderratio&utm_medium=referral&utm_campaign=dilemma&utm_content=facing-one"
+            slug="dilemma"
             style={{ color: "var(--accent-green)", textDecoration: "none" }}
           >
             FounderNexus
-          </a>{" "}
+          </FnLink>{" "}
           is the room.
         </div>
       </div>
