@@ -88,7 +88,7 @@ export default async function TopicPage({
 
   const current = getCurrentWeek();
   const signals = getSignalsForTopic(topic.slug as Category, 15);
-  const relatedConcepts = getConceptsForTopic(topic.slug as Category, 3);
+  const relatedConcepts = getConceptsForTopic(topic.slug as Category, 5);
   const cat = CATEGORY_COLORS[topic.slug];
   const cta = applyCtaUrl(topic.slug);
 

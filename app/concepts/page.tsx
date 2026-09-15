@@ -11,7 +11,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Concepts",
   description:
-    "Short operator definitions — SAFE, liquidation preference, runway, and more.",
+    "Short operator definitions — SAFE, valuation cap, option pool, LTV:CAC, and more.",
   alternates: { canonical: absoluteUrl("/concepts") },
   openGraph: { url: absoluteUrl("/concepts") },
 };
