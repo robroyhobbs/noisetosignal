@@ -1,7 +1,5 @@
 import type { Category } from "./types";
 
-const BIBLE = "https://startup-bible-theta.vercel.app";
-
 export interface ConceptMeta {
   slug: string;
   title: string;
@@ -11,8 +9,6 @@ export interface ConceptMeta {
   definition: string;
   /** Where founders get this wrong — max 3. */
   wrong: string[];
-  /** Outbound Startup Bible links when a path exists. Empty = FR-only. */
-  bibleLinks: { label: string; href: string }[];
   relatedTopics: Category[];
 }
 
@@ -28,16 +24,6 @@ export const concepts: ConceptMeta[] = [
       "Stacking SAFEs with mismatched terms and no pro forma of the next priced round.",
       "Skipping counsel because 'everyone uses YC's post-money SAFE' — small edits still move ownership.",
     ],
-    bibleLinks: [
-      {
-        label: "SAFE (concept)",
-        href: `${BIBLE}/concepts/safe/`,
-      },
-      {
-        label: "SAFEs, notes & priced rounds",
-        href: `${BIBLE}/raising-money/safes-notes-priced-rounds/`,
-      },
-    ],
     relatedTopics: ["fundraising"],
   },
   {
@@ -50,12 +36,6 @@ export const concepts: ConceptMeta[] = [
       "Assuming 1x non-participating is always harmless without checking seniority and multiples in the stack.",
       "Ignoring participating preferred or stacked prefs that quietly wipe common in mid outcomes.",
       "Negotiating valuation while leaving preference language unread until counsel's redline.",
-    ],
-    bibleLinks: [
-      {
-        label: "Liquidation preference (concept)",
-        href: `${BIBLE}/concepts/liquidation-preference/`,
-      },
     ],
     relatedTopics: ["fundraising"],
   },
@@ -70,12 +50,6 @@ export const concepts: ConceptMeta[] = [
       "Confusing activity (demos booked) with learning (why buyers say yes or no).",
       "Handing off before ICP, objection map, and proof points are written down.",
     ],
-    bibleLinks: [
-      {
-        label: "Founder-led sales (concept)",
-        href: `${BIBLE}/concepts/founder-led-sales/`,
-      },
-    ],
     relatedTopics: ["product", "leadership"],
   },
   {
@@ -88,16 +62,6 @@ export const concepts: ConceptMeta[] = [
       "Running open-ended free pilots with no success criteria, owner, or end date.",
       "Calling something a pilot when the buyer already needs a paid SOW — and discounting anyway.",
       "Treating a logo as traction without a path to paid expansion.",
-    ],
-    bibleLinks: [
-      {
-        label: "Pilot vs paid contract (concept)",
-        href: `${BIBLE}/concepts/pilot-vs-paid-contract/`,
-      },
-      {
-        label: "Pilots that convert",
-        href: `${BIBLE}/getting-customers/pilots-that-convert/`,
-      },
     ],
     relatedTopics: ["product"],
   },
@@ -112,7 +76,6 @@ export const concepts: ConceptMeta[] = [
       "Burning months on 'brand' or speculative features while pipeline and cash collection slip.",
       "Raising too late because 'we still have six months' — without a realistic close timeline.",
     ],
-    bibleLinks: [],
     relatedTopics: ["fundraising", "leadership"],
   },
   {
@@ -125,12 +88,6 @@ export const concepts: ConceptMeta[] = [
       "Celebrating valuation while skimming preference, participation, and seniority language.",
       "Accepting an option-pool increase that dilutes founders pre-money without modeling it.",
       "Agreeing to broad protective provisions that turn every hire and pivot into a board event.",
-    ],
-    bibleLinks: [
-      {
-        label: "Term sheets red flags",
-        href: `${BIBLE}/raising-money/term-sheets-red-flags/`,
-      },
     ],
     relatedTopics: ["fundraising"],
   },
@@ -145,16 +102,6 @@ export const concepts: ConceptMeta[] = [
       "Pitching post-money language while investors model dilution on pre-money — and not catching the mismatch.",
       "Skipping a simple ownership table before agreeing to the number in the room.",
     ],
-    bibleLinks: [
-      {
-        label: "Pre-money vs. post-money (concept)",
-        href: `${BIBLE}/concepts/pre-money-vs-post-money/`,
-      },
-      {
-        label: "SAFEs, notes & priced rounds",
-        href: `${BIBLE}/raising-money/safes-notes-priced-rounds/`,
-      },
-    ],
     relatedTopics: ["fundraising"],
   },
   {
@@ -167,16 +114,6 @@ export const concepts: ConceptMeta[] = [
       "Raising the cap to close faster without modeling conversion at a realistic next round.",
       "Stacking caps and discounts across SAFEs with no single ownership pro forma.",
       "Explaining the cap as 'our valuation today' instead of a conversion floor for future equity.",
-    ],
-    bibleLinks: [
-      {
-        label: "Valuation cap (concept)",
-        href: `${BIBLE}/concepts/valuation-cap/`,
-      },
-      {
-        label: "SAFE (concept)",
-        href: `${BIBLE}/concepts/safe/`,
-      },
     ],
     relatedTopics: ["fundraising"],
   },
@@ -191,16 +128,6 @@ export const concepts: ConceptMeta[] = [
       "Assuming acceleration, cliffs, and repurchase price are boilerplate you can ignore until counsel asks.",
       "Leaving unvested stock undocumented while raising — investors will force the cleanup mid-process.",
     ],
-    bibleLinks: [
-      {
-        label: "Founder vesting (concept)",
-        href: `${BIBLE}/concepts/founder-vesting/`,
-      },
-      {
-        label: "Founder stock, vesting & 83(b)",
-        href: `${BIBLE}/equity-legal/founder-stock-vesting-83b/`,
-      },
-    ],
     relatedTopics: ["leadership", "hiring"],
   },
   {
@@ -213,16 +140,6 @@ export const concepts: ConceptMeta[] = [
       "Treating 83(b) as optional paperwork you can file 'when you get to it.'",
       "Receiving vesting stock and never confirming whether counsel filed — and for whom.",
       "Focusing on strike price while ignoring the election deadline that locks the tax treatment.",
-    ],
-    bibleLinks: [
-      {
-        label: "83(b) election (concept)",
-        href: `${BIBLE}/concepts/83b-election/`,
-      },
-      {
-        label: "Founder stock, vesting & 83(b)",
-        href: `${BIBLE}/equity-legal/founder-stock-vesting-83b/`,
-      },
     ],
     relatedTopics: ["leadership", "hiring"],
   },
@@ -237,16 +154,6 @@ export const concepts: ConceptMeta[] = [
       "Building a 20% pool with no 18-month hiring plan that actually spends it.",
       "Granting advisor and early-hire equity ad hoc outside pool bands and vesting norms.",
     ],
-    bibleLinks: [
-      {
-        label: "Options pools & advisor equity",
-        href: `${BIBLE}/equity-legal/options-pools-advisor-equity/`,
-      },
-      {
-        label: "Advisor equity (concept)",
-        href: `${BIBLE}/concepts/advisor-equity/`,
-      },
-    ],
     relatedTopics: ["hiring", "fundraising"],
   },
   {
@@ -259,16 +166,6 @@ export const concepts: ConceptMeta[] = [
       "Treating venture debt as 'cheap capital' without modeling covenants, security, and warrant dilution.",
       "Drawing debt when the next equity round is unclear — lenders price that risk into control terms.",
       "Ignoring how debt sits ahead of common on a soft exit or restructuring.",
-    ],
-    bibleLinks: [
-      {
-        label: "Venture debt (concept)",
-        href: `${BIBLE}/concepts/venture-debt/`,
-      },
-      {
-        label: "Venture debt (playbook)",
-        href: `${BIBLE}/raising-money/venture-debt/`,
-      },
     ],
     relatedTopics: ["fundraising"],
   },
@@ -283,16 +180,6 @@ export const concepts: ConceptMeta[] = [
       "Cutting to default alive without deciding which product bets and key people survive the cut.",
       "Raising as if nothing changed after a default-alive reset that rewrote the growth narrative.",
     ],
-    bibleLinks: [
-      {
-        label: "Default alive (concept)",
-        href: `${BIBLE}/concepts/default-alive/`,
-      },
-      {
-        label: "When runway runs out",
-        href: `${BIBLE}/raising-money/when-runway-runs-out/`,
-      },
-    ],
     relatedTopics: ["fundraising", "leadership"],
   },
   {
@@ -305,16 +192,6 @@ export const concepts: ConceptMeta[] = [
       "Reporting LTV with heroic retention and CAC that ignores fully loaded sales and marketing.",
       "Optimizing the ratio while payback period quietly stretches past runway.",
       "Using blended CAC to hide a channel that will never pay back at scale.",
-    ],
-    bibleLinks: [
-      {
-        label: "LTV:CAC (concept)",
-        href: `${BIBLE}/concepts/ltv-cac/`,
-      },
-      {
-        label: "Pricing and packaging",
-        href: `${BIBLE}/getting-customers/pricing-and-packaging/`,
-      },
     ],
     relatedTopics: ["product", "market"],
   },

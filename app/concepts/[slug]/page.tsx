@@ -198,53 +198,6 @@ export default async function ConceptPage({
           ))}
         </ul>
 
-        {concept.bibleLinks.length > 0 && (
-          <div
-            style={{
-              background: "var(--bg-card)",
-              border: "1px solid var(--border)",
-              borderRadius: 4,
-              padding: "16px 20px",
-              marginBottom: 28,
-            }}
-          >
-            <div
-              className="eyebrow"
-              style={{ marginBottom: 8, color: "var(--text-muted)" }}
-            >
-              Go deeper · FounderNexus Startup Bible
-            </div>
-            <p
-              style={{
-                fontSize: 13,
-                color: "var(--text-sec)",
-                lineHeight: 1.6,
-                margin: "0 0 12px",
-              }}
-            >
-              Playbooks from the room — we link out.
-            </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              {concept.bibleLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    fontSize: 13,
-                    color: cat.text,
-                    textDecoration: "none",
-                    fontWeight: 600,
-                  }}
-                >
-                  {link.label} ↗
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
-
         <div style={{ marginBottom: 36 }}>
           <div
             className="eyebrow"
