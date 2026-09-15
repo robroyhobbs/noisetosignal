@@ -20,12 +20,21 @@ export const metadata: Metadata = {
     siteName: "Founder Ratio",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Founder Ratio — weekly picks for venture-backed founders",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Founder Ratio | The Founder Attention Index",
     description:
       "Five decision-changing picks and the weekly noise÷signal ratio.",
+    images: ["/og.png"],
   },
   icons: {
     icon: [{ url: "/icon.png", type: "image/png" }],
