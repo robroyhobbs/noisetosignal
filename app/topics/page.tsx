@@ -67,7 +67,7 @@ export default function TopicsIndex() {
             marginBottom: 40,
           }}
         >
-          Five hubs of recent decision-changing picks, with Startup Bible links.
+          Five hubs of recent decision-changing picks.
         </p>
 
         <div

@@ -5,31 +5,15 @@ export interface TopicMeta {
   slug: Category;
   title: string;
   blurb: string;
-  /** Short doctrine pointer — name a Bible section; do not paste playbook body. */
-  bibleHint: string;
-  bibleLinks: { label: string; href: string }[];
   /** 2–3 sentence definition of signal for this topic. */
   definition: string;
 }
-
-const BIBLE = "https://startup-bible-theta.vercel.app";
 
 export const topics: TopicMeta[] = [
   {
     slug: "fundraising",
     title: "Fundraising",
     blurb: "Rounds, process, and who still gets capital when the feed is loud.",
-    bibleHint: "Startup Bible on raising money — SAFEs, notes, priced rounds, data rooms.",
-    bibleLinks: [
-      {
-        label: "SAFEs, notes & priced rounds",
-        href: `${BIBLE}/raising-money/safes-notes-priced-rounds/`,
-      },
-      {
-        label: "Data rooms",
-        href: `${BIBLE}/raising-money/data-rooms/`,
-      },
-    ],
     definition:
       "Fundraising signal changes how you raise, price, or sequence a round — not another mega-round headline. Investor behavior, process, or proof that moves a close. Vanity announcements stay noise.",
   },
@@ -37,17 +21,6 @@ export const topics: TopicMeta[] = [
     slug: "hiring",
     title: "Hiring",
     blurb: "Team design, talent markets, and when headcount is the real bet.",
-    bibleHint: "Startup Bible on building the company — exec team and equity structure.",
-    bibleLinks: [
-      {
-        label: "Executive team",
-        href: `${BIBLE}/building-the-company/executive-team/`,
-      },
-      {
-        label: "Options pools & advisor equity",
-        href: `${BIBLE}/equity-legal/options-pools-advisor-equity/`,
-      },
-    ],
     definition:
       "Hiring signal changes who to hire next, how to compete for talent, or when to slow headcount. Org design, comp, recruiting leverage — not culture-poster content.",
   },
@@ -55,17 +28,6 @@ export const topics: TopicMeta[] = [
     slug: "product",
     title: "Product",
     blurb: "Build, package, and GTM choices that change what ships next.",
-    bibleHint: "Startup Bible on getting customers — packaging, pilots, validate-before-you-build.",
-    bibleLinks: [
-      {
-        label: "Pricing and packaging",
-        href: `${BIBLE}/getting-customers/pricing-and-packaging/`,
-      },
-      {
-        label: "Validate before you build",
-        href: `${BIBLE}/getting-customers/validate-before-you-build/`,
-      },
-    ],
     definition:
       "Product signal changes what you ship, how you package it, or how you go to market. Roadmap cuts, buyer surfaces, retention proof. Feature theater is noise.",
   },
@@ -73,17 +35,6 @@ export const topics: TopicMeta[] = [
     slug: "leadership",
     title: "Leadership",
     blurb: "Judgment, pivots, boards, and hard calls under pressure.",
-    bibleHint: "Startup Bible on company-building judgment — exec team and founder equity/vesting.",
-    bibleLinks: [
-      {
-        label: "Executive team",
-        href: `${BIBLE}/building-the-company/executive-team/`,
-      },
-      {
-        label: "Founder stock vesting & 83(b)",
-        href: `${BIBLE}/equity-legal/founder-stock-vesting-83b/`,
-      },
-    ],
     definition:
       "Leadership signal sharpens judgment — pivots, board dynamics, culture under constraint. Useful when it shows the cost of a hard call, not founder-brand flattery.",
   },
@@ -91,17 +42,6 @@ export const topics: TopicMeta[] = [
     slug: "market",
     title: "Market",
     blurb: "Capital as denominator, category shifts, and where attention is mispriced.",
-    bibleHint: "Startup Bible benchmarks and raising-money context for the capital landscape.",
-    bibleLinks: [
-      {
-        label: "Benchmarks",
-        href: `${BIBLE}/reference/benchmarks/`,
-      },
-      {
-        label: "Raising money (Startup Bible)",
-        href: `${BIBLE}/raising-money/safes-notes-priced-rounds/`,
-      },
-    ],
     definition:
       "Market signal reframes the denominator: capital flows, category structure, mispriced attention. Macro cheerleading without a takeaway is noise.",
   },

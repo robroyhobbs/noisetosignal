@@ -176,52 +176,6 @@ export default async function TopicPage({
           {topic.definition}
         </p>
 
-        <div
-          style={{
-            background: "var(--bg-card)",
-            border: "1px solid var(--border)",
-            borderRadius: 4,
-            padding: "16px 20px",
-            marginBottom: 36,
-            maxWidth: 720,
-          }}
-        >
-          <div
-            className="eyebrow"
-            style={{ marginBottom: 8, color: "var(--text-muted)" }}
-          >
-            Soft lens · FounderNexus Startup Bible
-          </div>
-          <p
-            style={{
-              fontSize: 13,
-              color: "var(--text-sec)",
-              lineHeight: 1.6,
-              margin: "0 0 10px",
-            }}
-          >
-            {topic.bibleHint}
-          </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
-            {topic.bibleLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  fontSize: 13,
-                  color: cat.text,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-              >
-                {link.label} ↗
-              </a>
-            ))}
-          </div>
-        </div>
-
         <h2
           style={{
             fontSize: 20,

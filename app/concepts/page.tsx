@@ -67,7 +67,7 @@ export default function ConceptsIndex() {
             marginBottom: 40,
           }}
         >
-          Short operator definitions — then out to FounderNexus Startup Bible.
+          Short operator definitions — SAFE, valuation cap, option pool, LTV:CAC, and more.
         </p>
 
         <div
