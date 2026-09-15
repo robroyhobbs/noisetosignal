@@ -1,3 +1,5 @@
+import { FnLink } from "./FnLink";
+
 interface InTheRoomProps {
   weekOf: string;
 }
@@ -61,10 +63,9 @@ export function InTheRoom({ weekOf }: InTheRoomProps) {
         >
           The index is public. The hard calls get better in a room of founders
           who have been through it —{" "}
-          <a
+          <FnLink
             href={roomLink}
-            target="_blank"
-            rel="noopener noreferrer"
+            slug={`in-the-room-${weekOf}`}
             style={{
               color: "var(--text-primary)",
               textDecoration: "underline",
@@ -73,14 +74,13 @@ export function InTheRoom({ weekOf }: InTheRoomProps) {
             }}
           >
             FounderNexus
-          </a>
+          </FnLink>
           .
         </p>
 
-        <a
+        <FnLink
           href={applyLink}
-          target="_blank"
-          rel="noopener noreferrer"
+          slug={`in-the-room-apply-${weekOf}`}
           style={{
             display: "inline-block",
             padding: "12px 28px",
@@ -97,7 +97,7 @@ export function InTheRoom({ weekOf }: InTheRoomProps) {
           }}
         >
           Apply to FounderNexus
-        </a>
+        </FnLink>
       </div>
     </div>
   );

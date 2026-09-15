@@ -14,6 +14,7 @@ import { getConceptsForTopic } from "@/lib/concepts";
 import type { Category } from "@/lib/types";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { FnLink } from "../../components/FnLink";
 
 export const revalidate = 3600;
 
@@ -420,10 +421,9 @@ export default async function TopicPage({
             Signal is the filter. The room is FounderNexus — apply if you are
             building at venture scale and want operators over feed noise.
           </p>
-          <a
+          <FnLink
             href={cta}
-            target="_blank"
-            rel="noopener noreferrer"
+            slug={`topic-${topic.slug}`}
             style={{
               display: "inline-block",
               background: cat.text,
@@ -438,7 +438,7 @@ export default async function TopicPage({
             }}
           >
             Apply to FounderNexus →
-          </a>
+          </FnLink>
         </div>
 
         <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>

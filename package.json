@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/fetch-renders.js",
+    "predev": "node scripts/fetch-renders.js",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "fetch:renders": "node scripts/fetch-renders.js"
   },
   "keywords": [],
   "author": "",

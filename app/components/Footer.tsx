@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FnLink } from "./FnLink";
 
 export function Footer() {
   return (
@@ -68,14 +69,13 @@ export function Footer() {
               Rob Roy Hobbs
             </a>
             {" "}in partnership with{" "}
-            <a
+            <FnLink
               href="https://www.foundernexus.com?utm_source=founderratio&utm_medium=referral&utm_campaign=week-2026-09-14&utm_content=footer"
-              target="_blank"
-              rel="noopener noreferrer"
+              slug="footer"
               style={{ color: "var(--text-sec)", textDecoration: "none" }}
             >
               FounderNexus
-            </a>{" "}
+            </FnLink>{" "}
             — a curated network for venture-scale founders who value rooms over
             noise.
           </div>
