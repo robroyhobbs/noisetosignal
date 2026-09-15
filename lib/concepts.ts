@@ -134,6 +134,190 @@ export const concepts: ConceptMeta[] = [
     ],
     relatedTopics: ["fundraising"],
   },
+  {
+    slug: "pre-money-vs-post-money",
+    title: "Pre-money vs post-money",
+    blurb: "Same round, different ownership — know which number you are negotiating.",
+    definition:
+      "Pre-money is company value before new capital; post-money is pre-money plus the check. Ownership is investment divided by post-money. Confusing the two is how founders celebrate a headline and give away an extra third of the company.",
+    wrong: [
+      "Treating a '$90M valuation' as interchangeable when pre vs post changes ownership by a full slice.",
+      "Pitching post-money language while investors model dilution on pre-money — and not catching the mismatch.",
+      "Skipping a simple ownership table before agreeing to the number in the room.",
+    ],
+    bibleLinks: [
+      {
+        label: "Pre-money vs. post-money (concept)",
+        href: `${BIBLE}/concepts/pre-money-vs-post-money/`,
+      },
+      {
+        label: "SAFEs, notes & priced rounds",
+        href: `${BIBLE}/raising-money/safes-notes-priced-rounds/`,
+      },
+    ],
+    relatedTopics: ["fundraising"],
+  },
+  {
+    slug: "valuation-cap",
+    title: "Valuation cap",
+    blurb: "The SAFE ceiling that sets how much equity early checks buy later.",
+    definition:
+      "A valuation cap is the maximum price at which a SAFE converts in a priced round. Above the cap, early money buys more ownership than new investors; below it, they convert at the round (or a discount). The cap is a dilution scenario — not a badge.",
+    wrong: [
+      "Raising the cap to close faster without modeling conversion at a realistic next round.",
+      "Stacking caps and discounts across SAFEs with no single ownership pro forma.",
+      "Explaining the cap as 'our valuation today' instead of a conversion floor for future equity.",
+    ],
+    bibleLinks: [
+      {
+        label: "Valuation cap (concept)",
+        href: `${BIBLE}/concepts/valuation-cap/`,
+      },
+      {
+        label: "SAFE (concept)",
+        href: `${BIBLE}/concepts/safe/`,
+      },
+    ],
+    relatedTopics: ["fundraising"],
+  },
+  {
+    slug: "founder-vesting",
+    title: "Founder vesting",
+    blurb: "Unvested founder stock can be clawed back — standard is four years with a cliff.",
+    definition:
+      "Founder vesting means the company can repurchase unvested shares at cost until they vest. Four years monthly with a one-year cliff is the market default. It protects co-founders and later investors if someone leaves early — and it is what investors expect on the cap table.",
+    wrong: [
+      "Skipping vesting between co-founders 'because we trust each other' and then fighting over a departure.",
+      "Assuming acceleration, cliffs, and repurchase price are boilerplate you can ignore until counsel asks.",
+      "Leaving unvested stock undocumented while raising — investors will force the cleanup mid-process.",
+    ],
+    bibleLinks: [
+      {
+        label: "Founder vesting (concept)",
+        href: `${BIBLE}/concepts/founder-vesting/`,
+      },
+      {
+        label: "Founder stock, vesting & 83(b)",
+        href: `${BIBLE}/equity-legal/founder-stock-vesting-83b/`,
+      },
+    ],
+    relatedTopics: ["leadership", "hiring"],
+  },
+  {
+    slug: "83b-election",
+    title: "83(b) election",
+    blurb: "File within 30 days of the grant — or tax every vest at future FMV.",
+    definition:
+      "An 83(b) election tells the IRS to tax restricted stock on the grant date instead of as each tranche vests. For early founder stock near zero FMV, that difference is the tax bill. Miss the 30-day window and you do not get a do-over.",
+    wrong: [
+      "Treating 83(b) as optional paperwork you can file 'when you get to it.'",
+      "Receiving vesting stock and never confirming whether counsel filed — and for whom.",
+      "Focusing on strike price while ignoring the election deadline that locks the tax treatment.",
+    ],
+    bibleLinks: [
+      {
+        label: "83(b) election (concept)",
+        href: `${BIBLE}/concepts/83b-election/`,
+      },
+      {
+        label: "Founder stock, vesting & 83(b)",
+        href: `${BIBLE}/equity-legal/founder-stock-vesting-83b/`,
+      },
+    ],
+    relatedTopics: ["leadership", "hiring"],
+  },
+  {
+    slug: "option-pool",
+    title: "Option pool",
+    blurb: "Reserved equity for hires and advisors — often expanded pre-money at your expense.",
+    definition:
+      "The option pool is equity reserved for employees and advisors. Investors often require a larger pool before the round closes, which dilutes founders on a pre-money basis. Size the pool to a real hiring plan — not a round number that looks 'market.'",
+    wrong: [
+      "Accepting a pre-money pool shuffle without modeling founder ownership after the refresh.",
+      "Building a 20% pool with no 18-month hiring plan that actually spends it.",
+      "Granting advisor and early-hire equity ad hoc outside pool bands and vesting norms.",
+    ],
+    bibleLinks: [
+      {
+        label: "Options pools & advisor equity",
+        href: `${BIBLE}/equity-legal/options-pools-advisor-equity/`,
+      },
+      {
+        label: "Advisor equity (concept)",
+        href: `${BIBLE}/concepts/advisor-equity/`,
+      },
+    ],
+    relatedTopics: ["hiring", "fundraising"],
+  },
+  {
+    slug: "venture-debt",
+    title: "Venture debt",
+    blurb: "Loan underwritten on investor follow-on — not profits. Senior, secured, with warrants.",
+    definition:
+      "Venture debt is a loan to a venture-backed company that is usually still burning cash. Lenders underwrite the probability of the next equity round, not EBITDA. It is senior and secured, does not convert, and usually includes a small warrant — useful runway if the equity story still holds.",
+    wrong: [
+      "Treating venture debt as 'cheap capital' without modeling covenants, security, and warrant dilution.",
+      "Drawing debt when the next equity round is unclear — lenders price that risk into control terms.",
+      "Ignoring how debt sits ahead of common on a soft exit or restructuring.",
+    ],
+    bibleLinks: [
+      {
+        label: "Venture debt (concept)",
+        href: `${BIBLE}/concepts/venture-debt/`,
+      },
+      {
+        label: "Venture debt (playbook)",
+        href: `${BIBLE}/raising-money/venture-debt/`,
+      },
+    ],
+    relatedTopics: ["fundraising"],
+  },
+  {
+    slug: "default-alive",
+    title: "Default alive",
+    blurb: "Cash flow keeps the company alive without a new round — not just longer runway.",
+    definition:
+      "Default alive means the company can survive indefinitely without new outside capital. It is not 'we bought six more months.' It is 'we no longer need a round to exist' — usually paid for with headcount, ambition, or the story the next investor wanted to hear.",
+    wrong: [
+      "Calling yourself default alive when you still need a bridge to make payroll next quarter.",
+      "Cutting to default alive without deciding which product bets and key people survive the cut.",
+      "Raising as if nothing changed after a default-alive reset that rewrote the growth narrative.",
+    ],
+    bibleLinks: [
+      {
+        label: "Default alive (concept)",
+        href: `${BIBLE}/concepts/default-alive/`,
+      },
+      {
+        label: "When runway runs out",
+        href: `${BIBLE}/raising-money/when-runway-runs-out/`,
+      },
+    ],
+    relatedTopics: ["fundraising", "leadership"],
+  },
+  {
+    slug: "ltv-cac",
+    title: "LTV:CAC",
+    blurb: "Lifetime value over acquisition cost — the unit-economics gate investors actually read.",
+    definition:
+      "LTV:CAC is lifetime value divided by customer acquisition cost. In the room it is a ratio gate: roughly 3:1 is bare minimum, 4:1 is more comfortable. If CAC is high, LTV has to clear payback or the growth story is a burn story.",
+    wrong: [
+      "Reporting LTV with heroic retention and CAC that ignores fully loaded sales and marketing.",
+      "Optimizing the ratio while payback period quietly stretches past runway.",
+      "Using blended CAC to hide a channel that will never pay back at scale.",
+    ],
+    bibleLinks: [
+      {
+        label: "LTV:CAC (concept)",
+        href: `${BIBLE}/concepts/ltv-cac/`,
+      },
+      {
+        label: "Pricing and packaging",
+        href: `${BIBLE}/getting-customers/pricing-and-packaging/`,
+      },
+    ],
+    relatedTopics: ["product", "market"],
+  },
 ];
 
 export const conceptSlugs = concepts.map((c) => c.slug);
@@ -145,7 +329,7 @@ export function getConcept(slug: string): ConceptMeta | undefined {
 /** Concepts linked to a topic hub — capped for UI. */
 export function getConceptsForTopic(
   topic: Category,
-  limit = 3
+  limit = 5
 ): ConceptMeta[] {
   return concepts
     .filter((c) => c.relatedTopics.includes(topic))
