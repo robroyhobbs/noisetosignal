@@ -3,81 +3,93 @@ import type { NoiseWeek, Dilemma, BenchmarkStage, NoiseSource } from "./types";
 export const weeks: NoiseWeek[] = [
   {
     weekOf: "2026-09-21",
-    noiseCount: 462,
+    noiseCount: 528,
     signalCount: 5,
-    ratio: 92.4,
-    note: "TODO: One-line summary of noise theme this week.",
+    ratio: 105.6,
+    note: "Unicorn AEO and AI-factory mega-rounds flooded the timeline while the useful reads were about GTM systems, founder-led sales with agents, and raises that separate primary capital from tender theater.",
     signal: [
       {
-        id: "s9-1",
-        title: "TODO: Signal pick 1",
-        url: "https://example.com",
-        source: "TODO",
-        whyItMatters: "TODO: Why this matters to founders.",
-        category: "market",
+        id: "s30-1",
+        title:
+          "AEO startup Profound hits unicorn valuation, raises $180M Series D 7 months after last round",
+        url: "https://techcrunch.com/2026/09/15/aeo-startup-profound-hits-unicorn-valuation-raises-180m-series-d-7-months-after-last-round/",
+        source: "TechCrunch",
+        whyItMatters:
+          "If buyers discover you through AI answers, SEO is no longer the whole GTM surface — answer-engine visibility is a product and sales problem. Useful for any founder still treating discovery as a content side project: the buying committee now includes the models that recommend you.",
+        category: "product",
         position: 1,
       },
       {
-        id: "s9-2",
-        title: "TODO: Signal pick 2",
-        url: "https://example.com",
-        source: "TODO",
-        whyItMatters: "TODO: Why this matters to founders.",
-        category: "market",
+        id: "s30-2",
+        title: "Scaling your growth engines",
+        url: "https://www.lennysnewsletter.com/p/scaling-your-b2b-growth-engine",
+        source: "Lenny's Newsletter",
+        whyItMatters:
+          "Operator map of the six B2B growth channels and the rule that most of your growth comes from one of the top three. Read it as a GTM-as-a-system checklist: pick the primary motion, staff it, and stop pretending paid + outbound + partnerships are all strategy one.",
+        category: "leadership",
         position: 2,
       },
       {
-        id: "s9-3",
-        title: "TODO: Signal pick 3",
-        url: "https://example.com",
-        source: "TODO",
-        whyItMatters: "TODO: Why this matters to founders.",
-        category: "market",
+        id: "s30-3",
+        title: "How a16z speedrun Founders Are Using AI Tools for GTM",
+        url: "https://speedrun.substack.com/p/ai-tools-for-gtm-and-sales",
+        source: "a16z speedrun",
+        whyItMatters:
+          "Founder-led sales now means orchestrating agents for prospecting, enrichment, and sequencing — not personally typing every email. Practical before you hire a VP Sales: extend founder capacity with a stack, then hire when the motion is documented, not when you feel busy.",
+        category: "hiring",
         position: 3,
       },
       {
-        id: "s9-4",
-        title: "TODO: Signal pick 4",
-        url: "https://example.com",
-        source: "TODO",
-        whyItMatters: "TODO: Why this matters to founders.",
-        category: "market",
+        id: "s30-4",
+        title:
+          "Y Combinator insurance tech alum Angle Health hits $2.7B valuation",
+        url: "https://techcrunch.com/2026/09/18/y-combinator-insurance-tech-alum-angle-health-hits-2-7b-valuation/",
+        source: "TechCrunch",
+        whyItMatters:
+          "A $200M Series C plus a $400M tender, with claimed profitability and 5,000+ SMB employers. Useful fundraising literacy: separate primary capital that funds the company from tender liquidity for employees, and notice that painful, expensive workflow markets still clear large rounds without agent theater.",
+        category: "fundraising",
         position: 4,
       },
       {
-        id: "s9-5",
-        title: "TODO: Signal pick 5",
-        url: "https://example.com",
-        source: "TODO",
-        whyItMatters: "TODO: Why this matters to founders.",
+        id: "s30-5",
+        title:
+          "Crusoe raises $3.9B to build massive data centers and small modular AI factories",
+        url: "https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories/",
+        source: "TechCrunch",
+        whyItMatters:
+          "The denominator piece. Capital is still flooding AI infrastructure at multi-billion checks and a ~$31B valuation while most app-layer founders fight for scraps. Price your round against the market you are actually in, not the headlines of companies building AI factories.",
         category: "market",
         position: 5,
-      }
+      },
     ],
     noise: [
       {
-        id: "n9-1",
-        title: "TODO: Noise headline 1",
+        id: "n30-1",
+        title: "I ranked #1 in ChatGPT for our category in 11 days (framework inside)",
         url: "#",
-        source: "TODO",
-        offense: "TODO: The offense in 1-2 dry sentences.",
+        source: "LinkedIn",
+        offense:
+          "The framework was three screenshots and a CTA. No query set, no retention, no revenue attributed to the answers.",
       },
       {
-        id: "n9-2",
-        title: "TODO: Noise headline 2",
+        id: "n30-2",
+        title: "We fired the sales team and our agents closed more pipeline overnight",
         url: "#",
-        source: "TODO",
-        offense: "TODO: The offense in 1-2 dry sentences.",
+        source: "Twitter/X",
+        offense:
+          "Pipeline meant calendar holds. Nobody owned the deal when the agent hallucinated the ICP.",
       },
       {
-        id: "n9-3",
-        title: "TODO: Noise headline 3",
+        id: "n30-3",
+        title: "Congrats to every founder who raised this week — the market is clearly back",
         url: "#",
-        source: "TODO",
-        offense: "TODO: The offense in 1-2 dry sentences.",
-      }
+        source: "Substack",
+        offense:
+          "One $3.9B infra round was treated as a macro for seed SaaS. The comments still called it a tide that lifts all boats.",
+      },
     ],
   },
+
 
   {
     weekOf: "2026-09-14",
