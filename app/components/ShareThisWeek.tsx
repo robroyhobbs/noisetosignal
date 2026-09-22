@@ -3,7 +3,6 @@
 import { useState, type CSSProperties } from "react";
 import { SITE_URL } from "@/lib/site";
 
-
 interface ShareThisWeekProps {
   weekOf: string;
   ratio: number;
@@ -38,15 +37,13 @@ export function ShareThisWeek({ weekOf, ratio }: ShareThisWeekProps) {
     display: "inline-flex",
     alignItems: "center",
     gap: 6,
-    padding: "6px 10px",
-    fontSize: 11,
-    fontWeight: 600,
-    letterSpacing: "0.04em",
-    textTransform: "uppercase",
+    padding: "7px 12px",
+    fontSize: 13,
+    fontWeight: 550,
     color: "var(--text-sec)",
     background: "transparent",
     border: "1px solid var(--border-strong)",
-    borderRadius: 4,
+    borderRadius: 6,
     cursor: "pointer",
     textDecoration: "none",
     lineHeight: 1,
@@ -57,30 +54,17 @@ export function ShareThisWeek({ weekOf, ratio }: ShareThisWeekProps) {
       style={{
         display: "flex",
         alignItems: "center",
-        gap: 8,
+        gap: 10,
         flexWrap: "wrap",
       }}
     >
-      <span
-        style={{
-          fontSize: 10,
-          color: "var(--text-muted)",
-          letterSpacing: "0.08em",
-          textTransform: "uppercase",
-          fontWeight: 700,
-        }}
-      >
+      <span style={{ fontSize: 13, color: "var(--text-muted)", fontWeight: 500 }}>
         Share this week
       </span>
       <button type="button" onClick={copyLink} style={btnStyle}>
         {copied ? "Copied" : "Copy link"}
       </button>
-      <a
-        href={tweetUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={btnStyle}
-      >
+      <a href={tweetUrl} target="_blank" rel="noopener noreferrer" style={btnStyle}>
         Post on X
       </a>
     </div>

@@ -34,8 +34,8 @@ export function ContrastSection() {
         <p
           style={{
             fontSize: 11,
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
+            letterSpacing: "0.04em",
+            textTransform: "none",
             color: "var(--text-muted)",
             marginBottom: 40,
           }}
@@ -75,8 +75,8 @@ export function ContrastSection() {
                   fontSize: 13,
                   fontWeight: 600,
                   color: "var(--text-sec)",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
+                  letterSpacing: "0.02em",
+                  textTransform: "none",
                   margin: 0,
                 }}
               >
@@ -128,8 +128,8 @@ export function ContrastSection() {
                   fontSize: 13,
                   fontWeight: 600,
                   color: "var(--text-sec)",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
+                  letterSpacing: "0.02em",
+                  textTransform: "none",
                   margin: 0,
                 }}
               >

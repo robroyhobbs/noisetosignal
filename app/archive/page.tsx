@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { absoluteUrl } from "@/lib/site";
 import { weeks, getRatioHistory } from "@/lib/data";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
+import { SiteShell } from "../components/SiteShell";
+import { PageHeader } from "../components/PageHeader";
 import { ArchiveChart } from "../components/ArchiveChart";
-import Link from "next/link";
-
 
 export const metadata: Metadata = {
   title: "Archive",
-  description: "Past Founder Ratio weekly indexes — noise counts, ratios, and signal picks.",
+  description:
+    "Past Founder Ratio weekly indexes — noise counts, ratios, and signal picks.",
   alternates: { canonical: absoluteUrl("/archive") },
   openGraph: { url: absoluteUrl("/archive") },
 };
@@ -24,124 +24,135 @@ const categoryColors: Record<string, string> = {
   market: "#f472b6",
 };
 
-export default function Archive() {
+export default function ArchivePage() {
   const current = weeks[0];
   const history = getRatioHistory();
-  const allTimeHigh = Math.max(...weeks.map((w) => w.ratio));
-  const firstWeek = weeks[weeks.length - 1];
-  const totalNoise = weeks.reduce((sum, w) => sum + w.noiseCount, 0);
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
-      <Header
-        weekOf={current.weekOf}
-        ratio={current.ratio}
-        noiseCount={current.noiseCount}
-      />
+    <SiteShell weekOf={current.weekOf} ratio={current.ratio}>
+      <div className="shell" style={{ paddingTop: 48, paddingBottom: 80 }}>
+        <PageHeader
+          eyebrow="All issues"
+          title="Archive"
+          lede="A simple week list with each Founder Ratio — open a week for its five picks."
+          crumbs={[{ href: "/", label: "← Current issue" }]}
+        />
 
-      <main style={{ maxWidth: 1100, margin: "0 auto", padding: "48px 24px 80px" }}>
-        <Link
-          href="/"
-          style={{
-            fontSize: 12,
-            color: "var(--text-muted)",
-            textDecoration: "none",
-            letterSpacing: "0.08em",
-            textTransform: "uppercase",
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 6,
-            marginBottom: 40,
-          }}
+        <div
+          className="card"
+          style={{ padding: "24px 20px 16px", marginBottom: 40 }}
         >
-          &larr; Back to current issue
-        </Link>
-
-        <div style={{ marginBottom: 48 }}>
-          <p style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: 8 }}>
-            All issues
-          </p>
-          <h1 style={{ fontSize: 32, fontWeight: 700, color: "var(--text-primary)", margin: "0 0 24px", letterSpacing: "-0.02em" }}>
-            Archive
-          </h1>
-
-          <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
-            {[
-              { label: "Issues tracked", value: String(weeks.length) },
-              { label: "All-time high ratio", value: allTimeHigh.toFixed(1) },
-              { label: "Total noise posts counted", value: totalNoise.toLocaleString() },
-              { label: "Tracking since", value: new Date(firstWeek.weekOf).toLocaleDateString("en-US", { month: "short", year: "numeric" }) },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div style={{ fontSize: 22, fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.01em" }}>
-                  {stat.value}
-                </div>
-                <div style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 2 }}>{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div style={{
-          background: "#0d0d14",
-          border: "1px solid var(--border)",
-          borderRadius: 6,
-          padding: "28px 24px 20px",
-          marginBottom: 48,
-        }}>
-          <p style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 16, letterSpacing: "0.06em", textTransform: "uppercase" }}>
-            Founder Ratio trend &mdash; all time
+          <p
+            style={{
+              fontSize: 13,
+              color: "var(--text-muted)",
+              marginBottom: 12,
+            }}
+          >
+            Ratio trend
           </p>
           <ArchiveChart data={history} />
-          <p style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 12, textAlign: "right" }}>
-            The ratio has increased every week since tracking began.
-          </p>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           {weeks.map((week, i) => {
             const prev = weeks[i + 1];
-            const change = prev ? ((week.ratio - prev.ratio) / prev.ratio) * 100 : null;
-            const date = new Date(week.weekOf);
-            const label = date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+            const change =
+              prev != null
+                ? ((week.ratio - prev.ratio) / prev.ratio) * 100
+                : null;
+            const label = new Date(week.weekOf + "T12:00:00Z").toLocaleDateString(
+              "en-US",
+              { month: "long", day: "numeric", year: "numeric" }
+            );
 
             return (
               <div
                 key={week.weekOf}
+                className="card"
                 style={{
-                  background: i === 0 ? "#0d0d14" : "transparent",
-                  border: `1px solid ${i === 0 ? "var(--border-strong)" : "var(--border)"}`,
-                  borderRadius: 6,
-                  padding: "20px 24px",
+                  padding: "22px 24px",
+                  borderColor:
+                    i === 0 ? "var(--border-strong)" : "var(--border)",
                 }}
               >
-                <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, marginBottom: 16 }}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    justifyContent: "space-between",
+                    gap: 24,
+                    marginBottom: 14,
+                    flexWrap: "wrap",
+                  }}
+                >
                   <div>
-                    <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 4 }}>
-                      <span style={{ fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-muted)" }}>
-                        {i === 0 ? "Current issue" : `Issue ${weeks.length - i}`}
-                      </span>
-                      {i === 0 && (
-                        <span style={{ fontSize: 10, background: "var(--accent)", color: "white", padding: "1px 6px", borderRadius: 2, fontWeight: 700, letterSpacing: "0.08em" }}>
-                          LATEST
-                        </span>
-                      )}
+                    <div
+                      style={{
+                        fontSize: 13,
+                        color: "var(--text-muted)",
+                        marginBottom: 4,
+                        fontWeight: 500,
+                      }}
+                    >
+                      {i === 0 ? "Latest issue" : `Issue ${weeks.length - i}`}
                     </div>
-                    <div style={{ fontSize: 16, fontWeight: 600, color: "var(--text-primary)" }}>Week of {label}</div>
-                    <div style={{ fontSize: 13, color: "var(--text-sec)", marginTop: 4, lineHeight: 1.5 }}>{week.note}</div>
+                    <div
+                      style={{
+                        fontSize: 18,
+                        fontWeight: 700,
+                        letterSpacing: "-0.02em",
+                        color: "var(--text-primary)",
+                      }}
+                    >
+                      Week of {label}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 14,
+                        color: "var(--text-sec)",
+                        marginTop: 6,
+                        lineHeight: 1.5,
+                        maxWidth: 560,
+                      }}
+                    >
+                      {week.note}
+                    </div>
                   </div>
 
-                  <div style={{ flexShrink: 0, textAlign: "right" }}>
-                    <div style={{ fontSize: 28, fontWeight: 700, color: i === 0 ? "var(--accent)" : "var(--text-primary)", letterSpacing: "-0.02em" }}>
+                  <div style={{ textAlign: "right", flexShrink: 0 }}>
+                    <div
+                      className="mono"
+                      style={{
+                        fontSize: 28,
+                        fontWeight: 700,
+                        color: i === 0 ? "var(--accent)" : "var(--text-primary)",
+                        letterSpacing: "-0.02em",
+                      }}
+                    >
                       {week.ratio.toFixed(1)}
                     </div>
-                    {change !== null && (
-                      <div style={{ fontSize: 12, color: change > 0 ? "var(--accent)" : "#22c55e" }}>
-                        {change > 0 ? "▲" : "▼"} {Math.abs(change).toFixed(1)}% vs prior week
+                    {change != null && (
+                      <div
+                        style={{
+                          fontSize: 13,
+                          color:
+                            change > 0 ? "var(--accent)" : "var(--accent-green)",
+                        }}
+                      >
+                        {change > 0 ? "+" : ""}
+                        {change.toFixed(1)}% vs prior
                       </div>
                     )}
-                    <div style={{ fontSize: 11, color: "var(--text-muted)", marginTop: 2 }}>
-                      {week.noiseCount.toLocaleString()} posts / {week.signalCount} signal
+                    <div
+                      style={{
+                        fontSize: 12,
+                        color: "var(--text-muted)",
+                        marginTop: 2,
+                      }}
+                    >
+                      {week.noiseCount.toLocaleString()} noise ·{" "}
+                      {week.signalCount} signal
                     </div>
                   </div>
                 </div>
@@ -157,23 +168,25 @@ export default function Archive() {
                         display: "inline-flex",
                         alignItems: "center",
                         gap: 6,
-                        fontSize: 12,
+                        fontSize: 13,
                         color: "var(--text-sec)",
                         textDecoration: "none",
                         background: "var(--bg)",
                         border: "1px solid var(--border)",
-                        borderRadius: 4,
-                        padding: "4px 10px",
+                        borderRadius: 6,
+                        padding: "6px 10px",
                       }}
                     >
-                      <span style={{
-                        display: "inline-block",
-                        width: 6,
-                        height: 6,
-                        borderRadius: "50%",
-                        background: categoryColors[item.category] || "#888",
-                        flexShrink: 0,
-                      }} />
+                      <span
+                        style={{
+                          width: 6,
+                          height: 6,
+                          borderRadius: "50%",
+                          background:
+                            categoryColors[item.category] || "#888",
+                          flexShrink: 0,
+                        }}
+                      />
                       {item.title}
                     </a>
                   ))}
@@ -182,9 +195,7 @@ export default function Archive() {
             );
           })}
         </div>
-      </main>
-
-      <Footer />
-    </div>
+      </div>
+    </SiteShell>
   );
 }

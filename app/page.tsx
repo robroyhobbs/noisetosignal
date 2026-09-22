@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
 import { absoluteUrl } from "@/lib/site";
-import { getCurrentWeek, getRatioHistory, weeks, getCurrentDilemma } from "@/lib/data";
+import {
+  getCurrentWeek,
+  getRatioHistory,
+  weeks,
+  getCurrentDilemma,
+} from "@/lib/data";
 import { getNewestDilemma } from "@/lib/dilemmas";
-import { Header } from "./components/Header";
+import { SiteShell } from "./components/SiteShell";
 import { HeroExplainer } from "./components/HeroExplainer";
-import { NoiseIndex } from "./components/NoiseIndex";
+import { WeekRatioLine } from "./components/WeekRatioLine";
 import { WeeklySignal } from "./components/WeeklySignal";
+import { ExploreDoors } from "./components/ExploreDoors";
+import { NoiseIndex } from "./components/NoiseIndex";
 import { NoiseExamples } from "./components/NoiseExamples";
-// Demoted from homepage for first-time clarity (components remain in repo):
-// import { NoiseArchetypes } from "./components/NoiseArchetypes";
-// import { NoiseLeaderboard } from "./components/NoiseLeaderboard";
-// import { HonestBenchmarks } from "./components/HonestBenchmarks";
 import { WeeklyDilemma } from "./components/WeeklyDilemma";
 import { ContrastSection } from "./components/ContrastSection";
 import { InTheRoom } from "./components/InTheRoom";
-// NewsletterForm hidden until subscribe is wired — do not delete the component.
-import { Footer } from "./components/Footer";
-
 
 export const metadata: Metadata = {
   alternates: { canonical: absoluteUrl("/") },
@@ -32,30 +32,31 @@ export default function Home() {
   const dilemma = getNewestDilemma() ?? getCurrentDilemma();
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
-      <Header
-        weekOf={current.weekOf}
-        ratio={current.ratio}
-        noiseCount={current.noiseCount}
-      />
+    <SiteShell weekOf={current.weekOf} ratio={current.ratio}>
+      {/* Above the fold: plain English → calm ratio → 5 picks → doors */}
       <HeroExplainer />
-      <main>
-        <NoiseIndex
-          currentRatio={current.ratio}
-          previousRatio={previous.ratio}
-          noiseCount={current.noiseCount}
-          signalCount={current.signalCount}
-          note={current.note}
-          weekOf={current.weekOf}
-          history={history}
-        />
-        <WeeklySignal items={current.signal} />
-        <NoiseExamples examples={current.noise} />
-        <WeeklyDilemma dilemma={dilemma} />
-        <ContrastSection />
-        <InTheRoom weekOf={current.weekOf} />
-      </main>
-      <Footer />
-    </div>
+      <WeekRatioLine
+        ratio={current.ratio}
+        weekOf={current.weekOf}
+        note={current.note}
+      />
+      <WeeklySignal items={current.signal} />
+      <ExploreDoors />
+
+      {/* Below the fold */}
+      <NoiseIndex
+        currentRatio={current.ratio}
+        previousRatio={previous.ratio}
+        noiseCount={current.noiseCount}
+        signalCount={current.signalCount}
+        note={current.note}
+        weekOf={current.weekOf}
+        history={history}
+      />
+      <NoiseExamples examples={current.noise} />
+      <WeeklyDilemma dilemma={dilemma} />
+      <ContrastSection />
+      <InTheRoom weekOf={current.weekOf} />
+    </SiteShell>
   );
 }
