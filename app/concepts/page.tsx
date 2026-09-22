@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { absoluteUrl } from "@/lib/site";
 import Link from "next/link";
+import { absoluteUrl } from "@/lib/site";
 import { getCurrentWeek } from "@/lib/data";
 import { concepts } from "@/lib/concepts";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
+import { SiteShell } from "../components/SiteShell";
+import { PageHeader } from "../components/PageHeader";
 
 export const revalidate = 3600;
 
@@ -28,47 +28,14 @@ export default function ConceptsIndex() {
   const current = getCurrentWeek();
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
-      <Header
-        weekOf={current.weekOf}
-        ratio={current.ratio}
-        noiseCount={current.noiseCount}
-      />
-
-      <main style={{ maxWidth: 1100, margin: "0 auto", padding: "48px 24px 80px" }}>
-        <p
-          style={{
-            fontSize: 11,
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-            color: "var(--text-muted)",
-            marginBottom: 8,
-          }}
-        >
-          Operator definitions
-        </p>
-        <h1
-          style={{
-            fontSize: 32,
-            fontWeight: 700,
-            color: "var(--text-primary)",
-            margin: "0 0 12px",
-            letterSpacing: "-0.02em",
-          }}
-        >
-          Concepts
-        </h1>
-        <p
-          style={{
-            fontSize: 15,
-            color: "var(--text-sec)",
-            maxWidth: 640,
-            lineHeight: 1.6,
-            marginBottom: 40,
-          }}
-        >
-          Short operator definitions — SAFE, valuation cap, option pool, LTV:CAC, and more.
-        </p>
+    <SiteShell weekOf={current.weekOf} ratio={current.ratio}>
+      <div className="shell" style={{ paddingTop: 48, paddingBottom: 80 }}>
+        <PageHeader
+          eyebrow="Operator definitions"
+          title="Concepts"
+          lede="Short definitions founders actually use — SAFE, valuation cap, option pool, LTV:CAC, and more."
+          crumbs={[{ href: "/", label: "← Current issue" }]}
+        />
 
         <div
           style={{
@@ -85,23 +52,15 @@ export default function ConceptsIndex() {
               <Link
                 key={concept.slug}
                 href={`/concepts/${concept.slug}`}
-                style={{
-                  display: "block",
-                  textDecoration: "none",
-                  background: "var(--bg-card)",
-                  border: "1px solid var(--border)",
-                  borderLeft: `3px solid ${accent}`,
-                  borderRadius: 4,
-                  padding: "20px 22px",
-                }}
+                className="door-card"
+                style={{ borderLeft: `3px solid ${accent}` }}
               >
                 <div
                   style={{
-                    fontSize: 11,
+                    fontSize: 18,
                     fontWeight: 700,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    color: accent,
+                    letterSpacing: "-0.02em",
+                    color: "var(--text-primary)",
                     marginBottom: 8,
                   }}
                 >
@@ -109,15 +68,15 @@ export default function ConceptsIndex() {
                 </div>
                 <div
                   style={{
-                    fontSize: 14,
-                    color: "var(--text-primary)",
+                    fontSize: 15,
+                    color: "var(--text-sec)",
                     lineHeight: 1.5,
-                    marginBottom: 12,
+                    marginBottom: 14,
                   }}
                 >
                   {concept.blurb}
                 </div>
-                <div style={{ fontSize: 12, color: "var(--text-muted)" }}>
+                <div style={{ fontSize: 14, fontWeight: 600, color: accent }}>
                   Read concept →
                 </div>
               </Link>
@@ -125,47 +84,17 @@ export default function ConceptsIndex() {
           })}
         </div>
 
-        <div style={{ marginTop: 40, display: "flex", gap: 20, flexWrap: "wrap" }}>
-          <Link
-            href="/"
-            style={{
-              fontSize: 12,
-              color: "var(--text-muted)",
-              textDecoration: "none",
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-            }}
-          >
-            ← Current issue
-          </Link>
-          <Link
-            href="/topics"
-            style={{
-              fontSize: 12,
-              color: "var(--text-muted)",
-              textDecoration: "none",
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-            }}
-          >
+        <div
+          style={{ marginTop: 40, display: "flex", gap: 20, flexWrap: "wrap" }}
+        >
+          <Link href="/topics" className="quiet-link">
             Topics
           </Link>
-          <Link
-            href="/archive"
-            style={{
-              fontSize: 12,
-              color: "var(--text-muted)",
-              textDecoration: "none",
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-            }}
-          >
+          <Link href="/archive" className="quiet-link">
             Archive
           </Link>
         </div>
-      </main>
-
-      <Footer />
-    </div>
+      </div>
+    </SiteShell>
   );
 }

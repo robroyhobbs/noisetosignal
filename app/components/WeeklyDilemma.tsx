@@ -172,7 +172,7 @@ export function WeeklyDilemma({ dilemma }: WeeklyDilemmaProps) {
                 fontSize: 11,
                 color: "var(--text-muted)",
                 letterSpacing: "0.06em",
-                textTransform: "uppercase",
+                textTransform: "none",
               }}
             >
               {byline}

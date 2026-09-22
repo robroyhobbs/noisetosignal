@@ -29,8 +29,8 @@ export function InTheRoom({ weekOf }: InTheRoomProps) {
         <p
           style={{
             fontSize: 11,
-            letterSpacing: "0.14em",
-            textTransform: "uppercase",
+            letterSpacing: "0.04em",
+            textTransform: "none",
             color: "var(--text-muted)",
             marginBottom: 28,
           }}
@@ -91,7 +91,7 @@ export function InTheRoom({ weekOf }: InTheRoomProps) {
             fontSize: 13,
             fontWeight: 600,
             letterSpacing: "0.06em",
-            textTransform: "uppercase",
+            textTransform: "none",
             textDecoration: "none",
             transition: "border-color 0.2s",
           }}

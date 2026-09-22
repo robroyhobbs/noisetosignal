@@ -6,15 +6,13 @@ export function Footer() {
     <footer
       style={{
         borderTop: "1px solid var(--border)",
-        padding: "32px 0",
+        padding: "40px 0 48px",
         background: "var(--bg)",
       }}
     >
       <div
+        className="shell"
         style={{
-          maxWidth: 1100,
-          margin: "0 auto",
-          padding: "0 24px",
           display: "flex",
           alignItems: "flex-start",
           justifyContent: "space-between",
@@ -22,14 +20,13 @@ export function Footer() {
           flexWrap: "wrap",
         }}
       >
-        {/* Left: brand + attribution */}
         <div>
           <div
             style={{
               display: "flex",
               alignItems: "center",
               gap: 10,
-              marginBottom: 8,
+              marginBottom: 10,
             }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -38,12 +35,17 @@ export function Footer() {
               alt=""
               width={28}
               height={36}
-              style={{ height: 36, width: "auto", display: "block", objectFit: "contain" }}
+              style={{
+                height: 36,
+                width: "auto",
+                display: "block",
+                objectFit: "contain",
+              }}
             />
             <div
               style={{
-                fontSize: 14,
-                fontWeight: 800,
+                fontSize: 15,
+                fontWeight: 700,
                 letterSpacing: "-0.01em",
                 color: "var(--text-primary)",
               }}
@@ -53,10 +55,10 @@ export function Footer() {
           </div>
           <div
             style={{
-              fontSize: 12,
+              fontSize: 14,
               color: "var(--text-muted)",
               lineHeight: 1.6,
-              maxWidth: 380,
+              maxWidth: 400,
             }}
           >
             Curated by{" "}
@@ -67,8 +69,8 @@ export function Footer() {
               style={{ color: "var(--text-sec)", textDecoration: "none" }}
             >
               Rob Roy Hobbs
-            </a>
-            {" "}in partnership with{" "}
+            </a>{" "}
+            in partnership with{" "}
             <FnLink
               href="https://www.foundernexus.com?utm_source=founderratio&utm_medium=referral&utm_campaign=week-2026-09-14&utm_content=footer"
               slug="footer"
@@ -79,66 +81,44 @@ export function Footer() {
             — a curated network for venture-scale founders who value rooms over
             noise.
           </div>
-          <div style={{ marginTop: 14, display: "flex", gap: 16 }}>
-            <Link
-              href="/topics"
-              style={{
-                fontSize: 11,
-                color: "var(--text-muted)",
-                textDecoration: "none",
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-              }}
-            >
+          <div style={{ marginTop: 16, display: "flex", gap: 20 }}>
+            <Link href="/topics" className="quiet-link">
               Topics
             </Link>
-            <Link
-              href="/concepts"
-              style={{
-                fontSize: 11,
-                color: "var(--text-muted)",
-                textDecoration: "none",
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-              }}
-            >
+            <Link href="/concepts" className="quiet-link">
               Concepts
             </Link>
-            <Link
-              href="/archive"
-              style={{
-                fontSize: 11,
-                color: "var(--text-muted)",
-                textDecoration: "none",
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-              }}
-            >
+            <Link href="/archive" className="quiet-link">
               Archive
             </Link>
           </div>
         </div>
 
-        {/* Right: methodology note */}
-        <div style={{ textAlign: "right" }}>
+        <div style={{ maxWidth: 300 }}>
           <div
-            className="eyebrow"
-            style={{ marginBottom: 6, color: "var(--text-muted)" }}
+            style={{
+              fontSize: 13,
+              fontWeight: 600,
+              color: "var(--text-sec)",
+              marginBottom: 8,
+            }}
           >
             Methodology
           </div>
           <div
             style={{
-              fontSize: 12,
+              fontSize: 13,
               color: "var(--text-muted)",
               lineHeight: 1.6,
-              maxWidth: 280,
             }}
           >
             Noise is counted weekly from TechCrunch, Product Hunt, Hacker News,
-            and The Information. Signal is human-curated. The ratio is always bad.
+            and The Information. Signal is human-curated. The ratio is always
+            bad.
           </div>
-          <div style={{ marginTop: 12, fontSize: 11, color: "var(--text-muted)" }}>
+          <div
+            style={{ marginTop: 14, fontSize: 12, color: "var(--text-muted)" }}
+          >
             © {new Date().getFullYear()} Founder Ratio
           </div>
         </div>

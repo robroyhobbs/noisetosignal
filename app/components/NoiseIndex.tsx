@@ -8,7 +8,6 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-
 import { ShareThisWeek } from "./ShareThisWeek";
 
 interface NoiseIndexProps {
@@ -26,6 +25,7 @@ function formatWeekShort(dateStr: string): string {
   return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 }
 
+/** Below-the-fold methodology + trend. Calm — not a market terminal. */
 export function NoiseIndex({
   currentRatio,
   previousRatio,
@@ -41,7 +41,7 @@ export function NoiseIndex({
   const changeDisplay =
     changePct === "N/A"
       ? "N/A"
-      : `${Number(changePct) >= 0 ? "▲ +" : "▼ "}${changePct}%`;
+      : `${Number(changePct) >= 0 ? "+" : ""}${changePct}% vs last week`;
   const chartData = history.map((h) => ({
     week: formatWeekShort(h.week),
     ratio: h.ratio,
@@ -50,170 +50,125 @@ export function NoiseIndex({
   return (
     <section
       style={{
-        background: "var(--bg-card)",
-        borderBottom: "1px solid var(--border)",
-        padding: "40px 0 0",
+        background: "var(--bg)",
+        borderTop: "1px solid var(--border)",
+        padding: "64px 0",
       }}
     >
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
-        {/* Index label */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            justifyContent: "space-between",
-            marginBottom: 24,
-          }}
-        >
-          <div>
-            <div className="eyebrow" style={{ marginBottom: 8 }}>
-              Founder Ratio (noise ÷ signal) — Week of {formatWeekShort(weekOf)}
-            </div>
-            <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
-              <span
-                className="mono"
-                style={{
-                  fontSize: 72,
-                  fontWeight: 800,
-                  letterSpacing: "-0.04em",
-                  color: "var(--accent)",
-                  lineHeight: 1,
-                }}
-              >
-                {currentRatio.toFixed(1)}
-              </span>
-              <div>
-                <div
-                  className="mono"
-                  style={{
-                    fontSize: 18,
-                    color: "var(--accent)",
-                    fontWeight: 700,
-                  }}
-                >
-                  {changeDisplay}
-                </div>
-                <div style={{ fontSize: 12, color: "var(--text-muted)" }}>
-                  vs. last week
-                </div>
-              </div>
-            </div>
-            <div
+      <div className="shell">
+        <div style={{ maxWidth: 820, marginBottom: 36 }}>
+          <p className="eyebrow" style={{ marginBottom: 10 }}>
+            Methodology
+          </p>
+          <h2 className="section-title">How the Founder Ratio works</h2>
+          <p
+            style={{
+              margin: "0 0 20px",
+              fontSize: 16,
+              color: "var(--text-sec)",
+              lineHeight: 1.6,
+            }}
+          >
+            Noise is counted weekly from TechCrunch, Product Hunt, Hacker News,
+            and The Information. Signal is five human-curated picks. The ratio is
+            noise ÷ signal — and it is always bad.
+          </p>
+          <p
+            style={{
+              margin: "0 0 24px",
+              fontSize: 15,
+              color: "var(--text-muted)",
+              lineHeight: 1.5,
+            }}
+          >
+            Week of {formatWeekShort(weekOf)}:{" "}
+            <span className="mono" style={{ color: "var(--accent)", fontWeight: 700 }}>
+              {currentRatio.toFixed(1)}
+            </span>
+            {" · "}
+            {noiseCount.toLocaleString()} noise / {signalCount} signal
+            {" · "}
+            {changeDisplay}
+          </p>
+          {note && (
+            <p
               style={{
-                marginTop: 12,
-                fontSize: 14,
+                margin: "0 0 20px",
+                fontSize: 15,
                 color: "var(--text-sec)",
-                maxWidth: 480,
                 lineHeight: 1.5,
               }}
             >
               {note}
-            </div>
-            <div style={{ marginTop: 16 }}>
-              <ShareThisWeek weekOf={weekOf} ratio={currentRatio} />
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div style={{ display: "flex", gap: 32, textAlign: "right" }}>
-            <div>
-              <div
-                className="mono eyebrow"
-                style={{ color: "var(--text-muted)", marginBottom: 4 }}
-              >
-                Noise this week
-              </div>
-              <div
-                className="mono"
-                style={{
-                  fontSize: 28,
-                  fontWeight: 700,
-                  color: "var(--accent)",
-                }}
-              >
-                {noiseCount.toLocaleString()}
-              </div>
-              <div style={{ fontSize: 11, color: "var(--text-muted)" }}>
-                posts tracked
-              </div>
-            </div>
-            <div>
-              <div
-                className="mono eyebrow"
-                style={{ color: "var(--text-muted)", marginBottom: 4 }}
-              >
-                Signal this week
-              </div>
-              <div
-                className="mono"
-                style={{
-                  fontSize: 28,
-                  fontWeight: 700,
-                  color: "var(--accent-green)",
-                }}
-              >
-                {signalCount}
-              </div>
-              <div style={{ fontSize: 11, color: "var(--text-muted)" }}>
-                items worth reading
-              </div>
-            </div>
-          </div>
+            </p>
+          )}
+          <ShareThisWeek weekOf={weekOf} ratio={currentRatio} />
         </div>
 
-        {/* Chart — explicit height avoids ResponsiveContainer -1 during static prerender */}
         <div
-          style={{ height: 120, marginBottom: 0, minWidth: 0, width: "100%" }}
-        >
-          <ResponsiveContainer width="100%" height={120}>
-            <LineChart
-              data={chartData}
-              margin={{ top: 4, right: 0, bottom: 0, left: 0 }}
-            >
-              <XAxis
-                dataKey="week"
-                tick={{ fill: "var(--text-muted)", fontSize: 10 }}
-                axisLine={false}
-                tickLine={false}
-              />
-              <YAxis hide domain={["dataMin - 10", "dataMax + 10"]} />
-              <Tooltip
-                contentStyle={{
-                  background: "var(--bg-card)",
-                  border: "1px solid var(--border-strong)",
-                  borderRadius: 4,
-                  color: "var(--text-primary)",
-                  fontSize: 12,
-                }}
-                formatter={(v) => [
-                  typeof v === "number" ? v.toFixed(1) : v,
-                  "Founder Ratio",
-                ]}
-              />
-              <Line
-                type="monotone"
-                dataKey="ratio"
-                stroke="var(--accent)"
-                strokeWidth={2}
-                dot={{ fill: "var(--accent)", r: 3 }}
-                activeDot={{ r: 5 }}
-              />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
-
-        {/* Always trending note */}
-        <div
+          className="card"
           style={{
-            padding: "10px 0 16px",
-            fontSize: 11,
-            color: "var(--text-muted)",
-            fontStyle: "italic",
-            borderTop: "1px solid var(--border)",
-            marginTop: 8,
+            padding: "24px 20px 12px",
+            maxWidth: 820,
           }}
         >
-          Up every week since we started.
+          <p
+            style={{
+              fontSize: 13,
+              color: "var(--text-muted)",
+              marginBottom: 12,
+            }}
+          >
+            Ratio trend
+          </p>
+          <div style={{ height: 140, minWidth: 0, width: "100%" }}>
+            <ResponsiveContainer width="100%" height={140}>
+              <LineChart
+                data={chartData}
+                margin={{ top: 4, right: 4, bottom: 0, left: 0 }}
+              >
+                <XAxis
+                  dataKey="week"
+                  tick={{ fill: "var(--text-muted)", fontSize: 11 }}
+                  axisLine={false}
+                  tickLine={false}
+                />
+                <YAxis hide domain={["dataMin - 10", "dataMax + 10"]} />
+                <Tooltip
+                  contentStyle={{
+                    background: "var(--bg-card)",
+                    border: "1px solid var(--border-strong)",
+                    borderRadius: 6,
+                    color: "var(--text-primary)",
+                    fontSize: 13,
+                  }}
+                  formatter={(v) => [
+                    typeof v === "number" ? v.toFixed(1) : v,
+                    "Founder Ratio",
+                  ]}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="ratio"
+                  stroke="var(--accent)"
+                  strokeWidth={2}
+                  dot={{ fill: "var(--accent)", r: 3 }}
+                  activeDot={{ r: 5 }}
+                />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+          <p
+            style={{
+              padding: "8px 0 4px",
+              fontSize: 13,
+              color: "var(--text-muted)",
+              fontStyle: "italic",
+              margin: 0,
+            }}
+          >
+            Up every week since we started.
+          </p>
         </div>
       </div>
     </section>

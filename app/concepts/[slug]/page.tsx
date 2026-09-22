@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { absoluteUrl } from "@/lib/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { absoluteUrl } from "@/lib/site";
 import { getCurrentWeek } from "@/lib/data";
 import {
   concepts,
@@ -10,8 +10,8 @@ import {
   applyConceptCtaUrl,
 } from "@/lib/concepts";
 import { getTopic } from "@/lib/topics";
-import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
+import { SiteShell } from "../../components/SiteShell";
+import { PageHeader } from "../../components/PageHeader";
 
 export const revalidate = 3600;
 
@@ -61,9 +61,7 @@ export async function generateMetadata({
   return {
     title: concept.title,
     description: concept.definition.slice(0, 160),
-    alternates: {
-      canonical: absoluteUrl(`/concepts/${concept.slug}`),
-    },
+    alternates: { canonical: absoluteUrl(`/concepts/${concept.slug}`) },
     openGraph: { url: absoluteUrl(`/concepts/${concept.slug}`) },
   };
 }
@@ -89,96 +87,21 @@ export default async function ConceptPage({
     .slice(0, 3);
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
-      <Header
-        weekOf={current.weekOf}
-        ratio={current.ratio}
-        noiseCount={current.noiseCount}
-      />
+    <SiteShell weekOf={current.weekOf} ratio={current.ratio}>
+      <div className="shell-read" style={{ paddingTop: 48, paddingBottom: 80 }}>
+        <PageHeader
+          eyebrow="Concept"
+          title={concept.title}
+          lede={concept.definition}
+          accent={cat.text}
+          crumbs={[
+            { href: "/concepts", label: "← All concepts" },
+            { href: "/topics", label: "Topics" },
+            { href: "/", label: "Current issue" },
+          ]}
+        />
 
-      <main style={{ maxWidth: 720, margin: "0 auto", padding: "48px 24px 80px" }}>
-        <div style={{ marginBottom: 12, display: "flex", gap: 16, flexWrap: "wrap" }}>
-          <Link
-            href="/concepts"
-            style={{
-              fontSize: 12,
-              color: "var(--text-muted)",
-              textDecoration: "none",
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-            }}
-          >
-            ← All concepts
-          </Link>
-          <Link
-            href="/topics"
-            style={{
-              fontSize: 12,
-              color: "var(--text-muted)",
-              textDecoration: "none",
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-            }}
-          >
-            Topics
-          </Link>
-          <Link
-            href="/"
-            style={{
-              fontSize: 12,
-              color: "var(--text-muted)",
-              textDecoration: "none",
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-            }}
-          >
-            Current issue
-          </Link>
-        </div>
-
-        <p
-          style={{
-            fontSize: 11,
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-            color: cat.text,
-            marginBottom: 8,
-            fontWeight: 700,
-          }}
-        >
-          Concept
-        </p>
-        <h1
-          style={{
-            fontSize: 34,
-            fontWeight: 800,
-            color: "var(--text-primary)",
-            margin: "0 0 16px",
-            letterSpacing: "-0.02em",
-          }}
-        >
-          {concept.title}
-        </h1>
-        <p
-          style={{
-            fontSize: 16,
-            color: "var(--text-sec)",
-            lineHeight: 1.65,
-            marginBottom: 32,
-          }}
-        >
-          {concept.definition}
-        </p>
-
-        <h2
-          style={{
-            fontSize: 18,
-            fontWeight: 700,
-            color: "var(--text-primary)",
-            margin: "0 0 14px",
-            letterSpacing: "-0.01em",
-          }}
-        >
+        <h2 className="section-title" style={{ marginBottom: 14 }}>
           Where founders get this wrong
         </h2>
         <ul
@@ -186,7 +109,7 @@ export default async function ConceptPage({
             margin: "0 0 36px",
             paddingLeft: 18,
             color: "var(--text-sec)",
-            fontSize: 14,
+            fontSize: 15,
             lineHeight: 1.65,
             display: "flex",
             flexDirection: "column",
@@ -200,8 +123,12 @@ export default async function ConceptPage({
 
         <div style={{ marginBottom: 36 }}>
           <div
-            className="eyebrow"
-            style={{ marginBottom: 10, color: "var(--text-muted)" }}
+            style={{
+              fontSize: 13,
+              fontWeight: 600,
+              color: "var(--text-muted)",
+              marginBottom: 10,
+            }}
           >
             Related topic hubs
           </div>
@@ -213,14 +140,8 @@ export default async function ConceptPage({
                 <Link
                   key={slug}
                   href={`/topics/${slug}`}
-                  style={{
-                    fontSize: 12,
-                    color,
-                    textDecoration: "none",
-                    letterSpacing: "0.06em",
-                    textTransform: "uppercase",
-                    fontWeight: 700,
-                  }}
+                  className="quiet-link"
+                  style={{ color, fontWeight: 600 }}
                 >
                   {topic?.title ?? slug} →
                 </Link>
@@ -232,8 +153,12 @@ export default async function ConceptPage({
         {related.length > 0 && (
           <div style={{ marginBottom: 36 }}>
             <div
-              className="eyebrow"
-              style={{ marginBottom: 10, color: "var(--text-muted)" }}
+              style={{
+                fontSize: 13,
+                fontWeight: 600,
+                color: "var(--text-muted)",
+                marginBottom: 10,
+              }}
             >
               Related concepts
             </div>
@@ -242,12 +167,8 @@ export default async function ConceptPage({
                 <Link
                   key={c.slug}
                   href={`/concepts/${c.slug}`}
-                  style={{
-                    fontSize: 13,
-                    color: "var(--text-sec)",
-                    textDecoration: "none",
-                    fontWeight: 600,
-                  }}
+                  className="quiet-link"
+                  style={{ fontWeight: 600 }}
                 >
                   {c.title}
                 </Link>
@@ -260,7 +181,7 @@ export default async function ConceptPage({
           style={{
             background: cat.bg,
             border: `1px solid ${cat.border}`,
-            borderRadius: 6,
+            borderRadius: 8,
             padding: "28px 24px",
             textAlign: "center",
             marginBottom: 36,
@@ -268,10 +189,8 @@ export default async function ConceptPage({
         >
           <div
             style={{
-              fontSize: 11,
-              fontWeight: 700,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
+              fontSize: 13,
+              fontWeight: 600,
               color: cat.text,
               marginBottom: 10,
             }}
@@ -298,21 +217,17 @@ export default async function ConceptPage({
               display: "inline-block",
               background: cat.text,
               color: "#0a0a0f",
-              fontWeight: 800,
-              fontSize: 13,
-              letterSpacing: "0.06em",
-              textTransform: "uppercase",
+              fontWeight: 700,
+              fontSize: 14,
               textDecoration: "none",
               padding: "12px 22px",
-              borderRadius: 4,
+              borderRadius: 6,
             }}
           >
             Apply to FounderNexus →
           </a>
         </div>
-      </main>
-
-      <Footer />
-    </div>
+      </div>
+    </SiteShell>
   );
 }
