@@ -94,7 +94,7 @@ export const concepts: ConceptMeta[] = [
   {
     slug: "pre-money-vs-post-money",
     title: "Pre-money vs post-money",
-    blurb: "Same round, different ownership — know which number you are negotiating.",
+    blurb: "Same round, different ownership. Know which number you are negotiating.",
     definition:
       "Pre-money is company value before new capital; post-money is pre-money plus the check. Ownership is investment divided by post-money. Confusing the two is how founders celebrate a headline and give away an extra third of the company.",
     wrong: [
