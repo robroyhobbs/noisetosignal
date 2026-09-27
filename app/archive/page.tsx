@@ -9,7 +9,7 @@ import { ArchiveChart } from "../components/ArchiveChart";
 export const metadata: Metadata = {
   title: "Archive",
   description:
-    "Past Founder Ratio weekly indexes — noise counts, ratios, and signal picks.",
+    "Past Founder Ratio weekly indexes: noise counts, ratios, and signal picks.",
   alternates: { canonical: absoluteUrl("/archive") },
   openGraph: { url: absoluteUrl("/archive") },
 };
@@ -34,7 +34,7 @@ export default function ArchivePage() {
         <PageHeader
           eyebrow="All issues"
           title="Archive"
-          lede="A simple week list with each Founder Ratio — open a week for its five picks."
+          lede="Each week's Founder Ratio in one list. Open a week to see its five picks."
           crumbs={[{ href: "/", label: "← Current issue" }]}
         />
 

@@ -69,9 +69,9 @@ export function NoiseIndex({
               lineHeight: 1.6,
             }}
           >
-            Noise is counted weekly from TechCrunch, Product Hunt, Hacker News,
-            and The Information. Signal is five human-curated picks. The ratio is
-            noise ÷ signal — and it is always bad.
+            We count noise weekly from TechCrunch, Product Hunt, Hacker News, and
+            The Information. Signal is five human-curated picks. The ratio is
+            noise ÷ signal, and it is always bad.
           </p>
           <p
             style={{

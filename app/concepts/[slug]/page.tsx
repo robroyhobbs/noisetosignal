@@ -206,8 +206,9 @@ export default async function ConceptPage({
               lineHeight: 1.5,
             }}
           >
-            Definitions filter the feed. The room is FounderNexus — apply if you
-            are building at venture scale and want operators over noise.
+            Definitions filter the feed. FounderNexus is where you work through
+            the decision with peers. Apply if you are building at venture scale
+            and want operators over noise.
           </p>
           <a
             href={cta}

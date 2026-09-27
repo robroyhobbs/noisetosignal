@@ -15,28 +15,28 @@ export const topics: TopicMeta[] = [
     title: "Fundraising",
     blurb: "Rounds, process, and who still gets capital when the feed is loud.",
     definition:
-      "Fundraising signal changes how you raise, price, or sequence a round — not another mega-round headline. Investor behavior, process, or proof that moves a close. Vanity announcements stay noise.",
+      "Fundraising signal changes how you raise, price, or sequence a round. It covers investor behavior, process, or proof that moves a close. Mega-round headlines and vanity announcements stay noise.",
   },
   {
     slug: "hiring",
     title: "Hiring",
     blurb: "Team design, talent markets, and when headcount is the real bet.",
     definition:
-      "Hiring signal changes who to hire next, how to compete for talent, or when to slow headcount. Org design, comp, recruiting leverage — not culture-poster content.",
+      "Hiring signal changes who to hire next, how to compete for talent, or when to slow headcount. It covers org design, comp, and recruiting leverage. Culture-poster content stays noise.",
   },
   {
     slug: "product",
     title: "Product",
     blurb: "Build, package, and GTM choices that change what ships next.",
     definition:
-      "Product signal changes what you ship, how you package it, or how you go to market. Roadmap cuts, buyer surfaces, retention proof. Feature theater is noise.",
+      "Product signal changes what you ship, how you package it, or how you go to market. It covers roadmap cuts, buyer surfaces, and retention proof. Feature theater is noise.",
   },
   {
     slug: "leadership",
     title: "Leadership",
     blurb: "Judgment, pivots, boards, and hard calls under pressure.",
     definition:
-      "Leadership signal sharpens judgment — pivots, board dynamics, culture under constraint. Useful when it shows the cost of a hard call, not founder-brand flattery.",
+      "Leadership signal sharpens your judgment on pivots, board dynamics, and culture under constraint. It earns a pick when it shows the cost of a hard call; founder-brand flattery stays noise.",
   },
   {
     slug: "market",
