@@ -158,17 +158,6 @@ export function NoiseIndex({
               </LineChart>
             </ResponsiveContainer>
           </div>
-          <p
-            style={{
-              padding: "8px 0 4px",
-              fontSize: 13,
-              color: "var(--text-muted)",
-              fontStyle: "italic",
-              margin: 0,
-            }}
-          >
-            Up every week since we started.
-          </p>
         </div>
       </div>
     </section>
