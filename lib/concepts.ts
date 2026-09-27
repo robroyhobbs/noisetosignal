@@ -185,26 +185,26 @@ export const concepts: ConceptMeta[] = [
   {
     slug: "buying-committee",
     title: "Buying committee",
-    blurb: "The multi-stakeholder group that actually has to say yes before a B2B deal closes.",
+    blurb: "The group of stakeholders who all have to say yes before a B2B deal closes.",
     definition:
-      "A buying committee is the set of people — economic buyer, champion, users, security, legal — who must align before a contract signs. One enthusiastic champion is not a deal. Map who can block, who can fund, and what proof each needs, or you will keep winning demos and losing closes.",
+      "A buying committee is the set of people who must agree before a contract gets signed: the economic buyer, your champion, users, security, and legal. An enthusiastic champion alone won't close the deal. Map who can block, who can fund, and what proof each one needs, or you will keep winning demos and losing closes.",
     wrong: [
       "Treating the champion as the buyer and discovering procurement, security, or the VP late in the cycle.",
-      "Running the same pitch for every stakeholder instead of mapping budget, risk, and user jobs separately.",
-      "Calling a verbal 'yes' from one person pipeline when the committee has not seen a shared success criteria.",
+      "Running one pitch for all stakeholders without mapping budget, risk, and user jobs separately.",
+      "Counting one person's verbal 'yes' as pipeline before the committee has seen shared success criteria.",
     ],
     relatedTopics: ["product", "leadership"],
   },
   {
     slug: "vitamin-vs-painkiller",
     title: "Vitamin vs painkiller",
-    blurb: "Nice-to-have versus must-have — the urgency test that decides if buyers will pay and stay.",
+    blurb: "Nice-to-have versus must-have: the urgency test for whether buyers will pay and stay.",
     definition:
-      "A painkiller solves a problem buyers already budget for and feel weekly; a vitamin is a nice improvement they will defer. Founders confuse polite interest with urgency. If the buyer can wait a quarter without consequence, you are selling a vitamin — and vitamins lose to whatever is on fire.",
+      "A painkiller solves a problem buyers already budget for and feel every week. A vitamin is a nice improvement they will put off. Founders mistake polite interest for urgency. If your buyer can wait a quarter without consequence, you are selling a vitamin, and buyers fund whatever is on fire first.",
     wrong: [
       "Reading 'interesting' demos and soft pipeline as proof the product is a must-have.",
       "Pricing and packaging like a painkiller while buyers treat renewal as optional.",
-      "Adding features to raise urgency instead of narrowing to the job that is already painful and funded.",
+      "Adding features to manufacture urgency when the fix is to narrow to the job that is already painful and funded.",
     ],
     relatedTopics: ["product", "market"],
   },
