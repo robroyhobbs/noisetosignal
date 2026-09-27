@@ -74,8 +74,8 @@ export function InTheRoom({ weekOf }: InTheRoomProps) {
           >
             FounderNexus
           </FnLink>{" "}
-          is where venture-backed founders work through decisions with peers
-          who have been through them.
+          is a curated network where venture-scale founders work through those
+          calls together.
         </p>
 
         <FnLink
