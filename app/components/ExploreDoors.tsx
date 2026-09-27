@@ -10,7 +10,7 @@ export function ExploreDoors() {
     {
       href: "/concepts",
       title: "Concepts",
-      blurb: "Short operator definitions — SAFE, option pool, LTV:CAC, and more.",
+      blurb: "Short operator definitions: SAFE, option pool, LTV:CAC, and more.",
     },
   ];
 
@@ -18,7 +18,7 @@ export function ExploreDoors() {
     <section style={{ padding: "48px 0 64px", background: "var(--bg)" }}>
       <div className="shell">
         <p className="eyebrow" style={{ marginBottom: 16 }}>
-          Go deeper
+          Keep reading
         </p>
         <div
           style={{

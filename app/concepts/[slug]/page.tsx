@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, metaDescription } from "@/lib/site";
 import { getCurrentWeek } from "@/lib/data";
 import {
   concepts,
@@ -60,7 +60,7 @@ export async function generateMetadata({
   if (!concept) return { title: "Concept" };
   return {
     title: concept.title,
-    description: concept.definition.slice(0, 160),
+    description: metaDescription(concept.definition),
     alternates: { canonical: absoluteUrl(`/concepts/${concept.slug}`) },
     openGraph: { url: absoluteUrl(`/concepts/${concept.slug}`) },
   };
@@ -102,7 +102,7 @@ export default async function ConceptPage({
         />
 
         <h2 className="section-title" style={{ marginBottom: 14 }}>
-          Where founders get this wrong
+          Common founder mistakes
         </h2>
         <ul
           style={{
@@ -206,8 +206,8 @@ export default async function ConceptPage({
               lineHeight: 1.5,
             }}
           >
-            Definitions filter the feed. The room is FounderNexus — apply if you
-            are building at venture scale and want operators over noise.
+            If you are building at venture scale and want operators to test your
+            thinking, apply to FounderNexus.
           </p>
           <a
             href={cta}

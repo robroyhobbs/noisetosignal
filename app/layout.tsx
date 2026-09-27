@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Founder Ratio | The Founder Attention Index",
     description:
-      "Five picks that change a real decision, plus the weekly noise÷signal ratio. The ratio is always bad.",
+      "Five picks that change a real decision for venture-backed founders, plus the weekly noise÷signal ratio.",
     siteName: "Founder Ratio",
     type: "website",
     locale: "en_US",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Founder Ratio — weekly picks for venture-backed founders",
+        alt: "Founder Ratio: weekly picks for venture-backed founders",
       },
     ],
   },

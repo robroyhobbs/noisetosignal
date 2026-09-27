@@ -39,12 +39,12 @@ export function HeroExplainer() {
             maxWidth: 560,
           }}
         >
-          Each week we count the startup feed, publish five signal picks, and
-          track the{" "}
+          Each week we count the startup feed and hand-pick five reads. Divide
+          the count by five and you get the{" "}
           <strong style={{ color: "var(--text-primary)", fontWeight: 600 }}>
             Founder Ratio
           </strong>{" "}
-          (noise ÷ signal). The ratio is always bad.
+          (noise ÷ signal).
         </p>
       </div>
     </section>

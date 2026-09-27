@@ -33,7 +33,7 @@ export default function TopicsIndex() {
         <PageHeader
           eyebrow="Signal by category"
           title="Topics"
-          lede="Five hubs of recent decision-changing picks. Open a hub for the latest signal and related concepts."
+          lede="Recent decision-changing picks, sorted into five hubs. Each hub has the latest signal and related concepts."
           crumbs={[{ href: "/", label: "← Current issue" }]}
         />
 
