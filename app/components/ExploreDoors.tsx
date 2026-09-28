@@ -10,7 +10,7 @@ export function ExploreDoors() {
     {
       href: "/concepts",
       title: "Concepts",
-      blurb: "Short operator definitions — SAFE, option pool, LTV:CAC, and more.",
+      blurb: "Short operator definitions: SAFE, option pool, LTV:CAC, and more.",
     },
   ];
 

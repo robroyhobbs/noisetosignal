@@ -103,7 +103,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://techcrunch.com/2026/09/15/aeo-startup-profound-hits-unicorn-valuation-raises-180m-series-d-7-months-after-last-round/",
         source: "TechCrunch",
         whyItMatters:
-          "If buyers discover you through AI answers, SEO is no longer the whole GTM surface — answer-engine visibility is a product and sales problem. Useful for any founder still treating discovery as a content side project: the buying committee now includes the models that recommend you.",
+          "If buyers discover you through AI answers, SEO is no longer the whole GTM surface. Answer-engine visibility is a product and sales problem. Useful for any founder still treating discovery as a content side project: the buying committee now includes the models that recommend you.",
         category: "product",
         position: 1,
       },
@@ -123,7 +123,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://speedrun.substack.com/p/ai-tools-for-gtm-and-sales",
         source: "a16z speedrun",
         whyItMatters:
-          "Founder-led sales now means orchestrating agents for prospecting, enrichment, and sequencing — not personally typing every email. Practical before you hire a VP Sales: extend founder capacity with a stack, then hire when the motion is documented, not when you feel busy.",
+          "Founder-led sales now means orchestrating agents for prospecting, enrichment, and sequencing instead of typing every email yourself. Practical before you hire a VP Sales: extend founder capacity with a stack, then hire when the motion is documented rather than when you feel busy.",
         category: "hiring",
         position: 3,
       },
@@ -145,7 +145,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories/",
         source: "TechCrunch",
         whyItMatters:
-          "The denominator piece. Capital is still flooding AI infrastructure at multi-billion checks and a ~$31B valuation while most app-layer founders fight for scraps. Price your round against the market you are actually in, not the headlines of companies building AI factories.",
+          "The denominator piece. Capital is still flooding AI infrastructure at multi-billion checks and a ~$31B valuation while most app-layer founders fight for scraps. Price your round against the market you are in, not against the headlines of companies building AI factories.",
         category: "market",
         position: 5,
       },
@@ -193,7 +193,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://a16z.com/announcement/investing-in-lightfield/",
         source: "Andreessen Horowitz",
         whyItMatters:
-          "For founders mid-pivot: shrinking to a core team, renaming the company, and raising into a new thesis is the hard path — not a LinkedIn rebound story. Read it as a case study in when to cut and what finding product-market fit again actually costs.",
+          "For founders mid-pivot: shrinking to a core team, renaming the company, and raising into a new thesis is the hard path, and this piece treats it that way instead of as a LinkedIn rebound story. Read it as a case study in when to cut and what it costs to find product-market fit again.",
         category: "leadership",
         position: 1,
       },
@@ -204,7 +204,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://techcrunch.com/2026/09/09/sequoia-doubles-down-on-cymphony-as-ai-agents-create-new-enterprise-security-risks/",
         source: "TechCrunch",
         whyItMatters:
-          "If you ship agents into customer environments, security is no longer a checkbox — it is the product surface. Useful for any founder selling into IT buyers: the buying committee just got bigger.",
+          "If you ship agents into customer environments, security is part of the product surface now. Useful for any founder selling into IT buyers: the buying committee just got bigger.",
         category: "product",
         position: 2,
       },
@@ -236,7 +236,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://temporal.io/blog/temporal-raises-usd550m-series-e-at-usd12-55b-valuation-ai",
         source: "Temporal",
         whyItMatters:
-          "The denominator piece. Capital is still flooding reliable AI infrastructure while most app-layer founders fight for scraps. Price your round against the market you are actually in, not the headlines of companies processing trillions of actions.",
+          "The denominator piece. Capital is still flooding reliable AI infrastructure while most app-layer founders fight for scraps. Price your round against the market you are in, not against the headlines of companies processing trillions of actions.",
         category: "market",
         position: 5,
       },
@@ -283,7 +283,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/",
         source: "Crunchbase News",
         whyItMatters:
-          "Whether or not you're raising AI, this is the denominator everyone is pricing against. The piece puts hard numbers on how concentrated the capital flood has become.",
+          "If you're raising, AI or not, this is the denominator investors price against. The piece puts hard numbers on how concentrated the capital flood has become.",
         category: "market",
         position: 1,
       },
@@ -304,7 +304,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://techcrunch.com/2026/04/07/vc-eclipse-has-a-new-1-3b-to-back-and-build-physical-ai-startups/",
         source: "TechCrunch",
         whyItMatters:
-          "Shows where allocator conviction is moving when pure software GTM feels crowded: teams that can ship atoms, not just prompts.",
+          "Shows where allocator conviction is moving when pure software GTM feels crowded: teams that can ship atoms as well as prompts.",
         category: "market",
         position: 3,
       },
@@ -374,7 +374,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://news.crunchbase.com/venture/capital-concentrated-ai-global-q1-2026/",
         source: "Crunchbase News",
         whyItMatters:
-          "If you're raising outside the frontier-model slipstream, this is the market you're actually in. The piece makes the core reality plain: more dollars are being invested, but into fewer companies.",
+          "If you're raising outside the frontier-model slipstream, this is your market. The piece shows investors putting more dollars into fewer companies.",
         category: "market",
         position: 1,
       },
@@ -384,7 +384,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://news.crunchbase.com/startups/tech-layoffs/",
         source: "Crunchbase News",
         whyItMatters:
-          "This is a useful read on hiring conditions because it strips away the optimism theater. Founders can see where teams are still contracting, which functions are getting hit, and how cautious the market remains.",
+          "A useful read on hiring conditions with the optimism theater stripped out. You can see where teams are still contracting, which functions are getting hit, and how cautious the market remains.",
         category: "hiring",
         position: 2,
       },
@@ -395,7 +395,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://news.crunchbase.com/venture/customer-intelligence-ai-getwhys-raises-more-seed-boutros/",
         source: "Crunchbase News",
         whyItMatters:
-          "The interesting part isn't the round size. It's the model: proprietary customer interviews turned into reusable GTM intelligence, with humans collecting the signal and AI compressing the work.",
+          "Look past the round size to the model: proprietary customer interviews turned into reusable GTM intelligence, with humans collecting the signal and AI compressing the work.",
         category: "product",
         position: 3,
       },
@@ -405,7 +405,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://vcnewsdaily.com/wealth.com/venture-capital-funding/wycmfbtjts",
         source: "VC News Daily",
         whyItMatters:
-          "This is a reminder that capital is still available for companies solving expensive, workflow-heavy problems in traditional industries. When a market is painful enough, founders can still raise into it.",
+          "Investors still fund companies solving expensive, workflow-heavy problems in traditional industries. If the market is painful enough, you can still raise into it.",
         category: "fundraising",
         position: 4,
       },
@@ -415,7 +415,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://www.highsignal.io/founder-retreats/",
         source: "High Signal",
         whyItMatters:
-          "Worth reading less for the retreat trend itself than for what it signals: founders are actively searching for smaller, higher-trust rooms. That's a useful counterweight to the usual timeline noise.",
+          "Read it for what the retreat trend shows: founders are looking for smaller, higher-trust groups. A useful counterweight to the usual timeline noise.",
         category: "leadership",
         position: 5,
       },
@@ -463,7 +463,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://www.nfx.com/post/seed-round-evolution",
         source: "NFX",
         whyItMatters:
-          "Pre-seed and pre-product capital has fundamentally changed shape. If you're still pitching a seed round like it's 2021, you're speaking a language investors quietly stopped using.",
+          "Pre-seed and pre-product capital has changed shape. If you still pitch a seed round like it's 2021, you're speaking a language investors stopped using.",
         category: "fundraising",
         position: 1,
       },
@@ -471,10 +471,9 @@ export const weeks: NoiseWeek[] = [
         id: "s5-2",
         title: "What Stripe Taught Us About Hiring Without a Job Description",
         url: "https://review.firstround.com/stripe-hiring-patterns",
-        source:
-          "mes. This piece reverse-engineers what they were actually selecting for — and why most startups optimize for the wrong signals entirely.Stripe's early hiring had almost nothing to do with resu",
+        source: "First Round Review",
         whyItMatters:
-          "Stripe's early hiring had almost nothing to do with resumes. This piece reverse-engineers what they actually selected for and why most startups optimize for the wrong signals entirely.",
+          "Stripe's early hiring had almost nothing to do with resumes. This piece reverse-engineers what Stripe selected for and why most startups optimize for the wrong signals.",
         category: "hiring",
         position: 2,
       },
@@ -484,7 +483,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://www.reforge.com/blog/mvp-to-scale-gap",
         source: "Reforge",
         whyItMatters:
-          "Everyone celebrates getting to MVP. Nobody talks about the brutal middle phase where the thing works but doesn't grow. This names the traps clearly.",
+          "Founders celebrate getting to MVP and rarely talk about the middle phase, when the product works but doesn't grow. This piece names the traps.",
         category: "product",
         position: 3,
       },
@@ -494,7 +493,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://www.lennysnewsletter.com/p/ceo-leverage-without-control",
         source: "Lenny's Newsletter",
         whyItMatters:
-          "Scaling leadership is the hardest part of founder life and the least discussed. This is a concrete look at how operators create leverage without becoming the bottleneck.",
+          "Scaling leadership is a hard and under-discussed part of founder life. This is a concrete look at how operators create leverage without becoming the bottleneck.",
         category: "leadership",
         position: 4,
       },
@@ -552,7 +551,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://review.firstround.com/founder-loneliness",
         source: "First Round Review",
         whyItMatters:
-          "This is the most honest piece on isolation at the top in years. Not a listicle, not a hot take — actual interviews with founders who've been through it. Worth reading slowly.",
+          "A candid piece on isolation at the top, built on interviews with founders who have been through it. Read it slowly.",
         category: "leadership",
         position: 1,
       },
@@ -562,7 +561,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://lenny.substack.com/p/positioning",
         source: "Lenny's Newsletter",
         whyItMatters:
-          "Most positioning advice stops at the framework. This one shows you what working positioning looks like in the market — the signals are subtler than you'd think.",
+          "Most positioning advice stops at the framework. This one shows what working positioning looks like in the market, and the signals are subtler than you'd expect.",
         category: "market",
         position: 2,
       },
@@ -582,7 +581,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://www.lennyrachitsky.com/p/bad-hire",
         source: "Lenny's Newsletter",
         whyItMatters:
-          "Every founder has one of these stories. This is the first one I've read that actually dissects what went wrong in the room where the hire was decided — not just the aftermath.",
+          "Many founders have one of these stories. This is the first I've read that dissects the hiring decision itself instead of only the aftermath.",
         category: "hiring",
         position: 4,
       },
@@ -637,7 +636,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://review.firstround.com/firing-vp",
         source: "First Round Review",
         whyItMatters:
-          "The tactical detail here is unusually honest. The part about what the board said vs. what they meant is something I've lived personally.",
+          "The tactical detail here is candid. I've lived the part about what the board said versus what they meant.",
         category: "leadership",
         position: 1,
       },
@@ -647,7 +646,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://coda.io/figma-quality",
         source: "Coda",
         whyItMatters:
-          "Not a 'culture deck' piece. Actual process changes, actual tradeoffs they made. The section on design review cadence is replicable.",
+          "This covers the process changes and tradeoffs the team made, well beyond a culture deck. You can replicate the section on design review cadence.",
         category: "product",
         position: 2,
       },
@@ -667,7 +666,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://www.nfx.com/post/slow-down",
         source: "NFX",
         whyItMatters:
-          "Goes against almost everything you'll hear in SF right now. Read it and decide for yourself — but at least read the argument.",
+          "It runs against most of what you'll hear in SF right now. Read the argument and decide for yourself.",
         category: "fundraising",
         position: 4,
       },
@@ -677,7 +676,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://www.notion.com/all-hands",
         source: "Notion",
         whyItMatters:
-          "Surprisingly practical. The bit about separating information-sharing from alignment-building changed how I think about the format.",
+          "Practical. The section on separating information-sharing from alignment-building changed how I think about the format.",
         category: "leadership",
         position: 5,
       },
@@ -722,7 +721,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://review.firstround.com/board-presentation",
         source: "First Round Review",
         whyItMatters:
-          "Read this before your next board meeting. The gap between what founders present and what boards actually evaluate is wider than most people think.",
+          "Read this before your next board meeting. The gap between what founders present and what board members evaluate is wider than most founders expect.",
         category: "leadership",
         position: 1,
       },
@@ -732,7 +731,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://a16z.com/market-map",
         source: "a16z",
         whyItMatters:
-          "Useful data on how market positioning actually affects fundraising outcomes. The category creation vs. category entry analysis is particularly good.",
+          "Useful data on how market positioning affects fundraising outcomes. The category creation vs. category entry analysis is the strongest section.",
         category: "market",
         position: 2,
       },
@@ -762,7 +761,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://www.ycombinator.com/library/pivot",
         source: "Y Combinator",
         whyItMatters:
-          "Most pivot frameworks are vague. This one has specific signals and a decision tree that's actually usable in the room where the decision has to get made.",
+          "Most pivot frameworks are vague. This one gives specific signals and a decision tree you can use in the meeting where you make the call.",
         category: "product",
         position: 5,
       },
@@ -799,7 +798,7 @@ export const weeks: NoiseWeek[] = [
     noiseCount: 1089,
     signalCount: 5,
     ratio: 217.8,
-    note: "First week of March. Q1 pressure starting to show in founder content — more anxiety, more listicles.",
+    note: "First week of March. Founder content started to show Q1 pressure: more anxiety, more listicles.",
     signal: [
       {
         id: "s4-1",
@@ -817,7 +816,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://a16z.com/investor-composition",
         source: "a16z",
         whyItMatters:
-          "Who is on your cap table matters more than the valuation. This piece finally quantifies why — and what it costs when the composition is wrong.",
+          "The mix of people on your cap table matters more than the valuation. This piece quantifies why and what the wrong mix costs you.",
         category: "fundraising",
         position: 2,
       },
@@ -827,7 +826,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://www.sequoiacap.com/article/market-timing",
         source: "Sequoia",
         whyItMatters:
-          "The timing question is always there in the room and almost never answered well. This framework at least gives you a language for the conversation.",
+          "The timing question comes up in every one of these conversations and rarely gets a good answer. This framework gives you language for it.",
         category: "market",
         position: 3,
       },
@@ -847,7 +846,7 @@ export const weeks: NoiseWeek[] = [
         url: "https://www.notion.com/async-update",
         source: "Notion",
         whyItMatters:
-          "Not about Notion. Actually useful. The format for weekly investor updates in section two is something I've started using.",
+          "Useful well beyond Notion. I've started using the weekly investor update format from section two.",
         category: "product",
         position: 5,
       },
@@ -915,7 +914,7 @@ export const dilemmas: Dilemma[] = [
     id: "d2026-09-14",
     weekOf: "2026-09-14",
     context:
-      "We are a 28-person B2B SaaS team at $2.4M ARR, flat for two quarters. We raised $18M at a $90M post 20 months ago. Two enterprise logos drive 40% of revenue and both renewals are soft. A growth fund will lead a $12M extension at a flat round if we keep headcount and ship an AI agent packaging story. Our gut says we need to cut to ~14, rebuild GTM around one ICP, and raise smaller later — Lightfield-style — but the board wants the extension closed this month.",
+      "We are a 28-person B2B SaaS team at $2.4M ARR, flat for two quarters. We raised $18M at a $90M post 20 months ago. Two enterprise logos drive 40% of revenue and both renewals are soft. A growth fund will lead a $12M extension at a flat round if we keep headcount and ship an AI agent packaging story. Our gut says we need to cut to ~14, rebuild GTM around one ICP, and raise smaller later (Lightfield-style), but the board wants the extension closed this month.",
     decision:
       "Take the flat extension and keep the team, or cut hard now and risk the board fight / fundraising gap?",
     stakes:
@@ -930,7 +929,7 @@ export const dilemmas: Dilemma[] = [
     decision:
       "Take the strategic-led round now, or raise a smaller insider extension and keep the roadmap customer-led?",
     stakes:
-      "The strategic money could open distribution—or turn us into a feature team with a cap table we can't unwind.",
+      "The strategic money could open distribution, or it could turn us into a feature team with a cap table we can't unwind.",
     submittedBy: "Seed founder, developer tools",
   },
   {
