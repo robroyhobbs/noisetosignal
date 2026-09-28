@@ -183,6 +183,32 @@ export const concepts: ConceptMeta[] = [
     relatedTopics: ["fundraising", "leadership"],
   },
   {
+    slug: "buying-committee",
+    title: "Buying committee",
+    blurb: "The group of stakeholders who all have to say yes before a B2B deal closes.",
+    definition:
+      "A buying committee is the set of people who must agree before a contract gets signed: the economic buyer, your champion, users, security, and legal. An enthusiastic champion alone won't close the deal. Map who can block, who can fund, and what proof each one needs, or you will keep winning demos and losing closes.",
+    wrong: [
+      "Treating the champion as the buyer and discovering procurement, security, or the VP late in the cycle.",
+      "Running one pitch for all stakeholders without mapping budget, risk, and user jobs separately.",
+      "Counting one person's verbal 'yes' as pipeline before the committee has seen shared success criteria.",
+    ],
+    relatedTopics: ["product", "leadership"],
+  },
+  {
+    slug: "vitamin-vs-painkiller",
+    title: "Vitamin vs painkiller",
+    blurb: "Nice-to-have versus must-have: the urgency test for whether buyers will pay and stay.",
+    definition:
+      "A painkiller solves a problem buyers already budget for and feel every week. A vitamin is a nice improvement they will put off. Founders mistake polite interest for urgency. If your buyer can wait a quarter without consequence, you are selling a vitamin, and buyers fund whatever is on fire first.",
+    wrong: [
+      "Reading 'interesting' demos and soft pipeline as proof the product is a must-have.",
+      "Pricing and packaging like a painkiller while buyers treat renewal as optional.",
+      "Adding features to manufacture urgency when the fix is to narrow to the job that is already painful and funded.",
+    ],
+    relatedTopics: ["product", "market"],
+  },
+  {
     slug: "ltv-cac",
     title: "LTV:CAC",
     blurb: "Lifetime value over acquisition cost — the unit-economics gate investors actually read.",
