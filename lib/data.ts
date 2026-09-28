@@ -2,6 +2,94 @@ import type { NoiseWeek, Dilemma, BenchmarkStage, NoiseSource } from "./types";
 
 export const weeks: NoiseWeek[] = [
   {
+    weekOf: "2026-09-28",
+    noiseCount: 462,
+    signalCount: 5,
+    ratio: 92.4,
+    note: "Consumer-agent unicorn theater and dual-class IPO talk filled the timeline. Founders needed the pieces on voting control, IC hiring, and writing eval rubrics before shipping the agent.",
+    signal: [
+      {
+        id: "s31-1",
+        title: "Anthropic's founders seek voting control ahead of IPO",
+        url: "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo/",
+        source: "TechCrunch",
+        whyItMatters:
+          "Seven co-founders at about 2% each want 50.1% voting control with no extra economics. If you are negotiating dual-class, board seats, or a trust structure before a priced round, price the trade carefully: control can survive public markets when ownership does not.",
+        category: "leadership",
+        position: 1,
+      },
+      {
+        id: "s31-2",
+        title:
+          "Building the AI-Ready Organization: What New Research Says About Tech Hiring Priorities in 2026",
+        url: "https://www.rivierapartners.com/insights/ai-hiring-priorities-2026-research/",
+        source: "Riviera Partners",
+        whyItMatters:
+          "Across 958 tech executives, individual contributors beat C-suite as the top AI hiring priority. Teams that buy SaaS AI tools without hiring builders report no meaningful impact at nearly twice the rate of teams that hire implementers. Before you greenlight a Chief AI Officer for the deck, fund three senior ICs who can ship and govern the stack.",
+        category: "hiring",
+        position: 2,
+      },
+      {
+        id: "s31-3",
+        title: "The Eval Rubric Is Your Agent's Behavior Contract",
+        url: "https://www.reforge.com/blog/eval-rubrics",
+        source: "Reforge",
+        whyItMatters:
+          "If you ship an agent without a written eval rubric, your team has no shared definition of good behavior across outcome, trajectory, governance, and experience. Draft version one from the PRD in under an hour. Tighten it from traces.",
+        category: "product",
+        position: 3,
+      },
+      {
+        id: "s31-4",
+        title: "The Road Not Taken: Self-Funding NFX",
+        url: "https://www.nfx.com/post/self-funding-nfx",
+        source: "NFX",
+        whyItMatters:
+          "NFX is dropping LP ownership targets for $100K to $3M partner checks, with no requirement to lead or take board seats. Recalibrate who you pitch when a firm no longer needs ownership or a board seat.",
+        category: "fundraising",
+        position: 4,
+      },
+      {
+        id: "s31-5",
+        title:
+          "Viral AI agent Instinct raises $1B Series C at a $10B valuation",
+        url: "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
+        source: "TechCrunch",
+        whyItMatters:
+          "A consumer agent that launched invite-only in August cleared a $1B Series C at $10B, one month after a $2.5B mark. Use it as the denominator. Consumer-agent fever is clearing mega-rounds while your B2B round still has to clear unit economics.",
+        category: "market",
+        position: 5,
+      },
+    ],
+    noise: [
+      {
+        id: "n31-1",
+        title: "We shipped our agent on vibes and the board called it product-market fit",
+        url: "#",
+        source: "LinkedIn",
+        offense:
+          "No rubric, no traces, no retention. The board deck had a screenshot of the Slack channel.",
+      },
+      {
+        id: "n31-2",
+        title: "Just raised at a $10B vibe check. My 7-slide deck for your seed inside.",
+        url: "#",
+        source: "Twitter/X",
+        offense:
+          "Three Unsplash photos and a valuation borrowed from Instinct's press release. Seed math was not invited.",
+      },
+      {
+        id: "n31-3",
+        title: "Hiring a Chief AI Officer before we have an eval. Culture is the moat.",
+        url: "#",
+        source: "Substack",
+        offense:
+          "The job post went live before the product had a pass or fail definition. Candidates asked what success looked like. Nobody had an answer.",
+      },
+    ],
+  },
+
+  {
     weekOf: "2026-09-21",
     noiseCount: 528,
     signalCount: 5,
@@ -812,6 +900,17 @@ export function getWeekByDate(date: string): NoiseWeek | undefined {
 // ── Weekly Dilemma ────────────────────────────────────────────────────────────
 
 export const dilemmas: Dilemma[] = [
+  {
+    id: "d2026-09-28",
+    weekOf: "2026-09-28",
+    context:
+      "We are a 22-person B2B agent company at $1.8M ARR closing a Series A in five weeks. Our lead wants a Chief AI Officer announce before the close so the syndicate can sell an AI-native C-suite story. Eng says the bottleneck is three senior ICs who can own harnesses and evals. We have one open exec slot in the model.",
+    decision:
+      "Hire the CAIO the lead is pitching, or fill the slot with builder ICs and risk looking under-led in partner meetings?",
+    stakes:
+      "The CAIO may lock the round and stall shipping. Builder ICs may improve the product and undercut the narrative the lead is selling upstairs.",
+    submittedBy: "Seed founder, B2B agents",
+  },
   {
     id: "d2026-09-14",
     weekOf: "2026-09-14",
