@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, metaDescription } from "@/lib/site";
 import { getCurrentWeek } from "@/lib/data";
 import {
   topics,
@@ -63,7 +63,7 @@ export async function generateMetadata({
   if (!topic) return { title: "Topic" };
   return {
     title: `${topic.title} signal`,
-    description: topic.definition.slice(0, 160),
+    description: metaDescription(topic.definition),
     alternates: { canonical: absoluteUrl(`/topics/${topic.slug}`) },
     openGraph: { url: absoluteUrl(`/topics/${topic.slug}`) },
   };
@@ -114,7 +114,7 @@ export default async function TopicPage({
 
         {signals.length === 0 ? (
           <p style={{ color: "var(--text-muted)", fontSize: 15 }}>
-            No curated items in this category yet. Check back on the next issue.
+            No picks in this category yet. Check the next issue.
           </p>
         ) : (
           <div
@@ -261,8 +261,8 @@ export default async function TopicPage({
               lineHeight: 1.5,
             }}
           >
-            Signal is the filter. The room is FounderNexus — apply if you are
-            building at venture scale and want operators over feed noise.
+            If you are building at venture scale and want advice from operators
+            instead of the feed, apply to FounderNexus.
           </p>
           <FnLink
             href={cta}

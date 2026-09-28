@@ -77,9 +77,8 @@ export function Footer() {
               style={{ color: "var(--text-sec)", textDecoration: "none" }}
             >
               FounderNexus
-            </FnLink>{" "}
-            — a curated network for venture-scale founders who value rooms over
-            noise.
+            </FnLink>
+            , a founder network for people building at venture scale.
           </div>
           <div style={{ marginTop: 16, display: "flex", gap: 20 }}>
             <Link href="/topics" className="quiet-link">
@@ -112,9 +111,9 @@ export function Footer() {
               lineHeight: 1.6,
             }}
           >
-            Noise is counted weekly from TechCrunch, Product Hunt, Hacker News,
-            and The Information. Signal is human-curated. The ratio is always
-            bad.
+            We count noise weekly from TechCrunch, Product Hunt, Hacker News,
+            and The Information, then hand-pick the signal. A higher ratio means
+            a noisier week.
           </div>
           <div
             style={{ marginTop: 14, fontSize: 12, color: "var(--text-muted)" }}
