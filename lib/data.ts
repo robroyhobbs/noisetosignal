@@ -2,6 +2,95 @@ import type { NoiseWeek, Dilemma, BenchmarkStage, NoiseSource } from "./types";
 
 export const weeks: NoiseWeek[] = [
   {
+    weekOf: "2026-10-05",
+    noiseCount: 462,
+    signalCount: 5,
+    ratio: 92.4,
+    note: "Round-doubling announcements and agent launch threads filled the timeline. Founders needed the runway math and an early look at what agent API calls will cost.",
+    signal: [
+      {
+        id: "s32-1",
+        title:
+          "The 10 Most Important Learnings From a16z's Latest State of Markets: Horizontal B2B Trades at 2.7x Revenue, New Startups Are Growing 500%+, and 55% of Unicorns Have Under 2 Years of Runway",
+        url: "https://www.saastr.com/the-10-most-important-learnings-from-a16zs-latest-state-of-markets-horizontal-b2b-trades-at-2-7x-revenue-new-startups-are-growing-500-and-55-of-unicorns-have-under-2-years-of-runway/",
+        source: "SaaStr",
+        whyItMatters:
+          "Companies that raised recently are growing 60 to 70%, while the median startup at scale grows 15 to 30%. If you are growing 25% at breakeven, plan to fund growth from cash flow, venture debt, or a strategic partner before you spend six months chasing a priced round at a good valuation.",
+        category: "fundraising",
+        position: 1,
+      },
+      {
+        id: "s32-2",
+        title:
+          "We Got a $240,000 Estimate for Agent API Access. Our Agent Suggested a $5 Postgres Instance.",
+        url: "https://www.saastr.com/we-got-a-240000-estimate-for-agent-api-access-our-agent-suggested-a-5-postgres-instance/",
+        source: "SaaStr",
+        whyItMatters:
+          "Salesforce, Atlassian, and HubSpot are adding charges for agent access, and SaaStr's agent makes 35,000 to 40,000 API calls a day. If agents run your ops, meter your own calls this quarter. If you sell seats, decide how you will price agent access before buyers mirror your data and route around you.",
+        category: "product",
+        position: 2,
+      },
+      {
+        id: "s32-3",
+        title: "CHAI offers engineers 50% more total compensation, paid in cash",
+        url: "https://www.prnewswire.com/news-releases/chai-offers-engineers-50-more-total-compensation-paid-in-cash-302897429.html",
+        source: "PR Newswire",
+        whyItMatters:
+          "A 15 to 20 person AI company is offering senior engineers 1.5x their current pay in cash, including $900K to an engineer leaving a $600K Meta package. The figures are company-reported. If your offers lean on options, expect candidates to hold them up against cash this size, and decide how much of your offer can move to cash.",
+        category: "hiring",
+        position: 3,
+      },
+      {
+        id: "s32-4",
+        title:
+          "Birdie appoints Alastair Douglas as CEO, as co-founder Max Parmentier becomes Chair",
+        url: "https://www.birdie.care/blog/birdie-appoints-alastair-douglas",
+        source: "Birdie",
+        whyItMatters:
+          "The founding CEO moves to Chair after nine years, the new CEO overlaps with him for a month, and two co-founders keep their COO and CRO roles. If your board is raising a CEO change, this is a handoff where the founder sets the timing and the structure.",
+        category: "leadership",
+        position: 4,
+      },
+      {
+        id: "s32-5",
+        title: "a16z-backed EliseAI raises $350M, doubles valuation to $4B",
+        url: "https://techcrunch.com/2026/09/29/a16z-backed-eliseai-raises-350m-doubles-valuation-to-4b/",
+        source: "TechCrunch",
+        whyItMatters:
+          "A vertical AI company past $200M ARR doubled its valuation in about a year. Use it as the denominator. Investors pay that multiple for vertical workflows with switching costs, and a horizontal app raising this fall starts closer to 2.7x revenue.",
+        category: "market",
+        position: 5,
+      },
+    ],
+    noise: [
+      {
+        id: "n32-1",
+        title: "Our valuation doubled in 12 months. Here's my morning routine.",
+        url: "#",
+        source: "LinkedIn",
+        offense:
+          "The post skips ARR, burn, and runway. It includes a cold plunge and a photo of the term sheet's cover page.",
+      },
+      {
+        id: "n32-2",
+        title: "We replaced our whole GTM team with 40 agents. AMA.",
+        url: "#",
+        source: "Twitter/X",
+        offense:
+          "The replies asked about the API bill and pipeline. The founder answered with a screenshot of the agent org chart.",
+      },
+      {
+        id: "n32-3",
+        title: "Why I'll never give up the CEO title, a founder manifesto",
+        url: "#",
+        source: "Substack",
+        offense:
+          "Two thousand words on founder mode and none on what the board asked for. The comments asked when the next raise closes.",
+      },
+    ],
+  },
+
+  {
     weekOf: "2026-09-28",
     noiseCount: 462,
     signalCount: 5,
