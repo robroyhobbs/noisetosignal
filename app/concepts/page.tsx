@@ -11,7 +11,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Concepts",
   description:
-    "Short operator definitions — SAFE, valuation cap, option pool, LTV:CAC, and more.",
+    "Short operator definitions: SAFE, valuation cap, option pool, LTV:CAC, and more.",
   alternates: { canonical: absoluteUrl("/concepts") },
   openGraph: { url: absoluteUrl("/concepts") },
 };
@@ -33,7 +33,7 @@ export default function ConceptsIndex() {
         <PageHeader
           eyebrow="Operator definitions"
           title="Concepts"
-          lede="Short definitions founders actually use — SAFE, valuation cap, option pool, LTV:CAC, and more."
+          lede="Short definitions of the terms founders negotiate: SAFE, valuation cap, option pool, LTV:CAC, and more."
           crumbs={[{ href: "/", label: "← Current issue" }]}
         />
 
