@@ -6,76 +6,88 @@ export const weeks: NoiseWeek[] = [
     noiseCount: 462,
     signalCount: 5,
     ratio: 92.4,
-    note: "TODO: One-line summary of noise theme this week.",
+    note: "Outcome-agent seed posts and kill-the-codebase Series A threads filled the timeline. Founders needed the FDE pay band, a working outcome-pricing contract, and a clean founder-to-chair handoff.",
     signal: [
       {
         id: "s12-1",
-        title: "TODO: Signal pick 1",
-        url: "https://example.com",
-        source: "TODO",
-        whyItMatters: "TODO: Why this matters to founders.",
-        category: "market",
+        title:
+          "Ex-Ramp engineers raise $20M for platform Melius after scrapping their first product",
+        url: "https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product/",
+        source: "TechCrunch",
+        whyItMatters:
+          "The co-founders burned the first codebase after six months, rebuilt as an agents lab for creative work, and hit more than $1M annualized revenue within two months of coming out of stealth. CRV led a $20M Series A on top of a $5M General Catalyst seed. If your first product is stalling before a priced round, treat a full rebuild as a raise thesis only when the new product already shows ARR.",
+        category: "fundraising",
         position: 1,
       },
       {
         id: "s12-2",
-        title: "TODO: Signal pick 2",
-        url: "https://example.com",
-        source: "TODO",
-        whyItMatters: "TODO: Why this matters to founders.",
-        category: "market",
+        title:
+          "Forward Deployed Engineer Salary at Startups (2026): What Startups Pay vs. What Candidates Ask",
+        url: "https://www.recruitingfromscratch.com/blog/forward-deployed-engineer-salary-at-startups-2026-what-startups-pay-vs-what-candidates-ask",
+        source: "Recruiting from Scratch",
+        whyItMatters:
+          "Across 75 seed-to-Series-B FDE postings, the median base band is $175K to $225K, and 82 candidates asked for a median of $200K. Equity shows up in 55% of descriptions, but fewer than 1 in 25 name a percentage. If you are hiring FDEs this quarter, price to the middle of that band, put a concrete equity number in the offer, and move in days. Ranges that top out under $200K lose people at the ceiling.",
+        category: "hiring",
         position: 2,
       },
       {
         id: "s12-3",
-        title: "TODO: Signal pick 3",
-        url: "https://example.com",
-        source: "TODO",
-        whyItMatters: "TODO: Why this matters to founders.",
-        category: "market",
+        title:
+          "Healthleap raises $38M for its AI that flags hospital patients who may need a closer look",
+        url: "https://techcrunch.com/2026/10/07/healthleap-raises-38m-for-its-ai-that-flags-hospital-patients-who-may-need-a-closer-look/",
+        source: "TechCrunch",
+        whyItMatters:
+          "Healthleap sells three-year hospital contracts with outcome-based pricing and says every customer has seen at least 5x hard ROI. At Penn Medicine it reports $23.8M annualized financial impact from its malnutrition program. If you sell AI into a budget that wants proof, write the multiple into the contract before you argue about seats.",
+        category: "product",
         position: 3,
       },
       {
         id: "s12-4",
-        title: "TODO: Signal pick 4",
-        url: "https://example.com",
-        source: "TODO",
-        whyItMatters: "TODO: Why this matters to founders.",
-        category: "market",
+        title:
+          "Leo Pareja Named Chief Executive Officer of AGNT; Founder Glenn Sanford to Continue as Chairman of the Board",
+        url: "https://www.agnt.inc/press-releases/leo-pareja-agnt-ceo",
+        source: "AGNT",
+        whyItMatters:
+          "Founder Glenn Sanford moves to Chairman after nearly two decades. Leo Pareja, already CEO of eXp Realty since 2024, takes the parent CEO seat. The board describes years of succession planning. If your board is raising a founder CEO change, this is a handoff where the internal operator already ran the core business.",
+        category: "leadership",
         position: 4,
       },
       {
         id: "s12-5",
-        title: "TODO: Signal pick 5",
-        url: "https://example.com",
-        source: "TODO",
-        whyItMatters: "TODO: Why this matters to founders.",
+        title: "Hone raises $60M seed to build AI that owns business outcomes",
+        url: "https://dealroom.co/news/161745-hone-raises-60m-seed-to-build-ai-that-owns-business-outcomes/",
+        source: "Dealroom",
+        whyItMatters:
+          "A five-month-old company founded by ex-OpenAI and Cognition staff raised a $60M seed at a $285M valuation from Benchmark and Index to build Engines that own outcomes rather than one-off tasks. Use it as the denominator for seed. Investors are paying that price for long-horizon agents aimed at enterprise P&L.",
         category: "market",
         position: 5,
-      }
+      },
     ],
     noise: [
       {
         id: "n12-1",
-        title: "TODO: Noise headline 1",
+        title: "We burned the whole codebase and closed $20M. Thread.",
         url: "#",
-        source: "TODO",
-        offense: "TODO: The offense in 1-2 dry sentences.",
+        source: "LinkedIn",
+        offense:
+          "The post skips ARR, burn, and what the new product ships. It ends on a photo of a deleted GitHub repo.",
       },
       {
         id: "n12-2",
-        title: "TODO: Noise headline 2",
+        title: "Just raised a $60M seed to own outcomes. My 5 a.m. stack.",
         url: "#",
-        source: "TODO",
-        offense: "TODO: The offense in 1-2 dry sentences.",
+        source: "Twitter/X",
+        offense:
+          "The replies asked about customers and guardrails. The founder replied with a cold plunge and an Engines org chart.",
       },
       {
         id: "n12-3",
-        title: "TODO: Noise headline 3",
+        title: "Why every founder needs an FDE org chart before product-market fit",
         url: "#",
-        source: "TODO",
-        offense: "TODO: The offense in 1-2 dry sentences.",
-      }
+        source: "Substack",
+        offense:
+          "Eighteen hundred words on titles and none on pay bands or equity. The comments asked what these people get paid.",
+      },
     ],
   },
 
