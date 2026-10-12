@@ -184,14 +184,14 @@ export function WeeklyDilemma({ dilemma }: WeeklyDilemmaProps) {
                 fontStyle: "italic",
               }}
             >
-              No answer provided. That's the point.
+              We give no answer, on purpose.
             </div>
           </div>
         </div>
 
         {/* CTA */}
         <div style={{ marginTop: 20, fontSize: 13, color: "var(--text-muted)" }}>
-          Facing one?{" "}
+          Facing one? Bring it to a{" "}
           <FnLink
             href="https://www.foundernexus.com?utm_source=founderratio&utm_medium=referral&utm_campaign=dilemma&utm_content=facing-one"
             slug="dilemma"
@@ -199,7 +199,7 @@ export function WeeklyDilemma({ dilemma }: WeeklyDilemmaProps) {
           >
             FounderNexus
           </FnLink>{" "}
-          is the room.
+          session.
         </div>
       </div>
     </section>
