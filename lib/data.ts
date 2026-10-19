@@ -2,6 +2,95 @@ import type { NoiseWeek, Dilemma, BenchmarkStage, NoiseSource } from "./types";
 
 export const weeks: NoiseWeek[] = [
   {
+    weekOf: "2026-10-19",
+    noiseCount: 462,
+    signalCount: 5,
+    ratio: 92.4,
+    note: "Disrupt stage clips and $60B victory laps filled the timeline. Founders needed the pro rata fine print and a comp plan that counts the AI bill.",
+    signal: [
+      {
+        id: "s13-1",
+        title: "VCs and founders are debating pro rata rights",
+        url: "https://www.axios.com/2026/10/15/venture-capital-pro-rata-valar-dayone",
+        source: "Axios",
+        whyItMatters:
+          "Valar Atomics sued early investor Day One Ventures after Day One tried to enforce its pro rata rights on a Sequoia-led Series B at a $6 billion valuation. Pro rata rights appear in most early-stage deals and in the NVCA model documents, and growth firms are pressing founders on them, sometimes in rounds tranched by valuation. If a lead asks your existing investors to waive, read your investor rights agreement for who must consent before you promise the allocation.",
+        category: "fundraising",
+        position: 1,
+      },
+      {
+        id: "s13-2",
+        title:
+          "Zoho halts 2026 salary hikes, looks to ‘avoid mass layoffs’ amid surging AI costs",
+        url: "https://indianexpress.com/article/technology/tech-news-technology/zoho-salary-hikes-avoid-mass-layoffs-ai-costs-10919069/",
+        source: "The Indian Express",
+        whyItMatters:
+          "Zoho has not grown headcount in 18 months and told employees there will be no annual raise this year. Co-founder Sridhar Vembu cited a fourfold rise in server prices and fast-growing AI usage costs, and the company also cut its marketing budget. If your AI bill is climbing, put it in the same budget as raises and new hires, and decide that tradeoff before review season.",
+        category: "hiring",
+        position: 2,
+      },
+      {
+        id: "s13-3",
+        title:
+          "When it came to Cal AI’s viral success, a small army of influencers paid off",
+        url: "https://techcrunch.com/2026/10/15/when-it-came-to-cal-ais-viral-success-a-small-army-of-influencers-paid-off/",
+        source: "TechCrunch",
+        whyItMatters:
+          "Cal AI made more than $30 million in revenue in two years and sold to MyFitnessPal in March. Founder Zach Yadegari said one creator post brought about a thousand users in two days, so the team paid as many creators as it could and tied each payout to a minimum reach. If paid creators are in your plan, contract for a minimum reach and pick creators with tight communities.",
+        category: "product",
+        position: 3,
+      },
+      {
+        id: "s13-4",
+        title:
+          "Even Benchmark thinks AI is eroding the venture pact against backing rivals",
+        url: "https://techcrunch.com/2026/10/15/even-benchmark-thinks-ai-is-eroding-the-venture-pact-against-backing-rivals/",
+        source: "TechCrunch",
+        whyItMatters:
+          "Benchmark's partners said at Disrupt that portfolio companies will keep running into each other. Factory said it fired board observer Chris Degnan over conduct involving Cognition, its direct rival. Degnan said he had already resigned, denied sharing anything confidential, and then joined Cognition as CRO. Khosla Ventures backs both companies. Before you grant a board or observer seat, ask the investor which portfolio companies could overlap with yours and what they will tell you if one does.",
+        category: "leadership",
+        position: 4,
+      },
+      {
+        id: "s13-5",
+        title: "Ramp reaches $60B valuation as it pushes deeper into AI",
+        url: "https://techcrunch.com/2026/10/15/ramp-reaches-60b-valuation-as-it-pushes-deeper-into-ai/",
+        source: "TechCrunch",
+        whyItMatters:
+          "Ramp raised $1.85 billion at a $60 billion valuation four months after pricing at $44 billion, and says annualized revenue has passed $2 billion. Use it as the denominator for finance software. That is about 30x revenue for a company that grew from expense management into payments and AI spend management. Investors will read your fintech deck against it.",
+        category: "market",
+        position: 5,
+      },
+    ],
+    noise: [
+      {
+        id: "n13-1",
+        title: "47 founders I met at Disrupt and what each one taught me",
+        url: "#",
+        source: "LinkedIn",
+        offense:
+          "The post names every panel and no number from any of them. It ends on a badge selfie.",
+      },
+      {
+        id: "n13-2",
+        title: "Ramp just hit $60B. Your startup is next.",
+        url: "#",
+        source: "Twitter/X",
+        offense:
+          "The thread skips the $2 billion in revenue behind the price. The replies asked for the author's ARR and got a link to a course.",
+      },
+      {
+        id: "n13-3",
+        title: "Pro rata is a tax on founders, a manifesto",
+        url: "#",
+        source: "Substack",
+        offense:
+          "Three thousand words against investor rights and none on what the author's own investor rights agreement says. The comments asked who led the seed.",
+      },
+    ],
+  },
+
+  {
     weekOf: "2026-10-12",
     noiseCount: 462,
     signalCount: 5,
