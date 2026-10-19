@@ -15,35 +15,35 @@ export const topics: TopicMeta[] = [
     title: "Fundraising",
     blurb: "Rounds, process, and who still gets capital when the feed is loud.",
     definition:
-      "Fundraising signal changes how you raise, price, or sequence a round — not another mega-round headline. Investor behavior, process, or proof that moves a close. Vanity announcements stay noise.",
+      "Fundraising signal changes how you raise, price, or sequence a round: investor behavior, process, or proof that moves a close. Mega-round headlines are noise.",
   },
   {
     slug: "hiring",
     title: "Hiring",
     blurb: "Team design, talent markets, and when headcount is the real bet.",
     definition:
-      "Hiring signal changes who to hire next, how to compete for talent, or when to slow headcount. Org design, comp, recruiting leverage — not culture-poster content.",
+      "Hiring signal changes who you hire next, how you compete for talent, or when you slow headcount: org design, comp, recruiting leverage. We skip culture posters.",
   },
   {
     slug: "product",
     title: "Product",
     blurb: "Build, package, and GTM choices that change what ships next.",
     definition:
-      "Product signal changes what you ship, how you package it, or how you go to market. Roadmap cuts, buyer surfaces, retention proof. Feature theater is noise.",
+      "Product signal changes what you ship, how you package it, or how you go to market. Roadmap cuts and retention proof make the list; feature theater does not.",
   },
   {
     slug: "leadership",
     title: "Leadership",
     blurb: "Judgment, pivots, boards, and hard calls under pressure.",
     definition:
-      "Leadership signal sharpens judgment — pivots, board dynamics, culture under constraint. Useful when it shows the cost of a hard call, not founder-brand flattery.",
+      "Leadership signal sharpens judgment on pivots, boards, and culture under constraint. We pick pieces that show what a hard call cost and skip founder flattery.",
   },
   {
     slug: "market",
     title: "Market",
     blurb: "Capital as denominator, category shifts, and where attention is mispriced.",
     definition:
-      "Market signal reframes the denominator: capital flows, category structure, mispriced attention. Macro cheerleading without a takeaway is noise.",
+      "Market signal changes how you read the denominator: capital flows, category structure, mispriced attention. Macro cheerleading with no takeaway is noise.",
   },
 ];
 
