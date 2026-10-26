@@ -2,6 +2,93 @@ import type { NoiseWeek, Dilemma, BenchmarkStage, NoiseSource } from "./types";
 
 export const weeks: NoiseWeek[] = [
   {
+    weekOf: "2026-10-26",
+    noiseCount: 462,
+    signalCount: 5,
+    ratio: 92.4,
+    note: "A trillion-dollar OpenAI round and post-Disrupt panel recaps filled the feed. Founders needed the fine print on tranched rounds, honest ARR, and what to tell employees about liquidity.",
+    signal: [
+      {
+        id: "s14-1",
+        title: "Investors break down how founders can raise a Series A today",
+        url: "https://techcrunch.com/2026/10/22/investors-break-down-how-founders-can-raise-a-series-a-today/",
+        source: "TechCrunch",
+        whyItMatters:
+          "At Disrupt, Peak XV's Shailendra Singh said it is now common to see a round try to close at up to three prices at once, and Index's Jahanvi Sardana called the tranche trend \"tranchopalooza.\" Singh also said a cumulative revenue or ARR chart is \"a massive red flag\" and expects a correction in 2027. Before your Series A, swap cumulative charts for monthly revenue and cohort retention, and get each tranche's milestone and price in writing.",
+        category: "fundraising",
+        position: 1,
+      },
+      {
+        id: "s14-2",
+        title:
+          "Carta and NewView partner, hoping to entice more startups to let employees sell shares early",
+        url: "https://techcrunch.com/2026/10/23/carta-and-newview-partner-hoping-to-entice-more-startups-to-let-employees-sell-shares-early/",
+        source: "TechCrunch",
+        whyItMatters:
+          "NewView and Carta found tender offers at Series C and later startups tripled over three years, yet only 44 were executed in the first half of 2026 across their data. NewView's Ravi Viswanathan says companies now stay private 12 to 15 years and pitches tenders as a retention tool. If you are Series C or later and losing people to public companies, decide whether liquidity belongs in your comp plan before the next offer you can't match.",
+        category: "hiring",
+        position: 2,
+      },
+      {
+        id: "s14-3",
+        title: "VCs, Superhuman Mail founder share red flags about product-market fit",
+        url: "https://techcrunch.com/2026/10/23/vcs-superhuman-mail-founder-share-red-flags-about-product-market-fit/",
+        source: "TechCrunch",
+        whyItMatters:
+          "Iconiq's Anu Bharadwaj said pilots are easy to win and the hard part is getting to production, and she asks whether a founder's number is true ARR or run rate. Rahul Vohra said Superhuman tracked \"delighted ARR,\" revenue only from highly engaged customers. His rule from customer interviews: at 15 percent or below, consider a complete pivot; at 20 percent, you can optimize toward 40. Split your ARR into pilots and production before an investor does it for you.",
+        category: "product",
+        position: 3,
+      },
+      {
+        id: "s14-4",
+        title: "Arc browser sunsets December 22 as The Browser Company doubles down on Dia",
+        url: "https://techcrunch.com/2026/10/22/arc-browser-sunsets-december-22-as-the-browser-company-doubles-down-on-dia/",
+        source: "TechCrunch",
+        whyItMatters:
+          "The Browser Company is shutting down Arc, its first browser, so its engineering and security teams can focus on Dia. The wind-down has three dates: no new accounts now, AI features off on mobile November 23, and the desktop app stops December 22, with imports into Dia. CEO Josh Miller declined to open-source Arc because its engine also powers Dia. If you are carrying a legacy product, set the dates, the migration path, and the IP line before you announce.",
+        category: "leadership",
+        position: 4,
+      },
+      {
+        id: "s14-5",
+        title: "OpenAI working on new $30B raise at $1.25T valuation ahead of IPO",
+        url: "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+        source: "TechCrunch",
+        whyItMatters:
+          "OpenAI is reportedly raising up to $30 billion at a $1.25 trillion pre-money valuation, led by Coatue and UAE investors, down from the $1.4 trillion Bloomberg reported a month earlier. Its March round valued it at $852 billion post-money. Treat this as the denominator for AI: the top of the market is still repricing, and terms are still being negotiated. Don't let it set the expectations for your own round.",
+        category: "market",
+        position: 5,
+      },
+    ],
+    noise: [
+      {
+        id: "n14-1",
+        title: "OpenAI is worth $1.25 trillion. Here's what that means for your seed round.",
+        url: "#",
+        source: "LinkedIn",
+        offense:
+          "Nothing, as it turns out. The post runs nine paragraphs to get there and ends with a calendar link.",
+      },
+      {
+        id: "n14-2",
+        title: "Everything I learned at Disrupt, in one thread",
+        url: "#",
+        source: "Twitter/X",
+        offense:
+          "Twenty-two tweets, each a speaker's name and a fire emoji. No term, number, or decision survives the thread.",
+      },
+      {
+        id: "n14-3",
+        title: "RIP Arc. Here's why every startup should open-source its dead products.",
+        url: "#",
+        source: "Substack",
+        offense:
+          "The essay skips that Arc's engine also runs the company's current browser. The comments asked who would pay to keep it secure.",
+      },
+    ],
+  },
+
+  {
     weekOf: "2026-10-19",
     noiseCount: 462,
     signalCount: 5,
