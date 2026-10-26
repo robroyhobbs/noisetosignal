@@ -50,7 +50,7 @@ export function ContrastSection() {
             gap: 48,
           }}
         >
-          {/* Left — what gets published */}
+          {/* Left: what the feed publishes */}
           <div>
             <div
               style={{
@@ -80,7 +80,7 @@ export function ContrastSection() {
                   margin: 0,
                 }}
               >
-                What gets published
+                The feed publishes
               </h3>
             </div>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
@@ -103,7 +103,7 @@ export function ContrastSection() {
             </ul>
           </div>
 
-          {/* Right — what founders actually need */}
+          {/* Right: questions founders ask */}
           <div>
             <div
               style={{
@@ -133,7 +133,7 @@ export function ContrastSection() {
                   margin: 0,
                 }}
               >
-                What founders actually need
+                Founders ask
               </h3>
             </div>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>

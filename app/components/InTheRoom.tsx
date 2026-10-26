@@ -48,9 +48,9 @@ export function InTheRoom({ weekOf }: InTheRoomProps) {
             lineHeight: 1.3,
           }}
         >
-          The signal is the public version.
+          Take the hard calls to a room
           <br />
-          FounderNexus is the room.
+          of founders who have made them.
         </h2>
 
         <p
@@ -61,8 +61,7 @@ export function InTheRoom({ weekOf }: InTheRoomProps) {
             margin: "0 0 40px",
           }}
         >
-          The index is public. The hard calls get better in a room of founders
-          who have been through it —{" "}
+          The picks here are public.{" "}
           <FnLink
             href={roomLink}
             slug={`in-the-room-${weekOf}`}
@@ -74,8 +73,9 @@ export function InTheRoom({ weekOf }: InTheRoomProps) {
             }}
           >
             FounderNexus
-          </FnLink>
-          .
+          </FnLink>{" "}
+          is a curated network where venture-scale founders work through those
+          calls together.
         </p>
 
         <FnLink
