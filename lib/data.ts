@@ -2,6 +2,84 @@ import type { NoiseWeek, Dilemma, BenchmarkStage, NoiseSource } from "./types";
 
 export const weeks: NoiseWeek[] = [
   {
+    weekOf: "2026-10-26",
+    noiseCount: 462,
+    signalCount: 5,
+    ratio: 92.4,
+    note: "TODO: One-line summary of noise theme this week.",
+    signal: [
+      {
+        id: "s14-1",
+        title: "TODO: Signal pick 1",
+        url: "https://example.com",
+        source: "TODO",
+        whyItMatters: "TODO: Why this matters to founders.",
+        category: "market",
+        position: 1,
+      },
+      {
+        id: "s14-2",
+        title: "TODO: Signal pick 2",
+        url: "https://example.com",
+        source: "TODO",
+        whyItMatters: "TODO: Why this matters to founders.",
+        category: "market",
+        position: 2,
+      },
+      {
+        id: "s14-3",
+        title: "TODO: Signal pick 3",
+        url: "https://example.com",
+        source: "TODO",
+        whyItMatters: "TODO: Why this matters to founders.",
+        category: "market",
+        position: 3,
+      },
+      {
+        id: "s14-4",
+        title: "TODO: Signal pick 4",
+        url: "https://example.com",
+        source: "TODO",
+        whyItMatters: "TODO: Why this matters to founders.",
+        category: "market",
+        position: 4,
+      },
+      {
+        id: "s14-5",
+        title: "TODO: Signal pick 5",
+        url: "https://example.com",
+        source: "TODO",
+        whyItMatters: "TODO: Why this matters to founders.",
+        category: "market",
+        position: 5,
+      }
+    ],
+    noise: [
+      {
+        id: "n14-1",
+        title: "TODO: Noise headline 1",
+        url: "#",
+        source: "TODO",
+        offense: "TODO: The offense in 1-2 dry sentences.",
+      },
+      {
+        id: "n14-2",
+        title: "TODO: Noise headline 2",
+        url: "#",
+        source: "TODO",
+        offense: "TODO: The offense in 1-2 dry sentences.",
+      },
+      {
+        id: "n14-3",
+        title: "TODO: Noise headline 3",
+        url: "#",
+        source: "TODO",
+        offense: "TODO: The offense in 1-2 dry sentences.",
+      }
+    ],
+  },
+
+  {
     weekOf: "2026-10-19",
     noiseCount: 462,
     signalCount: 5,
