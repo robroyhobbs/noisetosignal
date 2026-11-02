@@ -56,7 +56,7 @@ export function WeeklySignal({ items }: WeeklySignalProps) {
               lineHeight: 1.5,
             }}
           >
-            Fundraising, hiring, board, runway, GTM — open any card for the
+            Fundraising, hiring, board, runway, GTM. Open any card to read the
             source.
           </p>
         </div>

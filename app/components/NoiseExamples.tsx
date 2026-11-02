@@ -19,9 +19,9 @@ export function NoiseExamples({ examples }: NoiseExamplesProps) {
           <p className="eyebrow" style={{ marginBottom: 10, color: "var(--accent)" }}>
             Noise this week
           </p>
-          <h2 className="section-title">What we filtered out</h2>
+          <h2 className="section-title">Three posts we filtered out</h2>
           <p style={{ margin: 0, fontSize: 15, color: "var(--text-sec)", lineHeight: 1.5 }}>
-            Three examples. We don&apos;t name names.
+            We don&apos;t name the authors.
           </p>
         </div>
 

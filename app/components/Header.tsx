@@ -62,7 +62,7 @@ export function Header({ weekOf, ratio }: HeaderProps) {
           </Link>
           <div
             className="mono"
-            title={`Founder Ratio (noise ÷ signal) — week of ${formatWeek(weekOf)}`}
+            title={`Founder Ratio (noise ÷ signal), week of ${formatWeek(weekOf)}`}
             style={{
               fontSize: 12,
               fontWeight: 600,
