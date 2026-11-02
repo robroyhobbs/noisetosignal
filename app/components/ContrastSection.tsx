@@ -133,7 +133,7 @@ export function ContrastSection() {
                   margin: 0,
                 }}
               >
-                What founders actually need
+                What founders need
               </h3>
             </div>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>

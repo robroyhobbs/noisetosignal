@@ -50,7 +50,7 @@ export function InTheRoom({ weekOf }: InTheRoomProps) {
         >
           The signal is the public version.
           <br />
-          FounderNexus is the room.
+          FounderNexus sessions are the private one.
         </h2>
 
         <p
@@ -61,8 +61,8 @@ export function InTheRoom({ weekOf }: InTheRoomProps) {
             margin: "0 0 40px",
           }}
         >
-          The index is public. The hard calls get better in a room of founders
-          who have been through it —{" "}
+          The index is public. You make better hard calls alongside founders
+          who have already made them, at{" "}
           <FnLink
             href={roomLink}
             slug={`in-the-room-${weekOf}`}

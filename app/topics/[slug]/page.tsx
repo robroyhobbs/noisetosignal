@@ -261,8 +261,9 @@ export default async function TopicPage({
               lineHeight: 1.5,
             }}
           >
-            Signal is the filter. The room is FounderNexus — apply if you are
-            building at venture scale and want operators over feed noise.
+            Signal is the filter. FounderNexus is where you work through the
+            decision with peers. Apply if you are building at venture scale and
+            want operators over feed noise.
           </p>
           <FnLink
             href={cta}
