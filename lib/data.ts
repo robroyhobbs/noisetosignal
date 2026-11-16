@@ -2,6 +2,92 @@ import type { NoiseWeek, Dilemma, BenchmarkStage, NoiseSource } from "./types";
 
 export const weeks: NoiseWeek[] = [
   {
+    weekOf: "2026-11-16",
+    noiseCount: 378,
+    signalCount: 5,
+    ratio: 75.6,
+    note: "Jensen Huang's resignation, the scandal timeline, and a petition to bring him back filled the feed. Founders needed to know who replaces Nvidia's checks, which small funds can still lead, and how a CEO hears bad news once the company gets big.",
+    signal: [
+      {
+        id: "s17-1",
+        title: "Jensen Huang's departure blasts big hole in AI startup funding, VCs and founders say",
+        url: "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+        source: "TechCrunch",
+        whyItMatters:
+          "Nvidia joined 105 rounds this year, often as the largest investor, according to PitchBook. Investors say most of those calls came from Huang himself, and one describes interim CEO Colette Kress as \"much more conservative.\" Under Huang, infrastructure startups that needed $100 million to $500 million in GPUs often raised half of it from Nvidia at valuations of $1 billion or more. Seligman's Umesh Padval: \"When Nvidia was on the cap table, everyone felt safe.\" If a strategic investor anchors your next round, find out who signs off on the check and line up a second lead who doesn't depend on one person.",
+        category: "fundraising",
+        position: 1,
+      },
+      {
+        id: "s17-2",
+        title: "Olaf Sakkers is betting he can beat the emerging-manager squeeze",
+        url: "https://techcrunch.com/2026/11/11/olaf-sakkers-is-betting-he-can-beat-the-emerging-manager-squeeze/",
+        source: "TechCrunch",
+        whyItMatters:
+          "PitchBook data shows firms on their fourth fund or later took 88.2% of US venture dollars through the first three quarters, and first-time funds took 4.5%. Only 81 first-time funds closed in nine months, on pace for the worst year in at least a decade. Sakkers' RedBlue writes $50,000 to $100,000 checks, follows other leads, and pitches itself as the last investor in, with intros to leads like a16z and Thrive. Expect fewer new small funds on your angel list. Ask each one what it does for you after the wire, and whether it has ever led.",
+        category: "fundraising",
+        position: 2,
+      },
+      {
+        id: "s17-3",
+        title: "After dodging death, battery startup Our Next Energy is now going public",
+        url: "https://techcrunch.com/2026/11/16/after-dodging-death-battery-startup-our-next-energy-is-now-going-public/",
+        source: "TechCrunch",
+        whyItMatters:
+          "ONE missed its Series C in late 2023, laid off staff, walked away from a planned $1.6 billion Michigan factory, and ousted founder Mujeeb Ijaz as CEO. He came back in March 2025 and moved the company to grid storage, then to defense and rail when grid buyers kept choosing cheaper Chinese batteries. \"We decided that we needed a more durable market, and we looked for who in the customer base valued an American battery company,\" Ijaz said. It now plans a SPAC at a $1 billion pro forma equity value. When buyers keep picking the cheaper option, find the customers who will pay more for what only you can supply.",
+        category: "product",
+        position: 3,
+      },
+      {
+        id: "s17-4",
+        title: "Databricks' new AI agent tells CEO Ali Ghodsi the unvarnished truth",
+        url: "https://techcrunch.com/2026/11/11/databricks-new-ai-agent-tells-ceo-ali-ghodsi-the-unvarnished-truth/",
+        source: "TechCrunch",
+        whyItMatters:
+          "Ghodsi runs a 12,000-person company and says he uses Databricks' Genie agent to find what nobody tells him: the weak spots in an employee survey, a sales pitch that went badly, executive fixes that won't work. He cites Dunbar's number, about 150 people. Below it, a CEO knows everyone and people say bad news to his face. Above it, a salesperson won't confess a lost deal to the boss. Past 150 people, decide how bad news reaches you, whether that's a skip-level meeting, an anonymous survey, or a tool, before you lose track of it.",
+        category: "leadership",
+        position: 4,
+      },
+      {
+        id: "s17-5",
+        title: "AI agent startup LangChain hits $3B valuation",
+        url: "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+        source: "TechCrunch",
+        whyItMatters:
+          "LangChain raised a $300 million Series C at $3 billion, led by CapitalG, more than double the $1.25 billion price IVP led about a year ago. It says LangSmith has 7,000 customers, including Harvey, Rippling, Clay, Nvidia, Toyota, and Salesforce. The pitch is no lock-in to any model, cloud, or lab. TechCrunch notes plenty of rivals pitch the same thing. This is the denominator for agent tooling. If you sell on model neutrality, show a customer count, because the pitch alone no longer sets you apart.",
+        category: "market",
+        position: 5,
+      },
+    ],
+    noise: [
+      {
+        id: "n17-1",
+        title: "Sign the petition: Nvidia must reinstate Jensen Huang",
+        url: "#",
+        source: "Twitter/X",
+        offense:
+          "Nvidia's board picks its CEO. Retweets don't count as votes.",
+      },
+      {
+        id: "n17-2",
+        title: "What Jensen's exit teaches us about founder-led culture: a thread",
+        url: "#",
+        source: "LinkedIn",
+        offense:
+          "Thirty posts, each one a lesson. None mention the board's investigation.",
+      },
+      {
+        id: "n17-3",
+        title: "Anthropic's founders are each cashing out $250M. Here's how to get your number.",
+        url: "#",
+        source: "Substack",
+        offense:
+          "The S-1 says seven founders sell the same 3,378,378 shares each. The post offered a course.",
+      },
+    ],
+  },
+
+  {
     weekOf: "2026-11-09",
     noiseCount: 462,
     signalCount: 5,
